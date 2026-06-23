@@ -1,0 +1,158 @@
+daoyu_cheat = {
+	icon = decision_daoyu_icon
+	resources = { category = decisions }
+	potential = {
+		solar_system = { space_owner = { is_ai = no } }
+		not = { has_global_flag = daoyu_cheat_dont_show_again }
+	}
+	allow = {
+		custom_tooltip = { fail_text = daoyu_event_in_progress not = { has_global_flag = daoyu_cheat_in_progress } }
+	}
+	effect = {
+		set_global_flag = daoyu_cheat_in_progress
+		if = { limit = { has_global_flag = daoyu_cheat_enabled } planet_event = { id = daoyu_common.30 } }
+		else = { planet_event = { id = daoyu_common.31 } }
+	}
+}
+#编辑星球
+daoyu_edit_planet = {
+	owned_planets_only = no
+	icon = decision_daoyu_icon
+	resources = { category = decisions }
+	allow = { custom_tooltip = { fail_text = "daoyu_edit_planet_in_progress" not = { has_global_flag = daoyu_edit_planet_in_progress } } }
+	potential = {
+		has_global_flag = daoyu_cheat_enabled
+		solar_system = { space_owner = { is_ai = no } }
+	}
+	effect = {
+		set_global_flag = daoyu_edit_planet_in_progress
+		save_global_event_target_as = daoyu_target_planet
+		planet_event = { id = daoyu_common.21 }
+	}
+}
+daoyu_hyperlane = {
+	icon = decision_daoyu_icon
+	resources = { category = decisions }
+	potential = {
+		#has_global_flag = daoyu_cheat_enabled
+		not = { exists = event_target:daoyu_point_A }
+		solar_system = { space_owner = { is_ai = no } }
+	}
+	effect = {
+		set_global_flag = daoyu_select_point_A_on_map
+		solar_system = { save_global_event_target_as = daoyu_point_A }
+		planet_event = { id = daoyu_common.24 }
+	}
+}
+daoyu_gain_fleet = {
+	icon = decision_daoyu_icon
+	resources = { category = decisions }
+	potential = {
+		has_global_flag = daoyu_cheat_enabled
+		solar_system = {
+			owner = { is_ai = no }
+		}
+	}
+	allow = { custom_tooltip = { fail_text = "daoyu_gain_fleet_in_progress" not = { has_global_flag = daoyu_gain_fleet } } }
+	effect = {
+		set_global_flag = daoyu_gain_fleet
+		set_global_flag = daoyu_gain_fleet_from_planet
+		save_global_event_target_as = daoyu_gain_fleet_location
+		planet_event = { id = daoyu_common.22 }
+	}
+}
+daoyu_ring_world_restored = {
+	icon = decision_ruined_system
+	resources = { category = decisions }
+	potential = {
+		solar_system = { owner = { is_ai = no } not = { has_star_flag = daoyu_ring_world_restored } }
+		or = {
+			and = {
+				solar_system = {
+					has_star_flag = empire_home_system
+					has_star_flag = ring_world_built
+					any_system_planet = {
+						has_planet_flag = ignore_startup_effect
+						has_planet_flag = starting_mining_target
+						has_planet_flag = starting_deposit
+					}
+				}
+			}
+			and = {
+				solar_system = {
+					has_star_flag = cybrex
+					has_star_flag = precursor_system
+					any_system_megastructure = { is_megastructure_type = ring_world_ruined }
+					not = { any_system_megastructure = { is_megastructure_type = ring_world_3_intermediate } }
+				}
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = daoyu_remove_planet_tt
+		hidden_effect = {
+			solar_system = {
+				set_star_flag = daoyu_ring_world_restored
+				if = {
+					limit = { has_star_flag = empire_home_system has_star_flag = ring_world_built }
+					every_system_planet = { limit = { or = { is_planet_class = pc_shattered_2 is_planet_class = pc_ringworld_tech is_planet_class = pc_ringworld_seam } } remove_planet = yes }
+					every_system_planet = { limit = { or = { is_planet_class = pc_ringworld_tech_damaged is_planet_class = pc_ringworld_seam_damaged } } remove_planet = yes }
+					every_system_ambient_object = { limit = { is_ambient_object_type = medium_debris_01_object } destroy_ambient_object = this }
+					every_system_megastructure = { limit = { is_megastructure_type = ring_world_ruined } remove_megastructure = this }
+					every_system_megastructure = { limit = { is_megastructure_type = ring_world_ruined } remove_megastructure = this }
+					spawn_megastructure = { type = "ring_world_3_intermediate" orbit_angle = 333.5 orbit_distance = 45 location = planet }
+					every_system_planet = { limit = { is_planet_class = pc_ringworld_habitable } remove_planet = yes }
+					spawn_megastructure = { type = "ring_world_3_intermediate" orbit_angle = 243.5 orbit_distance = 45 location = planet }
+					spawn_megastructure = { type = "ring_world_3_intermediate" orbit_angle = 153.5 orbit_distance = 45 location = planet }
+					spawn_megastructure = { type = "ring_world_3_intermediate" orbit_angle = 63.5 orbit_distance = 45 location = planet }
+					every_system_planet = { limit = { is_planet_class = pc_shattered_ring_habitable } set_name = "NAME_Habitable_Section_A" }
+					every_system_planet = { limit = { is_planet_class = pc_ringworld_habitable } set_planet_size = 25 }
+					if = {
+						limit = { owner = { has_origin = origin_shattered_ring } }
+						every_system_planet = {
+							limit = { is_planet_class = pc_ringworld_habitable }
+							add_deposit = d_segment_rubble_1 add_deposit = d_segment_rubble_2 add_deposit = d_segment_rubble_3 add_deposit = d_segment_rubble_4
+							add_deposit = d_decrepit_tunnels_1 add_deposit = d_decrepit_tunnels_1 add_deposit = d_decrepit_tunnels_1
+						}
+					}
+					if = { limit = { owner = { has_civic = civic_machine_servitor } } every_system_planet = { limit = { is_planet_class = pc_ringworld_habitable } add_deposit = d_unsupervised_settlement } }
+					else_if = { limit = { owner = { has_authority = auth_hive_mind } } every_system_planet = { limit = { is_planet_class = pc_ringworld_habitable } add_deposit = d_collapsed_burrows } }
+					else = { every_system_planet = { limit = { is_planet_class = pc_ringworld_habitable } add_deposit = d_decrepit_dwellings } }
+					if = {
+						limit = { owner = { is_lithoid_empire = yes not = { has_valid_civic = civic_hive_devouring_swarm } } }
+						every_system_planet = { limit = { is_planet_class = pc_ringworld_habitable } while = { count = 4 add_deposit = d_hibernating_lithoids } }
+					}
+					if = {
+						limit = { owner = { is_lithoid_empire = yes has_valid_civic = civic_hive_devouring_swarm } }
+						every_system_planet = { limit = { is_planet_class = pc_ringworld_habitable } while = { count = 2 add_deposit = d_hibernating_lithoids } }
+					}
+					spawn_planet = { class = pc_barren name = "NAME_The_Interloper" orbit_distance = 100 orbit_angle = 70 size = 10 has_ring = no flags = { ignore_startup_effect starting_mining_target starting_deposit } init_effect = { set_deposit = d_minerals_10 } }
+					random_system_planet = { limit = { is_planet_class = pc_barren } create_mining_station = { owner = root } }
+				}
+				if = {
+					limit = { has_star_flag = cybrex has_star_flag = precursor_system }
+					every_megastructure = { limit = { is_megastructure_type = ring_world_ruined } remove_megastructure = this }
+					every_system_planet = { limit = { is_star = no } remove_planet = yes }
+					every_system_ambient_object = { destroy_ambient_object = this }
+					spawn_megastructure = { type = "ring_world_3_intermediate" orbit_angle = 0 orbit_distance = 45 }
+					spawn_megastructure = { type = "ring_world_3_intermediate" orbit_angle = 90 orbit_distance = 45 }
+					spawn_megastructure = { type = "ring_world_3_intermediate" orbit_angle = 180 orbit_distance = 45 }
+					spawn_megastructure = { type = "ring_world_3_intermediate" orbit_angle = 270 orbit_distance = 45 }
+				}
+			}
+		}
+	}
+}
+daoyu_gray = {
+	icon = decision_daoyu_icon
+	resources = { category = decisions }
+	potential = {
+		is_colony = yes
+		owner = { is_ai = no }
+	}
+	#allow = { daoyu_has_auto_flag_trigger = yes }
+	effect = {
+		set_global_flag = daoyu_from_decision_gray
+		planet_event = { id = daoyu_common.26 }
+	}
+}

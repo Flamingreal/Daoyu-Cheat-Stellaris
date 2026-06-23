@@ -1,0 +1,51 @@
+daoyu_cheat = {
+	resources = {
+		category = artifact_actions
+		cost = { minor_artifacts = 0 }
+	}
+	ai_weight = {
+		weight = 0
+	}
+	potential = {
+		is_ai = no
+		not = { has_global_flag = daoyu_cheat_dont_show_again }
+	}
+	allow = {
+		custom_tooltip = { fail_text = daoyu_event_in_progress not = { has_global_flag = daoyu_cheat_in_progress } }
+	}
+	effect = {
+		set_global_flag = daoyu_cheat_in_progress
+		if = { limit = { has_global_flag = daoyu_cheat_enabled } country_event = { id = daoyu.10 } }
+		else = { country_event = { id = daoyu.1 } }
+	}
+}
+daoyu_relic = {
+	resources = {
+		category = artifact_actions
+		cost = { minor_artifacts = 0 }
+	}
+	ai_weight = {
+		weight = 0
+	}
+	potential = {
+		is_ai = no
+		has_global_flag = daoyu_cheat_enabled
+	}
+	allow = {
+		custom_tooltip = { fail_text = daoyu_event_in_progress not = { has_global_flag = daoyu_relic_in_progress } }
+	}
+	effect = {
+		custom_tooltip = daoyu_relic_custom_tooltip
+		if = { limit = { has_modifier = relic_activation_cooldown } remove_modifier = relic_activation_cooldown }
+		else = { set_global_flag = daoyu_relic_in_progress country_event = { id = daoyu_relic.1 } }
+	}
+}
+daoyu_remove_in_progress = {
+	resources = { category = artifact_actions cost = { minor_artifacts = 0 } }
+	potential = { is_ai = no or = { has_global_flag = daoyu_cheat_in_progress has_global_flag = daoyu_edit_planet_in_progress has_global_flag = daoyu_gain_fleet_in_progress } }
+	effect = {
+		if = { limit = { has_global_flag = daoyu_cheat_in_progress } remove_global_flag = daoyu_cheat_in_progress }
+		if = { limit = { has_global_flag = daoyu_edit_planet_in_progress } remove_global_flag = daoyu_edit_planet_in_progress }
+		if = { limit = { has_global_flag = daoyu_gain_fleet_in_progress } remove_global_flag = daoyu_gain_fleet_in_progress }
+	}
+}

@@ -1,0 +1,63 @@
+
+special_project = {
+	key = "DAOYU_TARGET_PLANET_SPECIAL_PROJECT"
+	days_to_research = 2
+	timelimit = 1
+	picture = GFX_evt_unknown_ships
+	icon = "gfx\event_pictures\daoyu_cheat.dds"
+	event_scope = planet_event
+	on_start = {
+		event_target:daoyu_root = {
+			abort_special_project = { type = DAOYU_TARGET_PLANET_SPECIAL_PROJECT }
+			if = { limit = { has_global_flag = daoyu_teleportation_fleet } country_event = { id = daoyu.150 scopes = { from = from } } }
+			if = {
+				limit = { has_global_flag = daoyu_edit_planet_special_project }
+				remove_global_flag = daoyu_edit_planet_special_project from = { save_global_event_target_as = daoyu_target_planet } country_event = { id = daoyu_edit_planet.1 }
+			}
+			if = {
+				limit = { has_global_flag = daoyu_gain_fleet_special_project }
+				remove_global_flag = daoyu_gain_fleet_special_project from = { save_global_event_target_as = daoyu_gain_fleet_location } country_event = { id = daoyu.130 }
+			}
+			if = {
+				limit = { has_global_flag = daoyu_hyperlane_special_project }
+				remove_global_flag = daoyu_hyperlane_special_project from.solar_system = { save_global_event_target_as = daoyu_point_A } country_event = { id = daoyu.110 }
+			}
+			if = {
+				limit = { has_global_flag = daoyu_select_point_B_on_map }
+				remove_global_flag = daoyu_select_point_B_on_map add_hyperlane = { from = event_target:daoyu_point_A to = from.solar_system } country_event = { id = daoyu.110 }
+			}
+		}
+	}
+	on_success = {
+	}
+	on_fail = {
+		if = { limit = { has_global_flag = daoyu_teleportation_fleet } clear_global_event_target = daoyu_teleportation_fleet country_event = { id = daoyu.150 } }
+		if = { limit = { has_global_flag = daoyu_edit_planet_special_project } remove_global_flag = daoyu_edit_planet_special_project remove_global_flag = daoyu_edit_planet_in_progress }
+		if = { limit = { has_global_flag = daoyu_gain_fleet_special_project } remove_global_flag = daoyu_gain_fleet_special_project country_event = { id = daoyu.130 } }
+		if = { limit = { has_global_flag = daoyu_hyperlane_special_project } remove_global_flag = daoyu_hyperlane_special_project country_event = { id = daoyu.110 } }
+		if = { limit = { has_global_flag = daoyu_select_point_B_on_map } remove_global_flag = daoyu_select_point_B_on_map country_event = { id = daoyu.114 } }
+	}
+}
+special_project = {
+	key = "DAOYU_DISBAND_BEHEMOTH_SPECIAL_PROJECT"
+	days_to_research = 2
+	timelimit = 1
+	picture = GFX_evt_unknown_ships
+	icon = "gfx\event_pictures\daoyu_cheat.dds"
+	event_scope = country_event
+	on_start = {
+		event_target:daoyu_root = {
+			abort_special_project = { type = DAOYU_DISBAND_BEHEMOTH_SPECIAL_PROJECT }
+			if = {
+				limit = { has_global_flag = daoyu_fleets_disband_special_project }
+				remove_global_flag = daoyu_fleets_disband_special_project
+				from = { fleet = { delete_fleet = this } }
+			}
+		}
+	}
+	on_success = {
+	}
+	on_fail = {
+		if = { limit = { has_global_flag = daoyu_fleets_disband_special_project } remove_global_flag = daoyu_fleets_disband_special_project }
+	}
+}

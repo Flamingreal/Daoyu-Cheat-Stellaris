@@ -1,0 +1,3215 @@
+daoyu_can_build_mining_station_trigger = {
+	has_mining_station = no has_deposit_for = shipclass_mining_station
+	or = { solar_system.owner = { has_technology = tech_mine_exotic_gases } daoyu_has_exotic_gases_deposit = no }
+	or = { solar_system.owner = { has_technology = tech_mine_rare_crystals } daoyu_has_rare_crystals_deposit = no }
+	or = { solar_system.owner = { has_technology = tech_mine_volatile_motes } daoyu_has_volatile_motes_deposit = no }
+	or = { solar_system.owner = { has_technology = tech_mine_zro } daoyu_has_zro_deposit = no }
+	or = { solar_system.owner = { has_technology = tech_mine_living_metal } not = { has_deposit = d_living_metal_deposit } }
+}
+daoyu_can_build_research_station_trigger = {
+	has_research_station = no has_deposit_for = shipclass_research_station
+	or = { solar_system.owner = { has_technology = tech_mine_dark_matter } daoyu_has_dark_matter_deposit = no }
+	or = { solar_system.owner = { has_technology = tech_astral_harvesting } daoyu_has_astral_threads_deposit = no }
+}
+daoyu_has_energy_deposit = { or = { has_deposit = d_energy_1 has_deposit = d_energy_2 has_deposit = d_energy_3 has_deposit = d_energy_4 has_deposit = d_energy_5 has_deposit = d_energy_6 has_deposit = d_energy_7 has_deposit = d_energy_8 has_deposit = d_energy_9 has_deposit = d_energy_10 } }
+daoyu_has_minerals_deposit = {
+	or = { has_deposit = d_minerals_1 has_deposit = d_minerals_2 has_deposit = d_minerals_3 has_deposit = d_minerals_4 has_deposit = d_minerals_5 has_deposit = d_minerals_6 has_deposit = d_minerals_7 has_deposit = d_minerals_8 has_deposit = d_minerals_9 has_deposit = d_minerals_10 }
+}
+daoyu_has_alloys_deposit = {
+	or = { has_deposit = d_alloys_1 has_deposit = d_alloys_2 has_deposit = d_alloys_3 has_deposit = d_alloys_4 has_deposit = d_alloys_5 has_deposit = d_alloys_6 has_deposit = d_alloys_7 has_deposit = d_alloys_8 has_deposit = d_alloys_9 has_deposit = d_alloys_10 has_deposit = d_alloys_25 }
+}
+daoyu_has_society_deposit = { or = { has_deposit = d_society_1 has_deposit = d_society_2 has_deposit = d_society_3 has_deposit = d_society_4 has_deposit = d_society_5 has_deposit = d_society_6 has_deposit = d_society_7 has_deposit = d_society_8 has_deposit = d_society_9 has_deposit = d_society_10 } }
+daoyu_has_physics_deposit = { or = { has_deposit = d_physics_1 has_deposit = d_physics_2 has_deposit = d_physics_3 has_deposit = d_physics_4 has_deposit = d_physics_5 has_deposit = d_physics_6 has_deposit = d_physics_7 has_deposit = d_physics_8 has_deposit = d_physics_9 has_deposit = d_physics_10 } }
+daoyu_has_engineering_deposit = {
+	or = {
+		has_deposit = d_engineering_1 has_deposit = d_engineering_2 has_deposit = d_engineering_3 has_deposit = d_engineering_4 has_deposit = d_engineering_5 has_deposit = d_engineering_6 has_deposit = d_engineering_7 has_deposit = d_engineering_8 has_deposit = d_engineering_9 has_deposit = d_engineering_10
+	}
+}
+daoyu_has_exotic_gases_deposit = { or = { has_deposit = d_exotic_gases_1 has_deposit = d_exotic_gases_2 has_deposit = d_exotic_gases_3 has_deposit = d_exotic_gases_4 has_deposit = d_exotic_gases_5 } }
+daoyu_has_rare_crystals_deposit = { or = { has_deposit = d_rare_crystals_1 has_deposit = d_rare_crystals_2 has_deposit = d_rare_crystals_3 has_deposit = d_rare_crystals_4 has_deposit = d_rare_crystals_5 } }
+daoyu_has_volatile_motes_deposit = { or = { has_deposit = d_volatile_motes_1 has_deposit = d_volatile_motes_2 has_deposit = d_volatile_motes_3 has_deposit = d_volatile_motes_4 has_deposit = d_volatile_motes_5 } }
+daoyu_has_zro_deposit = { or = { has_deposit = d_zro_deposit_1 has_deposit = d_zro_deposit_2 has_deposit = d_zro_deposit_3 has_deposit = d_zro_deposit_4 has_deposit = d_zro_deposit_5 } }
+daoyu_has_dark_matter_deposit = { or = { has_deposit = d_dark_matter_deposit_1 has_deposit = d_dark_matter_deposit_2 has_deposit = d_dark_matter_deposit_3 has_deposit = d_dark_matter_deposit_10 } }
+daoyu_has_astral_threads_deposit = { or = { has_deposit = d_astral_threads_deposit_1 has_deposit = d_astral_threads_deposit_2 has_deposit = d_astral_threads_deposit_3 } }
+daoyu_asteroid_trigger = {
+	or = {
+		is_planet_class = pc_asteroid#小行星
+		is_planet_class = pc_ice_asteroid#冰晶小行星
+		is_planet_class = pc_crystal_asteroid#晶态小行星
+		is_planet_class = pc_rare_crystal_asteroid#晶态小行星
+	}
+}
+daoyu_megastructure_planet_trigger = {
+	is_astral_scar = no is_asteroid = no is_moon = no is_star = no
+	nor = {
+		has_planet_flag = megastructure has_planet_flag = has_megastructure
+		is_planet_class = pc_ringworld_habitable is_planet_class = pc_ringworld_habitable_damaged is_planet_class = pc_ringworld_tech is_planet_class = pc_ringworld_tech_damaged
+		is_planet_class = pc_ringworld_seam is_planet_class = pc_ringworld_seam_damaged is_planet_class = pc_habitat is_planet_class = pc_cosmogenesis_world
+	}
+}
+daoyu_terrestrial_planets_trigger = {
+	or = {
+		is_planet_class = pc_molten#熔融星球
+		is_planet_class = pc_frozen#冰封星球
+		is_planet_class = pc_broken#崩坏星球
+		is_planet_class = pc_barren#荒芜星球
+		is_planet_class = pc_barren_cold#荒芜星球
+		is_planet_class = pc_shattered#粉碎星球
+		is_planet_class = pc_desert#沙漠星球
+		is_planet_class = pc_arid#干旱星球
+		is_planet_class = pc_tundra#苔原星球
+		is_planet_class = pc_continental#陆地星球
+		is_planet_class = pc_tropical#热带星球
+		is_planet_class = pc_ocean#海洋星球
+		is_planet_class = pc_arctic#极地星球
+		is_planet_class = pc_alpine#高山星球
+		is_planet_class = pc_savannah#草原星球
+		is_planet_class = pc_gaia#盖亚星球
+		is_planet_class = pc_relic#遗落星球
+		is_planet_class = pc_nuked#死寂星球
+		is_planet_class = pc_toxic#剧毒星球
+		is_planet_class = pc_hive#蜂巢星球
+		is_planet_class = pc_machine#机械星球
+		is_planet_class = pc_gray_goo#纳米星球
+		is_planet_class = pc_shrouded#虚境星球
+		is_planet_class = pc_astral_scar#星界细缝
+	}
+}
+daoyu_has_moon_trigger = {
+	solar_system = { any_system_planet = { is_moon = yes orbit = { is_same_value = prevprevprev } } }
+}
+daoyu_can_spawn_planets_trigger = {
+	is_moon = no
+	or = {
+		is_star = yes
+		is_planet_class = pc_molten#熔融星球
+		is_planet_class = pc_frozen#冰封星球
+		is_planet_class = pc_broken#崩坏星球
+		is_planet_class = pc_barren#荒芜星球
+		is_planet_class = pc_barren_cold#荒芜星球
+		is_planet_class = pc_shattered#粉碎星球
+		is_planet_class = pc_desert#沙漠星球
+		is_planet_class = pc_arid#干旱星球
+		is_planet_class = pc_tundra#苔原星球
+		is_planet_class = pc_continental#陆地星球
+		is_planet_class = pc_tropical#热带星球
+		is_planet_class = pc_ocean#海洋星球
+		is_planet_class = pc_arctic#极地星球
+		is_planet_class = pc_alpine#高山星球
+		is_planet_class = pc_savannah#草原星球
+		is_planet_class = pc_gaia#盖亚星球
+		is_planet_class = pc_relic#遗落星球
+		is_planet_class = pc_nuked#死寂星球
+		is_planet_class = pc_toxic#剧毒星球
+		is_planet_class = pc_gas_giant#气态巨行星
+		is_planet_class = pc_hive#蜂巢星球
+		is_planet_class = pc_machine#机械星球
+		is_planet_class = pc_gray_goo#纳米星球
+		is_planet_class = pc_shrouded#虚境星球
+	}
+}
+daoyu_common_habitable_planets_trigger = {
+	or = {
+		is_planet_class = pc_gaia#盖亚星球
+		is_planet_class = pc_relic#遗落星球
+		is_planet_class = pc_nuked#死寂星球
+		is_planet_class = pc_desert#沙漠星球
+		is_planet_class = pc_arid#干旱星球
+		is_planet_class = pc_tundra#苔原星球
+		is_planet_class = pc_continental#陆地星球
+		is_planet_class = pc_tropical#热带星球
+		is_planet_class = pc_ocean#海洋星球
+		is_planet_class = pc_arctic#极地星球
+		is_planet_class = pc_alpine#高山星球
+		is_planet_class = pc_savannah#草原星球
+		is_planet_class = pc_hive#蜂巢星球
+		is_planet_class = pc_machine#机械星球
+	}
+}
+daoyu_HRD_star_trigger = {
+	or = {
+		is_planet_class = pc_b_star#B型恒星
+		is_planet_class = pc_a_star#A型恒星
+		is_planet_class = pc_f_star#F型恒星
+		is_planet_class = pc_g_star#G型恒星
+		is_planet_class = pc_k_star#K型恒星
+		is_planet_class = pc_m_star#M型恒星
+		is_planet_class = pc_t_star#T型褐矮星
+		is_planet_class = pc_m_giant_star#M型红巨星
+		is_planet_class = pc_neutron_star#中子星
+		is_planet_class = pc_pulsar#脉冲星
+		is_planet_class = pc_black_hole#黑洞
+	}
+}
+#戴森球
+daoyu_dyson_sphere_trigger = {
+	or = {
+		is_megastructure_type = dyson_sphere_0
+		is_megastructure_type = dyson_sphere_1
+		is_megastructure_type = dyson_sphere_2
+		is_megastructure_type = dyson_sphere_3
+		is_megastructure_type = dyson_sphere_4
+		is_megastructure_type = dyson_sphere_5
+		is_megastructure_type = dyson_sphere_ruined
+		is_megastructure_type = dyson_sphere_restored
+	}
+}
+#环形世界
+daoyu_ring_world_trigger = {
+	or = {
+		is_megastructure_type = ring_world_1
+		is_megastructure_type = ring_world_2_intermediate
+		is_megastructure_type = ring_world_2
+		is_megastructure_type = ring_world_3_intermediate
+		is_megastructure_type = ring_world_ruined
+		is_megastructure_type = ring_world_restored
+	}
+}
+#科学枢纽
+daoyu_think_tank_trigger = {
+	or = {
+		is_megastructure_type = think_tank_0
+		is_megastructure_type = think_tank_1
+		is_megastructure_type = think_tank_2
+		is_megastructure_type = think_tank_3
+		is_megastructure_type = think_tank_4
+		is_megastructure_type = think_tank_ruined
+		is_megastructure_type = think_tank_restored
+	}
+}
+#哨兵阵列
+daoyu_spy_orb_trigger = {
+	or = {
+		is_megastructure_type = spy_orb_0
+		is_megastructure_type = spy_orb_1
+		is_megastructure_type = spy_orb_2
+		is_megastructure_type = spy_orb_3
+		is_megastructure_type = spy_orb_4
+		is_megastructure_type = spy_orb_ruined
+		is_megastructure_type = spy_orb_restored
+	}
+}
+#物质解压器
+daoyu_matter_decompressor_trigger = {
+	or = {
+		is_megastructure_type = matter_decompressor_0
+		is_megastructure_type = matter_decompressor_1
+		is_megastructure_type = matter_decompressor_2
+		is_megastructure_type = matter_decompressor_3
+		is_megastructure_type = matter_decompressor_4
+		is_megastructure_type = matter_decompressor_ruined
+		is_megastructure_type = matter_decompressor_restored
+	}
+}
+#战略指挥中心
+daoyu_strategic_coordination_center_trigger = {
+	or = {
+		is_megastructure_type = strategic_coordination_center_0
+		is_megastructure_type = strategic_coordination_center_1
+		is_megastructure_type = strategic_coordination_center_2
+		is_megastructure_type = strategic_coordination_center_3
+		is_megastructure_type = strategic_coordination_center_ruined
+		is_megastructure_type = strategic_coordination_center_restored
+	}
+}
+#巨型艺术设施
+daoyu_mega_art_installation_trigger = {
+	or = {
+		is_megastructure_type = mega_art_installation_0
+		is_megastructure_type = mega_art_installation_1
+		is_megastructure_type = mega_art_installation_2
+		is_megastructure_type = mega_art_installation_3
+		is_megastructure_type = mega_art_installation_4
+		is_megastructure_type = mega_art_installation_ruined
+		is_megastructure_type = mega_art_installation_restored
+	}
+}
+#星际集会
+daoyu_interstellar_assembly_trigger = {
+	or = {
+		is_megastructure_type = interstellar_assembly_0
+		is_megastructure_type = interstellar_assembly_1
+		is_megastructure_type = interstellar_assembly_2
+		is_megastructure_type = interstellar_assembly_3
+		is_megastructure_type = interstellar_assembly_4
+		is_megastructure_type = interstellar_assembly_ruined
+		is_megastructure_type = interstellar_assembly_restored
+	}
+}
+#巨型船坞
+daoyu_mega_shipyard_trigger = {
+	or = {
+		is_megastructure_type = mega_shipyard_0
+		is_megastructure_type = mega_shipyard_1
+		is_megastructure_type = mega_shipyard_2
+		is_megastructure_type = mega_shipyard_3
+		is_megastructure_type = mega_shipyard_ruined
+		is_megastructure_type = mega_shipyard_restored
+	}
+}
+#以太相引擎
+daoyu_crisis_sphere_trigger = {
+	or = {
+		is_megastructure_type = crisis_sphere_0
+		is_megastructure_type = crisis_sphere_1
+		is_megastructure_type = crisis_sphere_2
+		is_megastructure_type = crisis_sphere_3
+		is_megastructure_type = crisis_sphere_4
+	}
+}
+#量子弹弓
+daoyu_quantum_catapult_trigger = {
+	or = {
+		is_megastructure_type = quantum_catapult_0
+		is_megastructure_type = quantum_catapult_1
+		is_megastructure_type = quantum_catapult_2
+		is_megastructure_type = quantum_catapult_3
+		is_megastructure_type = quantum_catapult_ruined
+		is_megastructure_type = quantum_catapult_restored
+		is_megastructure_type = quantum_catapult_ruined_slingshot
+		is_megastructure_type = quantum_catapult_restored_slingshot
+		is_megastructure_type = quantum_catapult_improved_slingshot
+	}
+}
+#戴森云
+daoyu_dyson_swarm_trigger = {
+	or = {
+		is_megastructure_type = dyson_swarm_1
+		is_megastructure_type = dyson_swarm_2
+		is_megastructure_type = dyson_swarm_3
+	}
+}
+#超空间中继器
+daoyu_hyper_relay_trigger = {
+	or = {
+		is_megastructure_typee = hyper_relay
+		is_megastructure_typee = hyper_relay_ruined
+		is_megastructure_typee = hyper_relay_restored
+	}
+}
+#电弧熔炉
+daoyu_orbital_arc_furnace_trigger = {
+	or = {
+		is_megastructure_type = orbital_arc_furnace_1
+		is_megastructure_type = orbital_arc_furnace_2
+		is_megastructure_type = orbital_arc_furnace_3
+		is_megastructure_type = orbital_arc_furnace_4
+		is_megastructure_type = orbital_arc_furnace_destroyed
+		is_megastructure_type = orbital_arc_furnace_restored
+	}
+}
+#星环基地
+daoyu_orbital_ring_trigger = {
+	or = {
+		is_megastructure_type = orbital_ring
+		is_megastructure_type = orbital_ring_ruined
+		is_megastructure_type = orbital_ring_restored
+	}
+}
+#星门
+daoyu_gateway_trigger = {
+	or = {
+		is_megastructure_type = gateway_0
+		is_megastructure_type = gateway_ruined
+		is_megastructure_type = gateway_restored
+		is_megastructure_type = gateway_final
+	}
+}
+daoyu_has_any_megastructure = {
+	or = {
+		any_system_megastructure = {
+			or = {
+				daoyu_dyson_sphere_trigger = yes
+				daoyu_ring_world_trigger = yes
+				daoyu_think_tank_trigger = yes
+				daoyu_spy_orb_trigger = yes
+				daoyu_matter_decompressor_trigger = yes
+				daoyu_strategic_coordination_center_trigger = yes
+				daoyu_mega_art_installation_trigger = yes
+				daoyu_interstellar_assembly_trigger = yes
+				daoyu_mega_shipyard_trigger = yes
+				daoyu_crisis_sphere_trigger = yes
+				daoyu_quantum_catapult_trigger = yes
+				daoyu_dyson_swarm_trigger = yes
+				daoyu_orbital_arc_furnace_trigger = yes
+				daoyu_orbital_ring_trigger = yes
+				is_megastructure_type = grand_archive_0
+				is_megastructure_type = habitat_central_complex
+			}
+		}
+		any_system_planet = { is_planet_class = pc_habitat has_planet_flag = megastructure has_planet_flag = habitat }
+		any_system_planet = { is_planet_class = pc_cosmogenesis_world }
+		count_orbital_station = { count > 0 limit = { or = { is_ship_size = orbital_ring_tier_1 is_ship_size = orbital_ring_tier_2 is_ship_size = orbital_ring_tier_3 } } }
+	}
+}
+#环境物体
+daoyu_ambient_object_trigger = {
+	or = {
+		is_ambient_object_type = ancient_battlefield_02_object
+		is_ambient_object_type = consecrated_planet_stage_1_object
+		is_ambient_object_type = consecrated_planet_stage_2_object
+		is_ambient_object_type = consecrated_planet_stage_3_object
+		is_ambient_object_type = large_debris_object
+		is_ambient_object_type = medium_debris_01_object
+		is_ambient_object_type = medium_debris_02_object
+		is_ambient_object_type = small_debris_object
+	}
+}
+daoyu_has_orbital_habitat_trigger = {
+	any_fleet_in_orbit = {
+		or = {
+			is_ship_size = major_orbital_resource
+			is_ship_size = major_orbital_generic
+			is_ship_size = minor_orbital_resource
+			is_ship_size = minor_orbital_generic
+			is_ship_size = major_orbital_knights
+		}
+	}
+}
+daoyu_ring_world_built = {
+	not = { event_target:daoyu_target_planet = { solar_system = { any_system_planet = { is_planet_class = pc_ringworld_habitable } } } }
+	daoyu_star_requires_no_anomaly = yes
+	daoyu_requires_no_habitable_planets = yes
+	daoyu_requires_no_black_hole = yes
+	daoyu_requires_no_binary_trinary = yes
+}
+daoyu_dyson_sphere_built = {
+	daoyu_star_requires_no_anomaly = yes
+	daoyu_requires_no_black_hole_neutron_star_pulsar = yes
+	daoyu_requires_no_habitable_planets = yes
+	daoyu_requires_no_arc_furnace = yes
+	daoyu_requires_no_arc_furnace_construction = yes
+	daoyu_requires_no_colonies = yes
+	daoyu_blocked_by_pre_ftl_policy = yes
+	daoyu_requires_no_binary_trinary = yes
+}
+daoyu_requires_no_black_hole_neutron_star_pulsar = {
+	custom_tooltip = {
+		fail_text = "requires_no_black_hole_neutron_star_pulsar"
+		event_target:daoyu_target_planet.solar_system = { not = { is_star_class = sc_black_hole is_star_class = sc_neutron_star is_star_class = sc_pulsar } }
+	}
+}
+daoyu_requires_no_arc_furnace = {
+	custom_tooltip = {
+		fail_text = "requires_no_arc_furnace"
+		event_target:daoyu_target_planet = { system_has_arc_furnace = no }
+	}
+}
+daoyu_requires_no_arc_furnace_construction = {
+	custom_tooltip = {
+		fail_text = "requires_no_arc_furnace_construction"
+		event_target:daoyu_target_planet = { if = { limit = { system_has_arc_furnace = no } not = { solar_system = { has_star_flag = arc_furnace_construction } } } }
+	}
+}
+daoyu_requires_no_colonies = {
+	custom_tooltip = {
+		fail_text = "requires_no_colonies"
+		event_target:daoyu_target_planet.solar_system = { not = { any_system_planet = { is_colony = yes is_artificial = no exists = owner owner = { is_primitive = no } } } }
+	}
+}
+daoyu_blocked_by_pre_ftl_policy = {
+	custom_tooltip = {
+		fail_text = "blocked_by_pre_ftl_policy"
+		event_target:daoyu_target_planet.solar_system = { if = { limit = { any_system_planet = { exists = owner owner = { is_primitive = yes } } } root = { has_policy_flag = interference_aggressive } } }
+	}
+}
+daoyu_requires_no_habitable_planets = {
+	custom_tooltip = {
+		fail_text = "requires_no_habitable_planets"
+		not = { event_target:daoyu_target_planet.solar_system = { any_system_planet = { colonizable_planet = yes } } }
+	}
+}
+daoyu_requires_no_black_hole = {
+	custom_tooltip = {
+		fail_text = "requires_no_black_hole"
+		not = { event_target:daoyu_target_planet.solar_system = { is_star_class = sc_black_hole } }
+	}
+}
+daoyu_requires_no_anomaly = {
+	custom_tooltip = { fail_text = "requires_no_anomaly" event_target:daoyu_target_planet = { not = { has_anomaly = yes } } }
+}
+daoyu_star_requires_no_anomaly = {
+	custom_tooltip = { fail_text = "requires_no_anomaly" event_target:daoyu_target_planet.solar_system = { star = { not = { has_anomaly = yes } } } }
+}
+daoyu_requires_no_binary_trinary = {
+	custom_tooltip = {
+		fail_text = "requires_no_binary_trinary"
+		event_target:daoyu_target_planet.solar_system = {
+			nor = {
+				is_star_class = sc_binary_1
+				is_star_class = sc_binary_2
+				is_star_class = sc_binary_3
+				is_star_class = sc_binary_4
+				is_star_class = sc_binary_5
+				is_star_class = sc_binary_6
+				is_star_class = sc_binary_7
+				is_star_class = sc_binary_8
+				is_star_class = sc_binary_9
+				is_star_class = sc_binary_10
+				is_star_class = sc_trinary_1
+				is_star_class = sc_trinary_2
+				is_star_class = sc_trinary_3
+				is_star_class = sc_trinary_4
+			}
+		}
+	}
+}
+#星球特征
+daoyu_add_or_remove_deposit_trigger = {
+	or = {
+		event_target:daoyu_target_planet = { has_global_flag = daoyu_remove_deposit has_deposit = $DEPOSIT$ }
+		event_target:daoyu_target_planet = { nor = { has_global_flag = daoyu_remove_deposit has_deposit = $DEPOSIT$ } }
+	}
+}
+daoyu_select_point_A_or_point_B_trigger = {
+	any_controlled_fleet = { is_ship_class = $CLASS$ solar_system = { not = { is_same_value = root.capital_scope.solar_system } } }
+	or = {
+		and = {
+			has_global_flag = daoyu_select_point_A
+			or = {
+				and = { exists = event_target:daoyu_point_B any_controlled_fleet = { is_ship_class = $CLASS$ solar_system = { nor = { is_same_value = event_target:daoyu_point_B has_hyperlane_to = event_target:daoyu_point_B } } } }
+				not = { exists = event_target:daoyu_point_B }
+			}
+		}
+		and = {
+			has_global_flag = daoyu_select_point_B
+			or = {
+				and = { exists = event_target:daoyu_point_A any_controlled_fleet = { is_ship_class = $CLASS$ solar_system = { nor = { is_same_value = event_target:daoyu_point_A has_hyperlane_to = event_target:daoyu_point_A } } } }
+				not = { exists = event_target:daoyu_point_A }
+			}
+		}
+	}
+}
+daoyu_precursor_starting_planet_trigger = {
+	daoyu_$PRECURSOR$_planet_trigger = yes
+	solar_system = {
+		nor = { exists = space_owner has_star_flag = daoyu_precursor_system }
+		has_star_flag = daoyu_$MUN$_jumps
+		has_star_flag = $PRECURSOR$
+		not = { has_star_flag = sol_system }
+	}
+}
+daoyu_precursor_starting_trigger = {
+	any_galaxy_planet = {
+		or = {
+			daoyu_precursor_starting_planet_trigger = { MUN = 1 PRECURSOR = $PRECURSOR$ }
+			daoyu_precursor_starting_planet_trigger = { MUN = 2 PRECURSOR = $PRECURSOR$ }
+			daoyu_precursor_starting_planet_trigger = { MUN = 3 PRECURSOR = $PRECURSOR$ }
+			daoyu_precursor_starting_planet_trigger = { MUN = 4 PRECURSOR = $PRECURSOR$ }
+			daoyu_precursor_starting_planet_trigger = { MUN = 5 PRECURSOR = $PRECURSOR$ }
+			daoyu_precursor_starting_planet_trigger = { MUN = 6 PRECURSOR = $PRECURSOR$ }
+			daoyu_precursor_starting_planet_trigger = { MUN = 7 PRECURSOR = $PRECURSOR$ }
+			daoyu_precursor_starting_planet_trigger = { MUN = 8 PRECURSOR = $PRECURSOR$ }
+			daoyu_precursor_starting_planet_trigger = { MUN = 9 PRECURSOR = $PRECURSOR$ }
+		}
+	}
+}
+#先驱者——沃陶姆
+daoyu_precursor_1_planet_trigger = { uninhabitable_regular_planet = yes has_anomaly = no is_star = no is_astral_scar = no nor = { exists = archaeological_site has_planet_flag = suppress_archaeological_sites } }
+#先驱者——尤特
+daoyu_precursor_2_planet_trigger = { uninhabitable_regular_planet = yes has_anomaly = no is_star = no is_astral_scar = no nor = { exists = archaeological_site has_planet_flag = suppress_archaeological_sites } }
+#先驱者——第一联盟
+daoyu_precursor_3_planet_trigger = { uninhabitable_regular_planet = yes has_anomaly = no is_star = no is_astral_scar = no nor = { exists = archaeological_site has_planet_flag = suppress_archaeological_sites } }
+#先驱者——伊拉斯人
+daoyu_precursor_4_planet_trigger = { uninhabitable_regular_planet = yes has_anomaly = no is_star = no is_astral_scar = no nor = { exists = archaeological_site has_planet_flag = suppress_archaeological_sites } }
+#先驱者——赛博勒克斯
+daoyu_precursor_5_planet_trigger = { uninhabitable_regular_planet = yes has_anomaly = no is_star = no is_astral_scar = no nor = { exists = archaeological_site has_planet_flag = suppress_archaeological_sites } }
+#先驱者——巴奥
+daoyu_precursor_baol_1_planet_trigger = { nor = { is_planet_class = pc_gas_giant is_planet_class = pc_molten } has_anomaly = no is_star = no is_astral_scar = no nor = { exists = archaeological_site has_planet_flag = suppress_archaeological_sites } }
+#先驱者——泽珞族
+daoyu_precursor_zroni_1_planet_trigger = { habitable_planet = yes has_anomaly = no is_star = no nor = { exists = archaeological_site has_planet_flag = suppress_archaeological_sites } }
+#先驱者——因内特贸易体
+daoyu_precursor_inetian_planet_trigger = { or = { is_planet_class = pc_barren is_planet_class = pc_barren_cold } has_anomaly = no nor = { has_planet_flag = precursor_world exists = archaeological_site } or = { is_planet_class = pc_barren is_planet_class = pc_barren_cold } }
+#先驱者——阿达卡利亚
+daoyu_precursor_adakkaria_planet_trigger = { nor = { can_have_habitable_deposits = yes is_planet_class = pc_gas_giant } has_anomaly = no is_star = no nor = { has_planet_flag = precursor_world exists = archaeological_site } }
+#帝国修正
+daoyu_has_country_modifiers = {
+	or = {
+		has_modifier = daoyu_num_tech_add_modifier
+		has_modifier = daoyu_research_speed_modifier
+		has_modifier = daoyu_building_build_speed_modifier
+		has_modifier = daoyu_ship_build_speed_modifier
+		has_modifier = daoyu_environment_tolerance_modifier
+		has_modifier = daoyu_archaeological_site_clues_modifier
+		has_modifier = daoyu_upkeep_mult_modifier
+		has_modifier = daoyu_empire_size_modifier
+		has_modifier = daoyu_country_resource_max_add_modifier
+		has_modifier = daoyu_planet_modifier
+		has_modifier = daoyu_military_experience_modifier_1
+		has_modifier = daoyu_military_experience_modifier_2
+		has_modifier = daoyu_military_experience_modifier_3
+	}
+}
+daoyu_single_tech = {
+	or = {
+		and = { has_global_flag = SHOW_MORE can_research_technology = $TECH$ nor = { has_technology = $TECH$ has_tech_option = $TECH$ } }
+		and = { not = { has_global_flag = SHOW_MORE } has_tech_option = $TECH$ }
+	}
+}
+daoyu_single_repe = {
+	or = {
+		and = { has_global_flag = SHOW_MORE can_research_technology = $TECH$ nor = { has_tech_option = $TECH$ } }
+		and = { not = { has_global_flag = SHOW_MORE } has_tech_option = $TECH$ }
+	}
+}
+#循环科技
+daoyu_show_daoyu_repeatable_tech_trigger = {
+	or = {
+		daoyu_single_repe = { TECH = tech_repeatable_reduced_building_cost }
+		daoyu_single_repe = { TECH = tech_repeatable_improved_shield_output }
+		daoyu_single_repe = { TECH = tech_repeatable_improved_tile_energy_output }
+		daoyu_single_repe = { TECH = tech_repeatable_weapon_type_energy_damage }
+		daoyu_single_repe = { TECH = tech_repeatable_weapon_type_energy_fire_rate }
+		daoyu_single_repe = { TECH = tech_repeatable_improved_core_system_cap }
+		daoyu_single_repe = { TECH = tech_repeatable_improved_starbase_capacity }
+		daoyu_single_repe = { TECH = tech_repeatable_improved_leader_life_span }
+		daoyu_single_repe = { TECH = tech_repeatable_improved_tile_food_output }
+		daoyu_single_repe = { TECH = tech_repeatable_command_limit }
+		daoyu_single_repe = { TECH = tech_repeatable_improved_army_damage }
+		daoyu_single_repe = { TECH = tech_repeatable_improved_army_health }
+		daoyu_single_repe = { TECH = tech_repeatable_naval_cap }
+		daoyu_single_repe = { TECH = tech_repeatable_weapon_type_strike_craft_fire_damage }
+		daoyu_single_repe = { TECH = tech_repeatable_weapon_type_strike_craft_fire_rate }
+		daoyu_single_repe = { TECH = tech_repeatable_improved_armor_output }
+		daoyu_single_repe = { TECH = tech_repeatable_weapon_type_explosive_damage }
+		daoyu_single_repe = { TECH = tech_repeatable_weapon_type_explosive_fire_rate }
+		daoyu_single_repe = { TECH = tech_repeatable_weapon_type_kinetic_damage }
+		daoyu_single_repe = { TECH = tech_repeatable_weapon_type_kinetic_fire_rate }
+		daoyu_single_repe = { TECH = tech_repeatable_improved_military_station_damage }
+		daoyu_single_repe = { TECH = tech_repeatable_improved_military_station_health }
+		daoyu_single_repe = { TECH = tech_repeatable_improved_tile_mineral_output }
+		daoyu_single_repe = { TECH = tech_repeatable_reduced_building_time }
+	}
+}
+#计算技术
+daoyu_show_computing_trigger = {
+	or = {
+		daoyu_single_tech = { TECH = tech_administrative_ai }
+		daoyu_single_tech = { TECH = tech_archeology_lab }
+		daoyu_single_tech = { TECH = tech_assisted_detection }
+		daoyu_single_tech = { TECH = tech_atmospheric_orbital_mechanics }
+		daoyu_single_tech = { TECH = tech_automated_exploration }
+		daoyu_single_tech = { TECH = tech_auxiliary_fire_control }
+		daoyu_single_tech = { TECH = tech_basic_science_lab_2 }
+		daoyu_single_tech = { TECH = tech_basic_science_lab_3 }
+		daoyu_single_tech = { TECH = tech_basic_science_lab_3 }
+		daoyu_single_tech = { TECH = tech_bio_pd_tracking_2 }
+		daoyu_single_tech = { TECH = tech_bio_pd_tracking_3 }
+		daoyu_single_tech = { TECH = tech_bioship_sensors_2 }
+		daoyu_single_tech = { TECH = tech_bioship_sensors_3 }
+		daoyu_single_tech = { TECH = tech_bioship_sensors_4 }
+		daoyu_single_tech = { TECH = tech_combat_computers_1 }
+		daoyu_single_tech = { TECH = tech_combat_computers_2 }
+		daoyu_single_tech = { TECH = tech_combat_computers_3 }
+		daoyu_single_tech = { TECH = tech_combat_computers_autonomous }
+		daoyu_single_tech = { TECH = tech_combat_computers_bio_integration }
+		daoyu_single_tech = { TECH = tech_consumer_good_refinement_1 }
+		daoyu_single_tech = { TECH = tech_consumer_good_refinement_2 }
+		daoyu_single_tech = { TECH = tech_cosmogenesis_crisis_1 }
+		daoyu_single_tech = { TECH = tech_cosmogenesis_crisis_2 }
+		daoyu_single_tech = { TECH = tech_cosmogenesis_crisis_3 }
+		daoyu_single_tech = { TECH = tech_cosmogenesis_crisis_4 }
+		daoyu_single_tech = { TECH = tech_cosmogenesis_crisis_5 }
+		daoyu_single_tech = { TECH = tech_cosmogenesis_thesis }
+		daoyu_single_tech = { TECH = tech_cryostasis_1 }
+		daoyu_single_tech = { TECH = tech_cryostasis_1_wilderness }
+		daoyu_single_tech = { TECH = tech_cryostasis_2 }
+		daoyu_single_tech = { TECH = tech_cryostasis_2_wilderness }
+		daoyu_single_tech = { TECH = tech_curator_lab }
+		daoyu_single_tech = { TECH = tech_decryption_1 }
+		daoyu_single_tech = { TECH = tech_decryption_2 }
+		daoyu_single_tech = { TECH = tech_decryption_3 }
+		daoyu_single_tech = { TECH = tech_detection_array }
+		daoyu_single_tech = { TECH = tech_dyson_swarm }
+		daoyu_single_tech = { TECH = tech_encryption_1 }
+		daoyu_single_tech = { TECH = tech_encryption_2 }
+		daoyu_single_tech = { TECH = tech_encryption_3 }
+		daoyu_single_tech = { TECH = tech_enigmatic_decoder }
+		daoyu_single_tech = { TECH = tech_enigmatic_encoder }
+		daoyu_single_tech = { TECH = tech_fe_lab_1 }
+		daoyu_single_tech = { TECH = tech_fe_lab_2 }
+		daoyu_single_tech = { TECH = tech_global_research_initiative }
+		daoyu_single_tech = { TECH = tech_lathe_overclocker }
+		daoyu_single_tech = { TECH = tech_lathe_resonator }
+		daoyu_single_tech = { TECH = tech_lathe_validator }
+		daoyu_single_tech = { TECH = tech_neuro_quantum_links }
+		daoyu_single_tech = { TECH = tech_new_numbers }
+		daoyu_single_tech = { TECH = tech_pd_tracking_2 }
+		daoyu_single_tech = { TECH = tech_pd_tracking_3 }
+		daoyu_single_tech = { TECH = tech_positronic_implants }
+		daoyu_single_tech = { TECH = tech_sapient_ai }
+		daoyu_single_tech = { TECH = tech_science_nexus }
+		daoyu_single_tech = { TECH = tech_self_aware_logic }
+		daoyu_single_tech = { TECH = tech_sensors_2 }
+		daoyu_single_tech = { TECH = tech_sensors_3 }
+		daoyu_single_tech = { TECH = tech_sensors_4 }
+		daoyu_single_tech = { TECH = tech_sensors_bio_integration }
+		daoyu_single_tech = { TECH = tech_sentry_array }
+		daoyu_single_tech = { TECH = tech_space_science_1 }
+		daoyu_single_tech = { TECH = tech_space_science_2 }
+		daoyu_single_tech = { TECH = tech_space_science_3 }
+		daoyu_single_tech = { TECH = tech_space_science_4 }
+		daoyu_single_tech = { TECH = tech_space_science_5 }
+		daoyu_single_tech = { TECH = tech_storm_prediction_1 }
+		daoyu_single_tech = { TECH = tech_storm_prediction_2 }
+		daoyu_single_tech = { TECH = tech_synchronized_defences }
+		daoyu_single_tech = { TECH = tech_synth_queen_knowledge }
+		daoyu_single_tech = { TECH = tech_trinary_computing }
+		daoyu_single_tech = { TECH = tech_wilderness_science_lab_2 }
+		daoyu_single_tech = { TECH = tech_wilderness_science_lab_3 }
+		daoyu_single_tech = { TECH = tech_wilderness_science_lab_3 }
+	}
+}
+#力场操控
+daoyu_show_field_manipulation_trigger = {
+	or = {
+		daoyu_single_tech = { TECH = tech_advanced_storm_manipulation }
+		daoyu_single_tech = { TECH = tech_akx_worm_1 }
+		daoyu_single_tech = { TECH = tech_bio_dark_matter_deflector }
+		daoyu_single_tech = { TECH = tech_bio_shields_2 }
+		daoyu_single_tech = { TECH = tech_bio_shields_3 }
+		daoyu_single_tech = { TECH = tech_bio_shields_4 }
+		daoyu_single_tech = { TECH = tech_bio_shields_5 }
+		daoyu_single_tech = { TECH = tech_cloaking_1 }
+		daoyu_single_tech = { TECH = tech_cloaking_2 }
+		daoyu_single_tech = { TECH = tech_cloaking_3 }
+		daoyu_single_tech = { TECH = tech_cloaking_dark_matter }
+		daoyu_single_tech = { TECH = tech_containment_vessel }
+		daoyu_single_tech = { TECH = tech_dark_matter_deflector }
+		daoyu_single_tech = { TECH = tech_dyson_sphere }
+		daoyu_single_tech = { TECH = tech_experimental_subspace_navigation }
+		daoyu_single_tech = { TECH = tech_fe_silo_1 }
+		daoyu_single_tech = { TECH = tech_fe_silo_2 }
+		daoyu_single_tech = { TECH = tech_gravity_snare_capacity_1 }
+		daoyu_single_tech = { TECH = tech_gravity_snare_capacity_2 }
+		daoyu_single_tech = { TECH = tech_gravity_snare_capacity_3 }
+		daoyu_single_tech = { TECH = tech_gravity_wells }
+		daoyu_single_tech = { TECH = tech_matter_decompressor }
+		daoyu_single_tech = { TECH = tech_mine_dark_matter }
+		daoyu_single_tech = { TECH = tech_mine_dark_matter }
+		daoyu_single_tech = { TECH = tech_physics_1 }
+		daoyu_single_tech = { TECH = tech_physics_2 }
+		daoyu_single_tech = { TECH = tech_physics_3 }
+		daoyu_single_tech = { TECH = tech_pk_shielder }
+		daoyu_single_tech = { TECH = tech_planetary_shield_generator }
+		daoyu_single_tech = { TECH = tech_power_hub_1 }
+		daoyu_single_tech = { TECH = tech_power_hub_2 }
+		daoyu_single_tech = { TECH = tech_power_plant_2 }
+		daoyu_single_tech = { TECH = tech_power_plant_3 }
+		daoyu_single_tech = { TECH = tech_power_plant_4 }
+		daoyu_single_tech = { TECH = tech_power_plant_4 }
+		daoyu_single_tech = { TECH = tech_rift_sphere }
+		daoyu_single_tech = { TECH = tech_shield_hardeners_1 }
+		daoyu_single_tech = { TECH = tech_shield_hardeners_2 }
+		daoyu_single_tech = { TECH = tech_shield_rechargers_1 }
+		daoyu_single_tech = { TECH = tech_shields_2 }
+		daoyu_single_tech = { TECH = tech_shields_3 }
+		daoyu_single_tech = { TECH = tech_shields_4 }
+		daoyu_single_tech = { TECH = tech_shields_5 }
+		daoyu_single_tech = { TECH = tech_storm_manipulation }
+		daoyu_single_tech = { TECH = tech_wilderness_power_hub_1 }
+		daoyu_single_tech = { TECH = tech_wilderness_power_hub_2 }
+		daoyu_single_tech = { TECH = tech_wilderness_shield_generator }
+	}
+}
+#粒子物理
+daoyu_show_particles_trigger = {
+	or = {
+		daoyu_single_tech = { TECH = null_void_beam }
+		daoyu_single_tech = { TECH = tech_akx_worm_3 }
+		daoyu_single_tech = { TECH = tech_antimatter_power }
+		daoyu_single_tech = { TECH = tech_arc_emitter_1 }
+		daoyu_single_tech = { TECH = tech_arc_emitter_2 }
+		daoyu_single_tech = { TECH = tech_astral_harvesting }
+		daoyu_single_tech = { TECH = tech_bio_antimatter_power }
+		daoyu_single_tech = { TECH = tech_bio_arc_emitter_1 }
+		daoyu_single_tech = { TECH = tech_bio_arc_emitter_2 }
+		daoyu_single_tech = { TECH = tech_bio_cold_fusion_power }
+		daoyu_single_tech = { TECH = tech_bio_dark_matter_power_core }
+		daoyu_single_tech = { TECH = tech_bio_disruptors_1 }
+		daoyu_single_tech = { TECH = tech_bio_disruptors_2 }
+		daoyu_single_tech = { TECH = tech_bio_disruptors_3 }
+		daoyu_single_tech = { TECH = tech_bio_energy_lance_1 }
+		daoyu_single_tech = { TECH = tech_bio_energy_lance_2 }
+		daoyu_single_tech = { TECH = tech_bio_energy_torpedoes_1 }
+		daoyu_single_tech = { TECH = tech_bio_energy_torpedoes_2 }
+		daoyu_single_tech = { TECH = tech_bio_fusion_power }
+		daoyu_single_tech = { TECH = tech_bio_hyper_drive_2 }
+		daoyu_single_tech = { TECH = tech_bio_hyper_drive_3 }
+		daoyu_single_tech = { TECH = tech_bio_jump_drive_1 }
+		daoyu_single_tech = { TECH = tech_bio_lasers_2 }
+		daoyu_single_tech = { TECH = tech_bio_lasers_3 }
+		daoyu_single_tech = { TECH = tech_bio_lasers_4 }
+		daoyu_single_tech = { TECH = tech_bio_lasers_5 }
+		daoyu_single_tech = { TECH = tech_bio_plasma_1 }
+		daoyu_single_tech = { TECH = tech_bio_plasma_2 }
+		daoyu_single_tech = { TECH = tech_bio_plasma_3 }
+		daoyu_single_tech = { TECH = tech_bio_zero_point_power }
+		daoyu_single_tech = { TECH = tech_cold_fusion_power }
+		daoyu_single_tech = { TECH = tech_dark_matter_detection }
+		daoyu_single_tech = { TECH = tech_dark_matter_power_core }
+		daoyu_single_tech = { TECH = tech_disruptors_1 }
+		daoyu_single_tech = { TECH = tech_disruptors_2 }
+		daoyu_single_tech = { TECH = tech_disruptors_3 }
+		daoyu_single_tech = { TECH = tech_energy_lance_1 }
+		daoyu_single_tech = { TECH = tech_energy_lance_2 }
+		daoyu_single_tech = { TECH = tech_energy_torpedoes_1 }
+		daoyu_single_tech = { TECH = tech_energy_torpedoes_2 }
+		daoyu_single_tech = { TECH = tech_extradimensional_weapon_1 }
+		daoyu_single_tech = { TECH = tech_fe_singularity_1 }
+		daoyu_single_tech = { TECH = tech_fe_singularity_2 }
+		daoyu_single_tech = { TECH = tech_ftl_inhibitor }
+		daoyu_single_tech = { TECH = tech_fusion_power }
+		daoyu_single_tech = { TECH = tech_gateway_activation }
+		daoyu_single_tech = { TECH = tech_gateway_construction }
+		daoyu_single_tech = { TECH = tech_hyper_drive_2 }
+		daoyu_single_tech = { TECH = tech_hyper_drive_3 }
+		daoyu_single_tech = { TECH = tech_hyper_drive_3 }
+		daoyu_single_tech = { TECH = tech_hyper_drive_bio_integration }
+		daoyu_single_tech = { TECH = tech_hyper_relays }
+		daoyu_single_tech = { TECH = tech_jump_drive_1 }
+		daoyu_single_tech = { TECH = tech_lasers_2 }
+		daoyu_single_tech = { TECH = tech_lasers_3 }
+		daoyu_single_tech = { TECH = tech_lasers_4 }
+		daoyu_single_tech = { TECH = tech_lasers_5 }
+		daoyu_single_tech = { TECH = tech_lgate_activation }
+		daoyu_single_tech = { TECH = tech_mine_volatile_motes }
+		daoyu_single_tech = { TECH = tech_mining_bio_laser }
+		daoyu_single_tech = { TECH = tech_mining_drone_weapon_1 }
+		daoyu_single_tech = { TECH = tech_pk_neutron }
+		daoyu_single_tech = { TECH = tech_plasma_1 }
+		daoyu_single_tech = { TECH = tech_plasma_2 }
+		daoyu_single_tech = { TECH = tech_plasma_3 }
+		daoyu_single_tech = { TECH = tech_quantum_catapult }
+		daoyu_single_tech = { TECH = tech_reactor_boosters_2 }
+		daoyu_single_tech = { TECH = tech_reactor_boosters_3 }
+		daoyu_single_tech = { TECH = tech_space_cloud_weapon_1 }
+		daoyu_single_tech = { TECH = tech_unusual_senses }
+		daoyu_single_tech = { TECH = tech_volatile_motes }
+		daoyu_single_tech = { TECH = tech_wilderness_volatile_motes }
+		daoyu_single_tech = { TECH = tech_wormhole_stabilization }
+		daoyu_single_tech = { TECH = tech_zero_point_power }
+	}
+}
+#新世界理论
+daoyu_show_new_worlds_trigger = {
+	or = {
+		daoyu_single_tech = { TECH = tech_alien_topography }
+		daoyu_single_tech = { TECH = tech_climate_restoration }
+		daoyu_single_tech = { TECH = tech_colonial_centralization }
+		daoyu_single_tech = { TECH = tech_colonization_2 }
+		daoyu_single_tech = { TECH = tech_colonization_3 }
+		daoyu_single_tech = { TECH = tech_colonization_4 }
+		daoyu_single_tech = { TECH = tech_colonization_5 }
+		daoyu_single_tech = { TECH = tech_dangerous_wildlife }
+		daoyu_single_tech = { TECH = tech_deep_sinkhole }
+		daoyu_single_tech = { TECH = tech_dense_jungle }
+		daoyu_single_tech = { TECH = tech_ecological_adaptation }
+		daoyu_single_tech = { TECH = tech_galactic_ambitions }
+		daoyu_single_tech = { TECH = tech_manifest_destiny }
+		daoyu_single_tech = { TECH = tech_massive_glacier }
+		daoyu_single_tech = { TECH = tech_mountain_range }
+		daoyu_single_tech = { TECH = tech_noxious_swamp }
+		daoyu_single_tech = { TECH = tech_planetary_infrastructure_1 }
+		daoyu_single_tech = { TECH = tech_planetary_infrastructure_1_wilderness }
+		daoyu_single_tech = { TECH = tech_planetary_infrastructure_2 }
+		daoyu_single_tech = { TECH = tech_planetary_infrastructure_2_wilderness }
+		daoyu_single_tech = { TECH = tech_quicksand_basin }
+		daoyu_single_tech = { TECH = tech_terrestrial_sculpting }
+		daoyu_single_tech = { TECH = tech_terrestrial_sculpting_wilderness }
+		daoyu_single_tech = { TECH = tech_tomb_world_adaption }
+		daoyu_single_tech = { TECH = tech_toxic_kelp }
+		daoyu_single_tech = { TECH = tech_volcano }
+		daoyu_single_tech = { TECH = tech_wilderness_colonial_centralization }
+	}
+}
+#治国术
+daoyu_show_statecraft_trigger = {
+	or = {
+		daoyu_single_tech = { TECH = tech_adaptive_bureaucracy }
+		daoyu_single_tech = { TECH = tech_akx_worm_2 }
+		daoyu_single_tech = { TECH = tech_artificial_moral_codes }
+		daoyu_single_tech = { TECH = tech_ascension_theory }
+		daoyu_single_tech = { TECH = tech_autocurating_vault }
+		daoyu_single_tech = { TECH = tech_autonomous_agents }
+		daoyu_single_tech = { TECH = tech_capital_productivity_1 }
+		daoyu_single_tech = { TECH = tech_capital_productivity_2 }
+		daoyu_single_tech = { TECH = tech_capital_productivity_3 }
+		daoyu_single_tech = { TECH = tech_collective_production_methods }
+		daoyu_single_tech = { TECH = tech_collective_self }
+		daoyu_single_tech = { TECH = tech_colonial_bureaucracy }
+		daoyu_single_tech = { TECH = tech_compact_living }
+		daoyu_single_tech = { TECH = tech_consecration_fields }
+		daoyu_single_tech = { TECH = tech_effective_bureaucracy }
+		daoyu_single_tech = { TECH = tech_embodied_dynamism }
+		daoyu_single_tech = { TECH = tech_executive_retreat }
+		daoyu_single_tech = { TECH = tech_fe_administration_1 }
+		daoyu_single_tech = { TECH = tech_fe_administration_2 }
+		daoyu_single_tech = { TECH = tech_fe_dome_1 }
+		daoyu_single_tech = { TECH = tech_fe_dome_2 }
+		daoyu_single_tech = { TECH = tech_fe_entertainment_1 }
+		daoyu_single_tech = { TECH = tech_fe_entertainment_2 }
+		daoyu_single_tech = { TECH = tech_fe_market_1 }
+		daoyu_single_tech = { TECH = tech_fe_market_2 }
+		daoyu_single_tech = { TECH = tech_fe_security_1 }
+		daoyu_single_tech = { TECH = tech_fe_security_2 }
+		daoyu_single_tech = { TECH = tech_federation_code }
+		daoyu_single_tech = { TECH = tech_galactic_administration }
+		daoyu_single_tech = { TECH = tech_galactic_archivism }
+		daoyu_single_tech = { TECH = tech_galactic_bureaucracy }
+		daoyu_single_tech = { TECH = tech_galactic_markets }
+		daoyu_single_tech = { TECH = tech_global_production_strategy }
+		daoyu_single_tech = { TECH = tech_heritage_site }
+		daoyu_single_tech = { TECH = tech_hive_cluster }
+		daoyu_single_tech = { TECH = tech_hive_confluence }
+		daoyu_single_tech = { TECH = tech_holographic_rituals }
+		daoyu_single_tech = { TECH = tech_housing_agrarian_idyll }
+		daoyu_single_tech = { TECH = tech_hyper_entertainment_forum }
+		daoyu_single_tech = { TECH = tech_hypercomms_forum }
+		daoyu_single_tech = { TECH = tech_interstellar_assembly }
+		daoyu_single_tech = { TECH = tech_interstellar_economics }
+		daoyu_single_tech = { TECH = tech_living_state }
+		daoyu_single_tech = { TECH = tech_mega_art }
+		daoyu_single_tech = { TECH = tech_neural_implants }
+		daoyu_single_tech = { TECH = tech_node_culling_1 }
+		daoyu_single_tech = { TECH = tech_node_culling_1_cloning }
+		daoyu_single_tech = { TECH = tech_node_culling_2 }
+		daoyu_single_tech = { TECH = tech_node_culling_3 }
+		daoyu_single_tech = { TECH = tech_node_reformatting_1 }
+		daoyu_single_tech = { TECH = tech_node_reformatting_2 }
+		daoyu_single_tech = { TECH = tech_node_reformatting_3 }
+		daoyu_single_tech = { TECH = tech_paradise_dome }
+		daoyu_single_tech = { TECH = tech_penal_colonies }
+		daoyu_single_tech = { TECH = tech_planetary_unification }
+		daoyu_single_tech = { TECH = tech_prescient_data_modeling }
+		daoyu_single_tech = { TECH = tech_resort_colonies }
+		daoyu_single_tech = { TECH = tech_resource_processing_algorithms }
+		daoyu_single_tech = { TECH = tech_satisfying_insults }
+		daoyu_single_tech = { TECH = tech_slave_colonies }
+		daoyu_single_tech = { TECH = tech_space_trading }
+		daoyu_single_tech = { TECH = tech_synthetic_thought_patterns }
+		daoyu_single_tech = { TECH = tech_tracking_implants }
+		daoyu_single_tech = { TECH = tech_transcendent_faith }
+		daoyu_single_tech = { TECH = tech_unity_of_purpose }
+		daoyu_single_tech = { TECH = tech_wilderness_cluster }
+		daoyu_single_tech = { TECH = tech_wilderness_confluence }
+		daoyu_single_tech = { TECH = tech_wilderness_galactic_administration }
+		daoyu_single_tech = { TECH = tech_xeno_aesthetics }
+		daoyu_single_tech = { TECH = tech_xeno_diplomacy }
+		daoyu_single_tech = { TECH = tech_xeno_linguistics }
+		daoyu_single_tech = { TECH = tech_xeno_relations }
+		daoyu_single_tech = { TECH = tech_xeno_tourism_agency }
+	}
+}
+#生物学
+daoyu_show_biology_trigger = {
+	or = {
+		daoyu_single_tech = { TECH = tech_alien_cloning }
+		daoyu_single_tech = { TECH = tech_alien_cloning_beastmasters }
+		daoyu_single_tech = { TECH = tech_alien_life_studies }
+		daoyu_single_tech = { TECH = tech_amoeba_strike_craft_1 }
+		daoyu_single_tech = { TECH = tech_bio_reactor }
+		daoyu_single_tech = { TECH = tech_bio_reactor_2 }
+		daoyu_single_tech = { TECH = tech_bio_strike_craft_1 }
+		daoyu_single_tech = { TECH = tech_bio_strike_craft_2 }
+		daoyu_single_tech = { TECH = tech_bio_strike_craft_3 }
+		daoyu_single_tech = { TECH = tech_bio_strike_craft_skrand }
+		daoyu_single_tech = { TECH = tech_biogenesis_colossus }
+		daoyu_single_tech = { TECH = tech_biogenesis_juggernaut }
+		daoyu_single_tech = { TECH = tech_biogenesis_titans }
+		daoyu_single_tech = { TECH = tech_biomechanics }
+		daoyu_single_tech = { TECH = tech_capacity_boosters }
+		daoyu_single_tech = { TECH = tech_cloning }
+		daoyu_single_tech = { TECH = tech_controlled_mutations }
+		daoyu_single_tech = { TECH = tech_controlled_mutations }
+		daoyu_single_tech = { TECH = tech_controlled_mutations_2 }
+		daoyu_single_tech = { TECH = tech_controlled_mutations_2 }
+		daoyu_single_tech = { TECH = tech_eco_simulation }
+		daoyu_single_tech = { TECH = tech_enhanced_cryosleep_sedatives }
+		daoyu_single_tech = { TECH = tech_epigenetic_triggers }
+		daoyu_single_tech = { TECH = tech_fe_clinic_1 }
+		daoyu_single_tech = { TECH = tech_fe_clinic_2 }
+		daoyu_single_tech = { TECH = tech_fe_nourishment_1 }
+		daoyu_single_tech = { TECH = tech_fe_nourishment_2 }
+		daoyu_single_tech = { TECH = tech_food_processing_1 }
+		daoyu_single_tech = { TECH = tech_food_processing_2 }
+		daoyu_single_tech = { TECH = tech_frontier_health }
+		daoyu_single_tech = { TECH = tech_frontier_hospital }
+		daoyu_single_tech = { TECH = tech_gargantuan_evolution }
+		daoyu_single_tech = { TECH = tech_gene_banks }
+		daoyu_single_tech = { TECH = tech_gene_crops }
+		daoyu_single_tech = { TECH = tech_gene_expressions }
+		daoyu_single_tech = { TECH = tech_gene_seed_purification }
+		daoyu_single_tech = { TECH = tech_gene_tailoring }
+		daoyu_single_tech = { TECH = tech_gene_tailoring_overtuned }
+		daoyu_single_tech = { TECH = tech_genome_mapping }
+		daoyu_single_tech = { TECH = tech_genome_mapping_wilderness }
+		daoyu_single_tech = { TECH = tech_glandular_acclimation }
+		daoyu_single_tech = { TECH = tech_growth_chamber_1 }
+		daoyu_single_tech = { TECH = tech_growth_chamber_2 }
+		daoyu_single_tech = { TECH = tech_harbinger_build_speed }
+		daoyu_single_tech = { TECH = tech_harbinger_growth_1 }
+		daoyu_single_tech = { TECH = tech_harbinger_growth_2 }
+		daoyu_single_tech = { TECH = tech_harbingers }
+		daoyu_single_tech = { TECH = tech_improved_incubators }
+		daoyu_single_tech = { TECH = tech_improved_incubators_beastmasters }
+		daoyu_single_tech = { TECH = tech_lathe_life_support }
+		daoyu_single_tech = { TECH = tech_lathe_preserver }
+		daoyu_single_tech = { TECH = tech_mauler_build_speed }
+		daoyu_single_tech = { TECH = tech_mauler_growth_1 }
+		daoyu_single_tech = { TECH = tech_mauler_growth_2 }
+		daoyu_single_tech = { TECH = tech_metabolic_gases }
+		daoyu_single_tech = { TECH = tech_metabolic_gases_beastmasters }
+		daoyu_single_tech = { TECH = tech_morphogenetic_field_mastery }
+		daoyu_single_tech = { TECH = tech_nano_vitality_crops }
+		daoyu_single_tech = { TECH = tech_neuroregeneration }
+		daoyu_single_tech = { TECH = tech_nutrient_replication }
+		daoyu_single_tech = { TECH = tech_regenerative_hull_tissue }
+		daoyu_single_tech = { TECH = tech_scourge_missile_1 }
+		daoyu_single_tech = { TECH = tech_selected_lineages }
+		daoyu_single_tech = { TECH = tech_society_1 }
+		daoyu_single_tech = { TECH = tech_society_2 }
+		daoyu_single_tech = { TECH = tech_society_3 }
+		daoyu_single_tech = { TECH = tech_space_whale_weapon_1 }
+		daoyu_single_tech = { TECH = tech_stinger_build_speed }
+		daoyu_single_tech = { TECH = tech_stinger_growth_1 }
+		daoyu_single_tech = { TECH = tech_stinger_growth_2 }
+		daoyu_single_tech = { TECH = tech_stingers }
+		daoyu_single_tech = { TECH = tech_subdermal_stimulation }
+		daoyu_single_tech = { TECH = tech_swarm_strike_craft_1 }
+		daoyu_single_tech = { TECH = tech_unique_mutation_crystalline_entity }
+		daoyu_single_tech = { TECH = tech_unique_mutation_cutholoid }
+		daoyu_single_tech = { TECH = tech_unique_mutation_restorative_enzymes }
+		daoyu_single_tech = { TECH = tech_unique_mutation_space_amoeba }
+		daoyu_single_tech = { TECH = tech_unique_mutation_starborne_		}
+		daoyu_single_tech = { TECH = tech_unique_mutation_tiyanki }
+		daoyu_single_tech = { TECH = tech_unique_mutation_voidworm }
+		daoyu_single_tech = { TECH = tech_universal_marcophage }
+		daoyu_single_tech = { TECH = tech_vitality_boosters }
+		daoyu_single_tech = { TECH = tech_voidworm_immunity }
+		daoyu_single_tech = { TECH = tech_voidworm_immunity }
+		daoyu_single_tech = { TECH = tech_weaver_bio_anti_evasion_2 }
+		daoyu_single_tech = { TECH = tech_weaver_bio_anti_evasion_3 }
+		daoyu_single_tech = { TECH = tech_weaver_bio_anti_evasion_4 }
+		daoyu_single_tech = { TECH = tech_weaver_bio_anti_evasion_5 }
+		daoyu_single_tech = { TECH = tech_weaver_bio_anti_evasion_6 }
+		daoyu_single_tech = { TECH = tech_weaver_bio_anti_fire_rate_1 }
+		daoyu_single_tech = { TECH = tech_weaver_bio_anti_fire_rate_2 }
+		daoyu_single_tech = { TECH = tech_weaver_bio_anti_fire_rate_3 }
+		daoyu_single_tech = { TECH = tech_weaver_bio_anti_fire_rate_4 }
+		daoyu_single_tech = { TECH = tech_weaver_bio_anti_fire_rate_5 }
+		daoyu_single_tech = { TECH = tech_weaver_bio_anti_fire_rate_6 }
+		daoyu_single_tech = { TECH = tech_weaver_bio_confuser_1 }
+		daoyu_single_tech = { TECH = tech_weaver_bio_confuser_2 }
+		daoyu_single_tech = { TECH = tech_weaver_bio_confuser_3 }
+		daoyu_single_tech = { TECH = tech_weaver_bio_confuser_4 }
+		daoyu_single_tech = { TECH = tech_weaver_bio_confuser_5 }
+		daoyu_single_tech = { TECH = tech_weaver_bio_confuser_6 }
+		daoyu_single_tech = { TECH = tech_weaver_bio_evasion_2 }
+		daoyu_single_tech = { TECH = tech_weaver_bio_evasion_3 }
+		daoyu_single_tech = { TECH = tech_weaver_bio_evasion_4 }
+		daoyu_single_tech = { TECH = tech_weaver_bio_evasion_5 }
+		daoyu_single_tech = { TECH = tech_weaver_bio_evasion_6 }
+		daoyu_single_tech = { TECH = tech_weaver_bio_fire_rate_1 }
+		daoyu_single_tech = { TECH = tech_weaver_bio_fire_rate_2 }
+		daoyu_single_tech = { TECH = tech_weaver_bio_fire_rate_3 }
+		daoyu_single_tech = { TECH = tech_weaver_bio_fire_rate_4 }
+		daoyu_single_tech = { TECH = tech_weaver_bio_fire_rate_5 }
+		daoyu_single_tech = { TECH = tech_weaver_bio_fire_rate_6 }
+		daoyu_single_tech = { TECH = tech_weaver_bio_healing_1 }
+		daoyu_single_tech = { TECH = tech_weaver_bio_healing_2 }
+		daoyu_single_tech = { TECH = tech_weaver_bio_healing_3 }
+		daoyu_single_tech = { TECH = tech_weaver_bio_healing_4 }
+		daoyu_single_tech = { TECH = tech_weaver_bio_healing_5 }
+		daoyu_single_tech = { TECH = tech_weaver_bio_healing_6 }
+		daoyu_single_tech = { TECH = tech_weaver_build_speed }
+		daoyu_single_tech = { TECH = tech_weaver_growth_1 }
+		daoyu_single_tech = { TECH = tech_weaver_growth_2 }
+		daoyu_single_tech = { TECH = tech_wilderness_food_processing_1 }
+		daoyu_single_tech = { TECH = tech_wilderness_food_processing_2 }
+	}
+}
+#军事理论
+daoyu_show_military_theory_trigger = {
+	or = {
+		daoyu_single_tech = { TECH = tech_adaptive_combat_algorithms }
+		daoyu_single_tech = { TECH = tech_centralized_command }
+		daoyu_single_tech = { TECH = tech_combat_training }
+		daoyu_single_tech = { TECH = tech_command_matrix }
+		daoyu_single_tech = { TECH = tech_deep_space_citadel }
+		daoyu_single_tech = { TECH = tech_doctrine_fleet_size_1 }
+		daoyu_single_tech = { TECH = tech_doctrine_fleet_size_2 }
+		daoyu_single_tech = { TECH = tech_doctrine_fleet_size_3 }
+		daoyu_single_tech = { TECH = tech_doctrine_fleet_size_4 }
+		daoyu_single_tech = { TECH = tech_doctrine_fleet_size_5 }
+		daoyu_single_tech = { TECH = tech_doctrine_navy_size_1 }
+		daoyu_single_tech = { TECH = tech_doctrine_navy_size_2 }
+		daoyu_single_tech = { TECH = tech_doctrine_navy_size_3 }
+		daoyu_single_tech = { TECH = tech_doctrine_navy_size_4 }
+		daoyu_single_tech = { TECH = tech_existential_campaigns }
+		daoyu_single_tech = { TECH = tech_fe_fortress_1 }
+		daoyu_single_tech = { TECH = tech_fe_fortress_2 }
+		daoyu_single_tech = { TECH = tech_galactic_campaigns }
+		daoyu_single_tech = { TECH = tech_global_defense_grid }
+		daoyu_single_tech = { TECH = tech_ground_defense_planning }
+		daoyu_single_tech = { TECH = tech_ground_defense_planning }
+		daoyu_single_tech = { TECH = tech_interstellar_campaigns }
+		daoyu_single_tech = { TECH = tech_interstellar_fleet_traditions }
+		daoyu_single_tech = { TECH = tech_lathe_cogitator }
+		daoyu_single_tech = { TECH = tech_mega_shipyard }
+		daoyu_single_tech = { TECH = tech_predatory_tactics }
+		daoyu_single_tech = { TECH = tech_refit_standards }
+		daoyu_single_tech = { TECH = tech_refit_standards_beastmasters }
+		daoyu_single_tech = { TECH = tech_strategic_coordination }
+		daoyu_single_tech = { TECH = tech_wilderness_defense_grid }
+	}
+}
+#灵能理论
+daoyu_show_psionics_trigger = {
+	or = {
+		daoyu_single_tech = { TECH = tech_bio_psi_jump_drive_1 }
+		daoyu_single_tech = { TECH = tech_bio_psionic_barrier }
+		daoyu_single_tech = { TECH = tech_bio_psionic_shield }
+		daoyu_single_tech = { TECH = tech_cloaking_psi }
+		daoyu_single_tech = { TECH = tech_covenant_composer }
+		daoyu_single_tech = { TECH = tech_covenant_eater }
+		daoyu_single_tech = { TECH = tech_covenant_instrument }
+		daoyu_single_tech = { TECH = tech_covenant_whisperers }
+		daoyu_single_tech = { TECH = tech_mine_zro }
+		daoyu_single_tech = { TECH = tech_pk_godray }
+		daoyu_single_tech = { TECH = tech_precognition_interface }
+		daoyu_single_tech = { TECH = tech_psi_jump_drive_1 }
+		daoyu_single_tech = { TECH = tech_psionic_barrier }
+		daoyu_single_tech = { TECH = tech_psionic_shield }
+		daoyu_single_tech = { TECH = tech_psionic_theory }
+		daoyu_single_tech = { TECH = tech_telepathy }
+		daoyu_single_tech = { TECH = tech_thought_enforcement }
+	}
+}
+#远古学
+daoyu_show_archaeostudies_trigger = {
+	or = {
+		daoyu_single_tech = { TECH = tech_arcane_deciphering }
+		daoyu_single_tech = { TECH = tech_archaeo_bio_lasers }
+		daoyu_single_tech = { TECH = tech_archaeo_detection_scrambler }
+		daoyu_single_tech = { TECH = tech_archaeo_lasers }
+		daoyu_single_tech = { TECH = tech_archaeo_mass_accelerator }
+		daoyu_single_tech = { TECH = tech_archaeo_mass_drivers }
+		daoyu_single_tech = { TECH = tech_archaeo_missiles }
+		daoyu_single_tech = { TECH = tech_archaeo_overcharger }
+		daoyu_single_tech = { TECH = tech_archaeo_pk_devolving_beam }
+		daoyu_single_tech = { TECH = tech_archaeo_point_defence }
+		daoyu_single_tech = { TECH = tech_archaeo_rampart }
+		daoyu_single_tech = { TECH = tech_archaeo_refinery }
+		daoyu_single_tech = { TECH = tech_archaeo_strike_crafts }
+		daoyu_single_tech = { TECH = tech_archaeo_titan_beam }
+		daoyu_single_tech = { TECH = tech_archaeoarmor }
+		daoyu_single_tech = { TECH = tech_archaeoshield }
+		daoyu_single_tech = { TECH = tech_archaeostudies }
+		daoyu_single_tech = { TECH = tech_archaeostudies_wilderness }
+		daoyu_single_tech = { TECH = tech_archeology_lab_ancrel }
+		daoyu_single_tech = { TECH = tech_bio_archaeo_mass_accelerator }
+		daoyu_single_tech = { TECH = tech_bio_archaeo_mass_drivers }
+		daoyu_single_tech = { TECH = tech_bio_archaeo_point_defence }
+		daoyu_single_tech = { TECH = tech_bio_archaeo_strike_crafts }
+		daoyu_single_tech = { TECH = tech_bio_archaeoarmor }
+		daoyu_single_tech = { TECH = tech_bio_archaeoshield }
+		daoyu_single_tech = { TECH = tech_secrets_baol }
+		daoyu_single_tech = { TECH = tech_secrets_cybrex }
+		daoyu_single_tech = { TECH = tech_secrets_irassian }
+		daoyu_single_tech = { TECH = tech_secrets_league }
+		daoyu_single_tech = { TECH = tech_secrets_vultaum }
+		daoyu_single_tech = { TECH = tech_secrets_yuht }
+		daoyu_single_tech = { TECH = tech_secrets_zroni }
+	}
+}
+#材料科学
+daoyu_show_materials_trigger = {
+	or = {
+		daoyu_single_tech = { TECH = tech_advanced_metallurgy_1 }
+		daoyu_single_tech = { TECH = tech_advanced_metallurgy_2 }
+		daoyu_single_tech = { TECH = tech_alloys_1 }
+		daoyu_single_tech = { TECH = tech_alloys_2 }
+		daoyu_single_tech = { TECH = tech_armor_hardeners_1 }
+		daoyu_single_tech = { TECH = tech_armor_hardeners_2 }
+		daoyu_single_tech = { TECH = tech_asteroidal_carapace }
+		daoyu_single_tech = { TECH = tech_bio_dragon_armor }
+		daoyu_single_tech = { TECH = tech_bio_ship_armor_2 }
+		daoyu_single_tech = { TECH = tech_bio_ship_armor_3 }
+		daoyu_single_tech = { TECH = tech_bio_ship_armor_4 }
+		daoyu_single_tech = { TECH = tech_bio_ship_armor_5 }
+		daoyu_single_tech = { TECH = tech_cosmogenesis_world }
+		daoyu_single_tech = { TECH = tech_crystal_armor_1 }
+		daoyu_single_tech = { TECH = tech_crystal_armor_2 }
+		daoyu_single_tech = { TECH = tech_dragon_armor }
+		daoyu_single_tech = { TECH = tech_engineering_1 }
+		daoyu_single_tech = { TECH = tech_engineering_2 }
+		daoyu_single_tech = { TECH = tech_engineering_3 }
+		daoyu_single_tech = { TECH = tech_exotic_gases }
+		daoyu_single_tech = { TECH = tech_fe_fabricator_1 }
+		daoyu_single_tech = { TECH = tech_fe_fabricator_2 }
+		daoyu_single_tech = { TECH = tech_fe_mine_1 }
+		daoyu_single_tech = { TECH = tech_fe_mine_2 }
+		daoyu_single_tech = { TECH = tech_luxuries_1 }
+		daoyu_single_tech = { TECH = tech_luxuries_2 }
+		daoyu_single_tech = { TECH = tech_mandibles_2 }
+		daoyu_single_tech = { TECH = tech_mandibles_3 }
+		daoyu_single_tech = { TECH = tech_mine_betharian }
+		daoyu_single_tech = { TECH = tech_mine_exotic_gases }
+		daoyu_single_tech = { TECH = tech_mine_living_metal }
+		daoyu_single_tech = { TECH = tech_mine_rare_crystals }
+		daoyu_single_tech = { TECH = tech_nanite_repair_system_synth_queen }
+		daoyu_single_tech = { TECH = tech_nanite_transmutation }
+		daoyu_single_tech = { TECH = tech_orbital_arc_furnace }
+		daoyu_single_tech = { TECH = tech_rare_crystals }
+		daoyu_single_tech = { TECH = tech_ship_armor_2 }
+		daoyu_single_tech = { TECH = tech_ship_armor_3 }
+		daoyu_single_tech = { TECH = tech_ship_armor_4 }
+		daoyu_single_tech = { TECH = tech_ship_armor_5 }
+		daoyu_single_tech = { TECH = tech_ship_hull_storm_breaker_1 }
+		daoyu_single_tech = { TECH = tech_ship_hull_storm_breaker_2 }
+		daoyu_single_tech = { TECH = tech_supreme_alloy }
+		daoyu_single_tech = { TECH = tech_wilderness_alloys_1 }
+		daoyu_single_tech = { TECH = tech_wilderness_alloys_2 }
+		daoyu_single_tech = { TECH = tech_wilderness_exotic_gases }
+		daoyu_single_tech = { TECH = tech_wilderness_rare_crystals }
+	}
+}
+#推进力学
+daoyu_show_propulsion_trigger = {
+	or = {
+		daoyu_single_tech = { TECH = tech_afterburners_1 }
+		daoyu_single_tech = { TECH = tech_afterburners_2 }
+		daoyu_single_tech = { TECH = tech_autocannons_1 }
+		daoyu_single_tech = { TECH = tech_autocannons_2 }
+		daoyu_single_tech = { TECH = tech_autocannons_3 }
+		daoyu_single_tech = { TECH = tech_bio_autocannons_1 }
+		daoyu_single_tech = { TECH = tech_bio_autocannons_2 }
+		daoyu_single_tech = { TECH = tech_bio_autocannons_3 }
+		daoyu_single_tech = { TECH = tech_bio_flak_batteries_2 }
+		daoyu_single_tech = { TECH = tech_bio_flak_batteries_3 }
+		daoyu_single_tech = { TECH = tech_bio_kinetic_artillery_1 }
+		daoyu_single_tech = { TECH = tech_bio_kinetic_artillery_2 }
+		daoyu_single_tech = { TECH = tech_bio_mass_accelerator_1 }
+		daoyu_single_tech = { TECH = tech_bio_mass_accelerator_2 }
+		daoyu_single_tech = { TECH = tech_bio_mass_drivers_2 }
+		daoyu_single_tech = { TECH = tech_bio_mass_drivers_3 }
+		daoyu_single_tech = { TECH = tech_bio_mass_drivers_4 }
+		daoyu_single_tech = { TECH = tech_bio_mass_drivers_5 }
+		daoyu_single_tech = { TECH = tech_bio_nanite_autocannon }
+		daoyu_single_tech = { TECH = tech_bio_nanite_flak_batteries }
+		daoyu_single_tech = { TECH = tech_bio_swarmer_missiles_1 }
+		daoyu_single_tech = { TECH = tech_bio_swarmer_missiles_2 }
+		daoyu_single_tech = { TECH = tech_bioship_thrusters_2 }
+		daoyu_single_tech = { TECH = tech_bioship_thrusters_3 }
+		daoyu_single_tech = { TECH = tech_bioship_thrusters_4 }
+		daoyu_single_tech = { TECH = tech_bioship_thrusters_5 }
+		daoyu_single_tech = { TECH = tech_boarding_cables }
+		daoyu_single_tech = { TECH = tech_dark_matter_		}
+		daoyu_single_tech = { TECH = tech_flak_batteries_2 }
+		daoyu_single_tech = { TECH = tech_flak_batteries_3 }
+		daoyu_single_tech = { TECH = tech_kinetic_artillery_1 }
+		daoyu_single_tech = { TECH = tech_kinetic_artillery_2 }
+		daoyu_single_tech = { TECH = tech_mass_accelerator_1 }
+		daoyu_single_tech = { TECH = tech_mass_accelerator_2 }
+		daoyu_single_tech = { TECH = tech_mass_drivers_2 }
+		daoyu_single_tech = { TECH = tech_mass_drivers_3 }
+		daoyu_single_tech = { TECH = tech_mass_drivers_4 }
+		daoyu_single_tech = { TECH = tech_mass_drivers_5 }
+		daoyu_single_tech = { TECH = tech_missiles_2 }
+		daoyu_single_tech = { TECH = tech_missiles_3 }
+		daoyu_single_tech = { TECH = tech_missiles_4 }
+		daoyu_single_tech = { TECH = tech_missiles_5 }
+		daoyu_single_tech = { TECH = tech_nanite_autocannon }
+		daoyu_single_tech = { TECH = tech_nanite_flak_batteries }
+		daoyu_single_tech = { TECH = tech_orbital_trash_dispersal }
+		daoyu_single_tech = { TECH = tech_swarmer_missiles_1 }
+		daoyu_single_tech = { TECH = tech_swarmer_missiles_2 }
+		daoyu_single_tech = { TECH = tech_thrusters_2 }
+		daoyu_single_tech = { TECH = tech_thrusters_3 }
+		daoyu_single_tech = { TECH = tech_thrusters_4 }
+		daoyu_single_tech = { TECH = tech_thrusters_bio_integration }
+		daoyu_single_tech = { TECH = tech_torpedoes_1 }
+		daoyu_single_tech = { TECH = tech_torpedoes_2 }
+		daoyu_single_tech = { TECH = tech_torpedoes_3 }
+	}
+}
+#宇航技术
+daoyu_show_voidcraft_trigger = {
+	or = {
+		daoyu_single_tech = { TECH = tech_battleship_build_speed }
+		daoyu_single_tech = { TECH = tech_battleship_hull_1 }
+		daoyu_single_tech = { TECH = tech_battleship_hull_2 }
+		daoyu_single_tech = { TECH = tech_battleships }
+		daoyu_single_tech = { TECH = tech_btc_1 }
+		daoyu_single_tech = { TECH = tech_colossus }
+		daoyu_single_tech = { TECH = tech_corvette_build_speed }
+		daoyu_single_tech = { TECH = tech_corvette_hull_1 }
+		daoyu_single_tech = { TECH = tech_corvette_hull_2 }
+		daoyu_single_tech = { TECH = tech_cosmogenesis_FE_titan }
+		daoyu_single_tech = { TECH = tech_cosmogenesis_battlecruiser }
+		daoyu_single_tech = { TECH = tech_cosmogenesis_escort }
+		daoyu_single_tech = { TECH = tech_cruiser_build_speed }
+		daoyu_single_tech = { TECH = tech_cruiser_hull_1 }
+		daoyu_single_tech = { TECH = tech_cruiser_hull_2 }
+		daoyu_single_tech = { TECH = tech_cruisers }
+		daoyu_single_tech = { TECH = tech_defense_platform_hull_1 }
+		daoyu_single_tech = { TECH = tech_destroyer_build_speed }
+		daoyu_single_tech = { TECH = tech_destroyer_hull_1 }
+		daoyu_single_tech = { TECH = tech_destroyer_hull_2 }
+		daoyu_single_tech = { TECH = tech_destroyers }
+		daoyu_single_tech = { TECH = tech_extra_large_space_fauna_build_speed }
+		daoyu_single_tech = { TECH = tech_extra_large_space_fauna_hull_1 }
+		daoyu_single_tech = { TECH = tech_extra_large_space_fauna_hull_2 }
+		daoyu_single_tech = { TECH = tech_habitat_1 }
+		daoyu_single_tech = { TECH = tech_habitat_2 }
+		daoyu_single_tech = { TECH = tech_habitat_3 }
+		daoyu_single_tech = { TECH = tech_juggernaut }
+		daoyu_single_tech = { TECH = tech_large_space_fauna_build_speed }
+		daoyu_single_tech = { TECH = tech_large_space_fauna_hull_1 }
+		daoyu_single_tech = { TECH = tech_large_space_fauna_hull_2 }
+		daoyu_single_tech = { TECH = tech_medium_space_fauna_build_speed }
+		daoyu_single_tech = { TECH = tech_medium_space_fauna_hull_1 }
+		daoyu_single_tech = { TECH = tech_medium_space_fauna_hull_2 }
+		daoyu_single_tech = { TECH = tech_mega_engineering }
+		daoyu_single_tech = { TECH = tech_modular_engineering }
+		daoyu_single_tech = { TECH = tech_nanite_repair_system }
+		daoyu_single_tech = { TECH = tech_orbital_ring_tier_1 }
+		daoyu_single_tech = { TECH = tech_ordered_retreat }
+		daoyu_single_tech = { TECH = tech_pk_cracker }
+		daoyu_single_tech = { TECH = tech_pk_nanobots }
+		daoyu_single_tech = { TECH = tech_repeatable_lcluster_clue }
+		daoyu_single_tech = { TECH = tech_ring_world }
+		daoyu_single_tech = { TECH = tech_ship_storm_weapons_1 }
+		daoyu_single_tech = { TECH = tech_ship_storm_weapons_2 }
+		daoyu_single_tech = { TECH = tech_small_space_fauna_build_speed }
+		daoyu_single_tech = { TECH = tech_small_space_fauna_hull_1 }
+		daoyu_single_tech = { TECH = tech_small_space_fauna_hull_2 }
+		daoyu_single_tech = { TECH = tech_space_defense_station_improvement }
+		daoyu_single_tech = { TECH = tech_starbase_3 }
+		daoyu_single_tech = { TECH = tech_starbase_4 }
+		daoyu_single_tech = { TECH = tech_starbase_5 }
+		daoyu_single_tech = { TECH = tech_strike_craft_1 }
+		daoyu_single_tech = { TECH = tech_strike_craft_2 }
+		daoyu_single_tech = { TECH = tech_strike_craft_3 }
+		daoyu_single_tech = { TECH = tech_strike_craft_skrand }
+		daoyu_single_tech = { TECH = tech_temple_of_transportation }
+		daoyu_single_tech = { TECH = tech_titan_hull_1 }
+		daoyu_single_tech = { TECH = tech_titan_hull_2 }
+		daoyu_single_tech = { TECH = tech_titanic_space_fauna_hull_1 }
+		daoyu_single_tech = { TECH = tech_titanic_space_fauna_hull_2 }
+		daoyu_single_tech = { TECH = tech_titans }
+	}
+}
+#工业
+daoyu_show_industry_trigger = {
+	or = {
+		daoyu_single_tech = { TECH = tech_advanced_industrial_storm_protection }
+		daoyu_single_tech = { TECH = tech_assembly_pattern }
+		daoyu_single_tech = { TECH = tech_binary_motivators }
+		daoyu_single_tech = { TECH = tech_construction_templates }
+		daoyu_single_tech = { TECH = tech_droid_workers }
+		daoyu_single_tech = { TECH = tech_fe_affluence_1 }
+		daoyu_single_tech = { TECH = tech_fe_affluence_2 }
+		daoyu_single_tech = { TECH = tech_fe_assembly_1 }
+		daoyu_single_tech = { TECH = tech_fe_assembly_2 }
+		daoyu_single_tech = { TECH = tech_fe_forge_1 }
+		daoyu_single_tech = { TECH = tech_fe_forge_2 }
+		daoyu_single_tech = { TECH = tech_housing_1 }
+		daoyu_single_tech = { TECH = tech_housing_2 }
+		daoyu_single_tech = { TECH = tech_identity_copy }
+		daoyu_single_tech = { TECH = tech_identity_fusion }
+		daoyu_single_tech = { TECH = tech_identity_initialization }
+		daoyu_single_tech = { TECH = tech_industrial_storm_protection }
+		daoyu_single_tech = { TECH = tech_integrated_cybernetics }
+		daoyu_single_tech = { TECH = tech_leviathan_techgenesis }
+		daoyu_single_tech = { TECH = tech_lost_building_methods }
+		daoyu_single_tech = { TECH = tech_mega_assembly }
+		daoyu_single_tech = { TECH = tech_micro_replicators }
+		daoyu_single_tech = { TECH = tech_mineral_purification_1 }
+		daoyu_single_tech = { TECH = tech_mineral_purification_2 }
+		daoyu_single_tech = { TECH = tech_mining_1 }
+		daoyu_single_tech = { TECH = tech_mining_1_wilderness }
+		daoyu_single_tech = { TECH = tech_mining_2 }
+		daoyu_single_tech = { TECH = tech_mining_3 }
+		daoyu_single_tech = { TECH = tech_mining_3 }
+		daoyu_single_tech = { TECH = tech_nanite_assemblers }
+		daoyu_single_tech = { TECH = tech_powered_exoskeletons }
+		daoyu_single_tech = { TECH = tech_powered_exoskeletons_wilderness }
+		daoyu_single_tech = { TECH = tech_robomodding }
+		daoyu_single_tech = { TECH = tech_robomodding_m }
+		daoyu_single_tech = { TECH = tech_robomodding_points_1 }
+		daoyu_single_tech = { TECH = tech_robomodding_points_2 }
+		daoyu_single_tech = { TECH = tech_robot_assembly_complex }
+		daoyu_single_tech = { TECH = tech_robotic_workers }
+		daoyu_single_tech = { TECH = tech_self_assembling_components }
+		daoyu_single_tech = { TECH = tech_space_mining_1 }
+		daoyu_single_tech = { TECH = tech_space_mining_2 }
+		daoyu_single_tech = { TECH = tech_space_mining_3 }
+		daoyu_single_tech = { TECH = tech_space_mining_4 }
+		daoyu_single_tech = { TECH = tech_space_mining_5 }
+		daoyu_single_tech = { TECH = tech_storm_relief_center }
+		daoyu_single_tech = { TECH = tech_synthetic_leaders }
+		daoyu_single_tech = { TECH = tech_synthetic_workers }
+		daoyu_single_tech = { TECH = tech_wilderness_mineral_purification_1 }
+		daoyu_single_tech = { TECH = tech_wilderness_mineral_purification_2 }
+	}
+}
+#
+daoyu_has_renowned_leader_trigger = {
+	custom_tooltip = {
+		fail_text = daoyu_leader_not_hired
+		or = {
+			and = { or = { not = { has_global_flag = $FLAG$ } has_country_flag = dismissed_$FLAG$ } not = { any_owned_leader = { has_leader_flag = renowned_$LEADER_FLAG$ } } }
+			has_global_flag = daoyu_show_legendary_unlimited
+		}
+	}
+}
+#思潮
+daoyu_show_ethic_trigger = {
+	or = {
+		not = { has_global_flag = daoyu_from_auto_seek_unity_of_ethic }
+		and = { has_global_flag = daoyu_from_auto_seek_unity_of_ethic or = { has_ethic = ethic_$ETHIC$ has_ethic = ethic_fanatic_$ETHIC$ } }
+	}
+}
+daoyu_can_ethic_trigger = {
+	or = {
+		has_global_flag = daoyu_country_pop_group_transfer_ethic
+		has_global_flag = daoyu_from_auto_seek_unity_of_ethic
+		and = { has_global_flag = daoyu_species_pop_group_transfer_ethic exists = event_target:daoyu_target_species }
+		and = { has_global_flag = daoyu_planet_pop_group_transfer_ethic exists = event_target:daoyu_target_planet }
+		and = { has_global_flag = daoyu_ethic_from_leader not = { has_global_flag = effect_every_owned_leader } exists = event_target:daoyu_target_leader event_target:daoyu_target_leader = { not = { has_ethic = ethic_$ETHIC$ } } }
+		and = { has_global_flag = daoyu_ethic_from_leader has_global_flag = effect_every_owned_leader }
+	}
+}
+daoyu_has_template_leader = {
+	or = {
+		exists = event_target:daoyu_template_leader_1
+		exists = event_target:daoyu_template_leader_2
+		exists = event_target:daoyu_template_leader_3
+		exists = event_target:daoyu_template_leader_4
+		exists = event_target:daoyu_template_leader_5
+		exists = event_target:daoyu_template_leader_6
+		exists = event_target:daoyu_template_leader_7
+	}
+}
+daoyu_show_can_clone_leaders_trigger = {
+	custom_tooltip = { fail_text = NO_LEADER_AVAILABLE any_owned_leader = { has_leader_flag = daoyu_template_leader_$MUN$ } }
+	custom_tooltip = { fail_text = CURRENT_LEADER exists = event_target:daoyu_view_template_leader event_target:daoyu_view_template_leader = { not = { has_leader_flag = daoyu_template_leader_$MUN$ } } }
+}
+daoyu_trait23 = {
+	or = {
+		has_trait = $T$
+		has_trait = $T$_2
+		has_trait = $T$_3
+	}
+}
+daoyu_allow_veteran_trait_trigger = {
+	or = {
+		event_target:daoyu_target_leader = { has_global_flag = daoyu_add_trait or = { and = { has_global_flag = daoyu_show_more_trait not = { has_trait = $TRAIT$ } } num_leader_traits = { value = 0 is_subclass = yes } } }
+		has_global_flag = daoyu_remove_trait
+	}
+}
+daoyu_saved_leader_trigger = {
+	or = {
+		has_leader_flag = daoyu_template_leader_1
+		has_leader_flag = daoyu_template_leader_2
+		has_leader_flag = daoyu_template_leader_3
+		has_leader_flag = daoyu_template_leader_4
+		has_leader_flag = daoyu_template_leader_5
+		has_leader_flag = daoyu_template_leader_6
+		has_leader_flag = daoyu_template_leader_7
+	}
+}
+daoyu_save_or_remove_leader_trigger = {
+	custom_tooltip = {
+		fail_text = daoyu_saved_leader
+		or = {
+			and = { not = { has_global_flag = daoyu_save_leader } any_owned_leader = { has_leader_flag = daoyu_template_leader_$MUN$ } }
+			and = { has_global_flag = daoyu_save_leader event_target:daoyu_target_leader = { daoyu_saved_leader_trigger = no } }
+		}
+	}
+}
+daoyu_assign_saved_leader_trigger = {
+	or = {
+		and = { or = { has_global_flag = daoyu_create_warship has_global_flag = daoyu_create_transport } exists = event_target:daoyu_template_leader_$MUN$ event_target:daoyu_template_leader_$MUN$ = { has_leader_flag = daoyu_template_leader_$MUN$ leader_class = commander } }
+		and = { has_global_flag = daoyu_create_science_ship exists = event_target:daoyu_template_leader_$MUN$ event_target:daoyu_template_leader_$MUN$ = { has_leader_flag = daoyu_template_leader_$MUN$ leader_class = scientist } }
+	}
+}
+daoyu_show_veteran_trait_trigger = {
+	or = {
+		and = { has_global_flag = daoyu_add_trait daoyu_$TRAIT$_trigger = yes }
+		and = { has_global_flag = daoyu_remove_trait has_trait = $TRAIT$ }
+	}
+}
+daoyu_show_leader_trait_trigger = {
+	or = {
+		and = { has_global_flag = daoyu_add_trait not = { has_trait = $TRAIT$ } daoyu_$TRAIT$_trigger = yes }
+		and = { has_global_flag = daoyu_remove_trait has_trait = $TRAIT$ }
+	}
+}
+daoyu_show_replace_trait_2_trigger = {
+	or = {
+		and = { has_global_flag = daoyu_add_trait not = { has_trait = $TRAIT$_2 } daoyu_$TRAIT$_trigger = yes }
+		and = { has_global_flag = daoyu_remove_trait or = { has_trait = $TRAIT$ has_trait = $TRAIT$_2 } }
+	}
+}
+daoyu_show_replace_trait_3_trigger = {
+	or = {
+		and = { has_global_flag = daoyu_add_trait not = { has_trait = $TRAIT$_3 } daoyu_$TRAIT$_trigger = yes }
+		and = { has_global_flag = daoyu_remove_trait or = { has_trait = $TRAIT$ has_trait = $TRAIT$_2 has_trait = $TRAIT$_3 } }
+	}
+}
+daoyu_show_origin_trait_3_trigger = {
+	or = {
+		and = {
+			has_global_flag = daoyu_add_trait not = { has_trait = $TRAIT$_3 }
+			or = { has_global_flag = daoyu_show_more_trait and = { is_ruler = yes owner = { has_origin = $ORIGIN$ } } }
+		}
+		and = { has_global_flag = daoyu_remove_trait or = { has_trait = $TRAIT$ has_trait = $TRAIT$_2 has_trait = $TRAIT$_3 } }
+	}
+}
+daoyu_show_no_origin_legendary_leader_no_origin_treasure_hunters_trigger = {
+	or = {
+		and = {
+			has_global_flag = daoyu_add_trait not = { has_trait = $TRAIT$_2 }
+			or = { has_global_flag = daoyu_show_more_trait and = { is_ruler = yes owner = { nor = { has_origin = origin_legendary_leader has_origin = origin_treasure_hunters } } } }
+		}
+		and = { has_global_flag = daoyu_remove_trait or = { has_trait = $TRAIT$ has_trait = $TRAIT$_2 } }
+	}
+}
+#老练特质
+daoyu_subclass_commander_admiral_trigger = { leader_class = commander nand = { owner = { has_civic = civic_distinguished_admiralty } is_heir = yes } }
+daoyu_subclass_commander_general_trigger = { leader_class = commander trait_is_crisis_faction_check = no nand = { owner = { has_civic = civic_distinguished_admiralty } is_heir = yes } }
+daoyu_subclass_commander_governor_trigger = { leader_class = commander trait_is_crisis_faction_check = no }
+daoyu_subclass_commander_councilor_trigger = { leader_class = commander trait_is_crisis_faction_check = no nand = { exists = owner owner = { is_gestalt = yes } } }
+daoyu_subclass_official_delegate_trigger = { leader_class = official }
+daoyu_subclass_official_governor_trigger = { leader_class = official }
+daoyu_subclass_official_diplomacy_councilor_trigger = { leader_class = official nand = { exists = owner owner = { is_gestalt = yes } } }
+daoyu_subclass_official_economy_councilor_trigger = { leader_class = official nand = { exists = owner owner = { is_gestalt = yes } } }
+daoyu_subclass_scientist_explorer_trigger = { leader_class = scientist }
+daoyu_subclass_scientist_scholar_trigger = { leader_class = scientist }
+daoyu_subclass_scientist_governor_trigger = { leader_class = scientist }
+daoyu_subclass_scientist_councilor_trigger = { leader_class = scientist }
+#2级进阶特质
+daoyu_leader_has_upgrade_1_trait_trigger = {
+	or = {
+		has_trait = leader_trait_gale_speed#其疾如风
+		has_trait = trait_ruler_fortifier#筑防者
+		has_trait = leader_trait_armada_logistician#舰队后勤专家
+		has_trait = trait_ruler_military_pioneer#军事先驱
+		has_trait = leader_trait_intimidator#武力恫吓
+		has_trait = leader_trait_border_guard#边防卫士
+		has_trait = leader_trait_crew_trainer#海军教官
+		has_trait = leader_trait_overseer#秩序监察
+		has_trait = trait_ruler_from_the_ranks#出身士卒
+		has_trait = trait_ruler_recruiter#征兵官
+		has_trait = leader_trait_consul_general#总领事官
+		has_trait = leader_trait_shadow_broker#影子经纪人
+		has_trait = leader_trait_home_guard#家园卫士
+		has_trait = leader_trait_guardian#守护者
+		has_trait = leader_trait_frontier_spirit#开拓精神
+		has_trait = leader_trait_martinet#纪律森严
+		has_trait = leader_trait_warden#星球守望
+		has_trait = leader_trait_reinforcer#铜墙铁壁
+		has_trait = leader_trait_conscripter#征募专员
+		has_trait = leader_trait_wrecker#片甲不留
+		has_trait = leader_trait_annihilator#赶尽杀绝
+		has_trait = leader_trait_artillerist#大炮兵主义
+		has_trait = leader_trait_commanding_presence#威风堂堂
+		has_trait = leader_trait_demolisher#定点爆破
+		has_trait = leader_trait_archaeo_specialization#远古科技专精
+		has_trait = leader_trait_artillery_specialization#炮击专精
+		has_trait = leader_trait_carrier_specialization#航母专精
+		has_trait = leader_trait_rocketry_specialization#制导专精
+		has_trait = leader_trait_gunship_specialization#炮艇专精
+		has_trait = leader_trait_juryrigger#应急维修
+		has_trait = leader_trait_surgical_bombardment#精准轰炸
+		has_trait = leader_trait_dreaded#恐惧灌输
+		has_trait = leader_trait_heavy_hitter#重拳出击
+		has_trait = leader_trait_hardy#坚韧不拔
+		has_trait = leader_trait_corsair#物资掠夺
+		has_trait = leader_trait_shipbreaker#残舰拆解
+		has_trait = leader_trait_scout#侦查专家
+		has_trait = leader_trait_interrogator#审讯专家
+		has_trait = leader_trait_crusader#卫道勇士
+		has_trait = leader_trait_tuner#引擎调谐
+		has_trait = leader_trait_slippery#来去自如
+		has_trait = leader_trait_observant#观察敏锐
+		has_trait = leader_trait_principled#恪守底线
+		has_trait = leader_trait_fleet_organizer#舰队组织者
+		has_trait = leader_trait_spycraft#谍战专家
+		has_trait = leader_trait_spark_of_genius#灵光一闪
+		has_trait = trait_ruler_industrialist#矿业狂潮
+		has_trait = trait_ruler_warlike#好战
+		has_trait = trait_ruler_charismatic#魅力非凡
+		has_trait = trait_ruler_feedback_loop#回馈循环
+		has_trait = trait_ruler_logistic_understanding#深通后勤
+		has_trait = trait_ruler_eye_for_talent#伯乐之眼
+		has_trait = trait_ruler_champion_of_the_people#人民公仆
+		has_trait = leader_trait_planar_theorist#位面理论家
+		has_trait = leader_trait_capitalist#能源大亨
+		has_trait = leader_trait_private_mines#私有矿业
+		has_trait = leader_trait_homesteader#自耕者
+		has_trait = leader_trait_scrapper#清道夫
+		has_trait = leader_trait_entrepreneur#实业家
+		has_trait = leader_trait_venerated#声名显赫
+		has_trait = leader_trait_righteous#正义凌然
+		has_trait = leader_trait_iron_fist#铁拳
+		has_trait = leader_trait_trade_focus#商贸专精
+		has_trait = leader_trait_gifted#天赋异禀
+		has_trait = leader_trait_carefree#直觉敏锐
+		has_trait = leader_trait_roamer#漫游者
+		has_trait = leader_trait_archaeologist#考古学家
+		has_trait = leader_trait_meticulous#精益求精
+		has_trait = leader_trait_void_hunter#虚空猎手
+		has_trait = leader_trait_void_tracker#虚空追迹者
+	}
+}
+#2阶内阁
+daoyu_leader_trait_gale_speed_trigger = { leader_class = commander OR = { has_paragon_dlc = no has_trait = subclass_commander_councilor } }
+daoyu_trait_ruler_fortifier_trigger = { leader_class = commander OR = { has_paragon_dlc = no has_trait = subclass_commander_councilor } }
+daoyu_leader_trait_armada_logistician_trigger = { leader_class = commander OR = { has_paragon_dlc = no has_trait = subclass_commander_councilor } }
+daoyu_trait_ruler_military_pioneer_trigger = { leader_class = commander OR = { has_paragon_dlc = no has_trait = subclass_commander_councilor } }
+daoyu_leader_trait_intimidator_trigger = { leader_class = commander has_paragon_dlc = yes has_trait = subclass_commander_councilor }
+daoyu_leader_trait_border_guard_trigger = { leader_class = commander has_paragon_dlc = yes has_trait = subclass_commander_councilor }
+daoyu_leader_trait_crew_trainer_trigger = { leader_class = commander has_paragon_dlc = yes has_trait = subclass_commander_councilor }
+daoyu_leader_trait_overseer_trigger = { leader_class = official has_paragon_dlc = yes has_trait = subclass_official_diplomacy_councilor exists = owner owner = { is_homicidal = no } }
+daoyu_trait_ruler_from_the_ranks_trigger = { leader_class = commander OR = { has_paragon_dlc = no has_trait = subclass_commander_councilor } }
+daoyu_trait_ruler_recruiter_trigger = { leader_class = commander OR = { has_paragon_dlc = no has_trait = subclass_commander_councilor } }
+daoyu_leader_trait_consul_general_trigger = { leader_class = official has_paragon_dlc = yes has_trait = subclass_official_diplomacy_councilor exists = owner owner = { is_homicidal = no } }
+daoyu_leader_trait_shadow_broker_trigger = { leader_class = official has_paragon_dlc = yes has_trait = subclass_official_diplomacy_councilor }
+daoyu_leader_trait_home_guard_trigger = { leader_class = commander has_paragon_dlc = yes has_trait = subclass_commander_councilor }
+daoyu_leader_trait_guardian_trigger = { leader_class = commander trait_is_crisis_faction_check = no has_paragon_dlc = yes has_trait = subclass_commander_councilor }
+daoyu_leader_trait_frontier_spirit_trigger = { leader_class = official has_paragon_dlc = yes trait_is_wilderness_check = no has_trait = subclass_official_economy_councilor }
+daoyu_trait_ruler_champion_of_the_people_trigger = { is_gestalt = no }
+daoyu_leader_trait_planar_theorist_trigger = { leader_class = scientist has_astral_planes_dlc = yes is_heir = no is_ruler = no }
+#2阶总督
+daoyu_leader_trait_martinet_trigger = { is_ruler = no leader_class = commander trait_is_crisis_faction_check = no has_trait = subclass_commander_governor has_paragon_dlc = yes }
+daoyu_leader_trait_warden_trigger = { is_ruler = no leader_class = commander trait_is_crisis_faction_check = no OR = { has_paragon_dlc = no has_trait = subclass_commander_governor } }
+daoyu_leader_trait_reinforcer_trigger = { is_ruler = no leader_class = commander trait_is_crisis_faction_check = no has_paragon_dlc = yes has_trait = subclass_commander_governor }
+daoyu_leader_trait_conscripter_trigger = { is_ruler = no leader_class = commander trait_is_crisis_faction_check = no has_paragon_dlc = yes has_trait = subclass_commander_governor }
+daoyu_leader_trait_capitalist_trigger = {
+	nor = { has_trait_tier1or2 = { TRAIT = leader_trait_private_mines } has_trait_tier1or2 = { TRAIT = leader_trait_homesteader } has_trait_tier1or2 = { TRAIT = leader_trait_scrapper } has_trait_tier1or2 = { TRAIT = leader_trait_entrepreneur } has_trait_tier1or2 = { TRAIT = leader_trait_venerated } }
+	is_ruler = no trait_is_crisis_faction_check = no trait_is_wilderness_check = no has_global_flag = game_started has_base_skill > 1 NOT = { has_leader_flag = block_homeworld_traits }
+}
+daoyu_leader_trait_private_mines_trigger = {
+	nor = { has_trait_tier1or2 = { TRAIT = leader_trait_capitalist } has_trait_tier1or2 = { TRAIT = leader_trait_homesteader } has_trait_tier1or2 = { TRAIT = leader_trait_scrapper } has_trait_tier1or2 = { TRAIT = leader_trait_entrepreneur } has_trait_tier1or2 = { TRAIT = leader_trait_venerated } }
+	is_ruler = no trait_is_crisis_faction_check = no trait_is_wilderness_check = no has_global_flag = game_started has_base_skill > 1 NOT = { has_leader_flag = block_homeworld_traits }
+}
+daoyu_leader_trait_homesteader_trigger = {
+	nor = { has_trait_tier1or2 = { TRAIT = leader_trait_capitalist } has_trait_tier1or2 = { TRAIT = leader_trait_private_mines } has_trait_tier1or2 = { TRAIT = leader_trait_scrapper } has_trait_tier1or2 = { TRAIT = leader_trait_entrepreneur } has_trait_tier1or2 = { TRAIT = leader_trait_venerated } }
+	is_ruler = no trait_is_crisis_faction_check = no trait_is_wilderness_check = no has_global_flag = game_started has_base_skill > 1 exists = owner owner = { country_uses_food = yes } NOT = { has_leader_flag = block_homeworld_traits }
+}
+daoyu_leader_trait_scrapper_trigger = {
+	nor = { has_trait_tier1or2 = { TRAIT = leader_trait_capitalist } has_trait_tier1or2 = { TRAIT = leader_trait_private_mines } has_trait_tier1or2 = { TRAIT = leader_trait_homesteader } has_trait_tier1or2 = { TRAIT = leader_trait_entrepreneur } has_trait_tier1or2 = { TRAIT = leader_trait_venerated } }
+	is_ruler = no trait_is_crisis_faction_check = no trait_is_wilderness_check = no has_global_flag = game_started has_base_skill > 1 NOT = { has_leader_flag = block_homeworld_traits }
+}
+daoyu_leader_trait_entrepreneur_trigger = {
+	nor = { has_trait_tier1or2 = { TRAIT = leader_trait_capitalist } has_trait_tier1or2 = { TRAIT = leader_trait_private_mines } has_trait_tier1or2 = { TRAIT = leader_trait_homesteader } has_trait_tier1or2 = { TRAIT = leader_trait_scrapper } has_trait_tier1or2 = { TRAIT = leader_trait_venerated } }
+	is_ruler = no trait_is_crisis_faction_check = no has_global_flag = game_started has_base_skill > 1 exists = owner owner = { country_uses_consumer_goods = yes } NOT = { has_leader_flag = block_homeworld_traits }
+}
+daoyu_leader_trait_venerated_trigger = {
+	nor = { has_trait_tier1or2 = { TRAIT = leader_trait_capitalist } has_trait_tier1or2 = { TRAIT = leader_trait_private_mines } has_trait_tier1or2 = { TRAIT = leader_trait_homesteader } has_trait_tier1or2 = { TRAIT = leader_trait_scrapper } has_trait_tier1or2 = { TRAIT = leader_trait_entrepreneur } }
+	is_ruler = no trait_is_crisis_faction_check = no has_global_flag = game_started has_base_skill > 1 NOT = { has_leader_flag = block_homeworld_traits }
+}
+daoyu_leader_trait_righteous_trigger = { is_ruler = no or = { leader_class = commander leader_class = official } trait_is_crisis_faction_check = no }
+daoyu_leader_trait_iron_fist_trigger = { is_ruler = no leader_class = commander trait_is_crisis_faction_check = no trait_is_gestalt_check = no exists = owner owner = { allows_slavery = yes } }
+daoyu_leader_trait_trade_focus_trigger = { is_ruler = no leader_class = official trait_is_crisis_faction_check = no has_paragon_dlc = yes exists = owner owner = { is_gestalt = no } }
+#2阶其他
+daoyu_leader_trait_wrecker_trigger = { leader_class = commander nor = { has_trait = leader_trait_juryrigger has_trait = leader_trait_juryrigger_2 } has_paragon_dlc = yes has_trait = subclass_commander_admiral }
+daoyu_leader_trait_annihilator_trigger = { leader_class = commander has_paragon_dlc = yes has_trait = subclass_commander_general }
+daoyu_leader_trait_artillerist_trigger = { leader_class = commander has_paragon_dlc = yes has_trait = subclass_commander_admiral }
+daoyu_leader_trait_commanding_presence_trigger = { leader_class = commander has_paragon_dlc = yes has_trait = subclass_commander_admiral }
+daoyu_leader_trait_demolisher_trigger = { leader_class = commander has_paragon_dlc = yes has_trait = subclass_commander_general }
+daoyu_leader_trait_archaeo_specialization_trigger = { leader_class = commander has_ancrel = yes OR = { has_paragon_dlc = no has_trait = subclass_commander_admiral } exists = owner owner = { has_ascension_perk = ap_archaeoengineers } }
+daoyu_leader_trait_artillery_specialization_trigger = { leader_class = commander has_paragon_dlc = yes has_any_admiral_speciality = no has_trait = subclass_commander_admiral }
+daoyu_leader_trait_carrier_specialization_trigger = { leader_class = commander has_paragon_dlc = yes has_any_admiral_speciality = no has_trait = subclass_commander_admiral }
+daoyu_leader_trait_rocketry_specialization_trigger = { leader_class = commander has_paragon_dlc = yes has_any_admiral_speciality = no has_trait = subclass_commander_admiral }
+daoyu_leader_trait_gunship_specialization_trigger = { leader_class = commander has_paragon_dlc = yes has_any_admiral_speciality = no has_trait = subclass_commander_admiral }
+daoyu_leader_trait_juryrigger_trigger = { leader_class = commander nor = { has_trait = leader_trait_wrecker has_trait = leader_trait_wrecker_2 } has_paragon_dlc = yes has_trait = subclass_commander_admiral }
+daoyu_leader_trait_surgical_bombardment_trigger = { leader_class = commander has_paragon_dlc = yes has_trait = subclass_commander_general }
+daoyu_leader_trait_dreaded_trigger = { leader_class = commander trait_is_crisis_faction_check = no has_paragon_dlc = yes has_trait = subclass_commander_general }
+daoyu_leader_trait_heavy_hitter_trigger = { leader_class = commander trait_is_crisis_faction_check = no OR = { has_paragon_dlc = no has_trait = subclass_commander_general } }
+daoyu_leader_trait_hardy_trigger = { leader_class = commander trait_is_crisis_faction_check = no has_trait = subclass_commander_general has_paragon_dlc = yes }
+daoyu_leader_trait_corsair_trigger = { leader_class = commander has_paragon_dlc = yes has_trait = subclass_commander_admiral }
+daoyu_leader_trait_shipbreaker_trigger = { leader_class = commander has_paragon_dlc = yes OR = { has_trait = subclass_commander_admiral has_trait = subclass_commander_general } }
+daoyu_leader_trait_scout_trigger = { or = { leader_class = commander leader_class = scientist } OR = { has_paragon_dlc = no has_trait = subclass_commander_admiral has_trait = subclass_scientist_explorer } }
+daoyu_leader_trait_interrogator_trigger = { leader_class = commander trait_is_crisis_faction_check = no has_paragon_dlc = yes has_trait = subclass_commander_general }
+daoyu_leader_trait_crusader_trigger = { leader_class = commander trait_is_crisis_faction_check = no has_paragon_dlc = yes has_trait = subclass_commander_general }
+daoyu_leader_trait_tuner_trigger = { leader_class = scientist has_trait = subclass_scientist_explorer has_paragon_dlc = yes }
+daoyu_leader_trait_slippery_trigger = { leader_class = scientist has_trait = subclass_scientist_explorer has_paragon_dlc = yes }
+daoyu_leader_trait_observant_trigger = { or = { leader_class = commander leader_class = scientist } OR = { has_trait = subclass_scientist_explorer has_trait = subclass_commander_admiral } has_paragon_dlc = yes }
+daoyu_leader_trait_gifted_trigger = { is_ruler = no trait_is_crisis_faction_check = no has_paragon_dlc = yes }
+daoyu_leader_trait_carefree_trigger = { leader_class = scientist nor = { has_trait_tier1or2 = { TRAIT = leader_trait_meticulous } } is_ruler = no }
+daoyu_leader_trait_roamer_trigger = { leader_class = scientist is_ruler = no }
+daoyu_leader_trait_archaeologist_trigger = { leader_class = scientist }
+daoyu_leader_trait_meticulous_trigger = { leader_class = scientist nor = { has_trait_tier1or2 = { TRAIT = leader_trait_carefree } } is_ruler = no }
+daoyu_leader_trait_void_hunter_trigger = { leader_class = commander has_grand_archive_dlc = yes exists = owner owner = { has_encountered_any_fauna = yes } }
+daoyu_leader_trait_void_tracker_trigger = { leader_class = scientist has_grand_archive_dlc = yes }
+#3级进阶特质
+daoyu_leader_has_upgrade_2_trait_trigger = {
+	or = {
+		has_trait = leader_trait_legendary_military_knowledge has_trait = leader_trait_legendary_military_knowledge_2#卓越将军
+		has_trait = leader_trait_legendary_foe_hammer has_trait = leader_trait_legendary_foe_hammer_2#坚定进攻者
+		has_trait = leader_trait_legendary_great_teacher has_trait = leader_trait_legendary_great_teacher_2#智慧导师
+		has_trait = leader_trait_legendary_pious_ascet has_trait = leader_trait_legendary_pious_ascet_2#虔诚禁欲
+		has_trait = leader_trait_legendary_commanding_presence has_trait = leader_trait_legendary_commanding_presence_2#威风堂堂
+		has_trait = leader_trait_legendary_high_king has_trait = leader_trait_legendary_high_king_2#至高王
+		has_trait = leader_trait_legendary_gunboat_diplomacy has_trait = leader_trait_legendary_gunboat_diplomacy_2#炮舰外交
+		has_trait = leader_trait_legendary_scientific_diplomacy has_trait = leader_trait_legendary_scientific_diplomacy_2#人才虹吸
+		has_trait = leader_trait_legendary_autarky has_trait = leader_trait_legendary_autarky_2#自给经济派
+		has_trait = leader_trait_legendary_natural_ruler has_trait = leader_trait_legendary_natural_ruler_2#开明统治者
+		has_trait = leader_trait_legendary_industry_titan has_trait = leader_trait_legendary_industry_titan_2#工业巨头
+		has_trait = leader_trait_legendary_great_inventor has_trait = leader_trait_legendary_great_inventor_2#大发明家
+		has_trait = leader_trait_legendary_genetic_purist has_trait = leader_trait_legendary_genetic_purist_2#基因艺术家
+		has_trait = leader_trait_legendary_evervigilant has_trait = leader_trait_legendary_evervigilant_2#警钟长鸣
+		has_trait = leader_trait_inquisitive has_trait = leader_trait_inquisitive_2#求知若渴
+		has_trait = leader_trait_maniacal has_trait = leader_trait_maniacal_2#超级专注
+		has_trait = trait_ruler_expansionist has_trait = trait_ruler_expansionist_2#扩张主义者
+		has_trait = leader_trait_science_communicator has_trait = leader_trait_cartographer_2#档案管理
+		has_trait = leader_trait_cartographer has_trait = leader_trait_cultural_focus_2#测绘专家
+		has_trait = leader_trait_cultural_focus has_trait = trait_ruler_investor_2#文宣专精
+		has_trait = trait_ruler_investor has_trait = trait_ruler_architectural_sense_2#投资者
+		has_trait = trait_ruler_architectural_sense has_trait = trait_ruler_deep_connections_2#重视建筑
+		has_trait = trait_ruler_deep_connections has_trait = leader_trait_reformer_2#关系深厚
+		has_trait = leader_trait_reformer has_trait = leader_trait_courtroom_training_2#改革家
+		has_trait = leader_trait_courtroom_training has_trait = leader_trait_ambassador_ear_to_the_ground_2#外语学家
+		has_trait = leader_trait_ambassador_ear_to_the_ground has_trait = leader_trait_ambassador_whisper_networks_2#耳目众多
+		has_trait = leader_trait_ambassador_whisper_networks has_trait = leader_trait_ambassador_bully_2#巧舌如簧
+		has_trait = leader_trait_ambassador_bully has_trait = leader_trait_ambassador_pact_keeper_2#煽风点火
+		has_trait = leader_trait_ambassador_pact_keeper has_trait = leader_trait_ambassador_commercial_pact_focus_2#温文尔雅
+		has_trait = leader_trait_ambassador_commercial_pact_focus has_trait = leader_trait_ambassador_research_pact_focus_2#企业精神
+		has_trait = leader_trait_ambassador_research_pact_focus has_trait = leader_trait_ambassador_extra_envoys_2#研究交流
+		has_trait = leader_trait_ambassador_extra_envoys has_trait = leader_trait_science_communicator_2#随从团队
+		has_trait = leader_trait_expertise_materials has_trait = leader_trait_expertise_materials_2#专长：材料科学
+		has_trait = leader_trait_expertise_propulsion has_trait = leader_trait_expertise_propulsion_2#专长：推进力学
+		has_trait = leader_trait_expertise_voidcraft has_trait = leader_trait_expertise_voidcraft_2#专长：宇航技术
+		has_trait = leader_trait_expertise_industry has_trait = leader_trait_expertise_industry_2#专长：工业
+		has_trait = leader_trait_expertise_field_manipulation has_trait = leader_trait_expertise_field_manipulation_2#专长：力场操控
+		has_trait = leader_trait_expertise_particles has_trait = leader_trait_expertise_particles_2#专长：粒子物理
+		has_trait = leader_trait_expertise_computing has_trait = leader_trait_expertise_computing_2#专长：计算技术
+		has_trait = leader_trait_expertise_psionics has_trait = leader_trait_expertise_psionics_2#专长：灵能理论
+		has_trait = leader_trait_expertise_new_worlds has_trait = leader_trait_expertise_new_worlds_2#专长：新世界理论
+		has_trait = leader_trait_expertise_statecraft has_trait = leader_trait_expertise_statecraft_2#专长：治国术
+		has_trait = leader_trait_expertise_biology has_trait = leader_trait_expertise_biology_2#专长：生物学
+		has_trait = leader_trait_expertise_military_theory has_trait = leader_trait_expertise_military_theory_2#专长：军事理论
+		has_trait = leader_trait_expertise_archaeostudies has_trait = leader_trait_expertise_archaeostudies_2#专长：远古学
+		has_trait = leader_trait_mining_focus has_trait = leader_trait_mining_focus_2#矿业专精
+		has_trait = leader_trait_generator_focus has_trait = leader_trait_generator_focus_2#发电专精
+		has_trait = leader_trait_farming_focus has_trait = leader_trait_farming_focus_2#农学专精
+		has_trait = leader_trait_settler has_trait = leader_trait_settler_2#安居佑民
+		has_trait = leader_trait_naturalist has_trait = leader_trait_naturalist_2#自然主义
+		has_trait = leader_trait_forge_focus has_trait = leader_trait_forge_focus_2#冶金专精
+		has_trait = leader_trait_industrial_focus has_trait = leader_trait_industrial_focus_2#工业专精
+		has_trait = leader_trait_refinement_focus has_trait = leader_trait_refinement_focus_2#精炼专精
+		has_trait = leader_trait_assembler has_trait = leader_trait_assembler_2#组装专家
+		has_trait = leader_trait_pop_focused has_trait = leader_trait_pop_focused_2#高效委派
+		has_trait = leader_trait_distribution_lines has_trait = leader_trait_distribution_lines_2#资源分发规划
+		has_trait = leader_trait_collaborator has_trait = leader_trait_collaborator_2#研究协作
+		has_trait = leader_trait_manufacturer has_trait = leader_trait_manufacturer_2#民用制造
+		has_trait = leader_trait_space_miner has_trait = leader_trait_space_miner_2#地质专家
+		has_trait = leader_trait_engineering_focus has_trait = leader_trait_engineering_focus_2#工程专精
+		has_trait = leader_trait_physics_focus has_trait = leader_trait_physics_focus_2#物理专精
+		has_trait = leader_trait_society_focus has_trait = leader_trait_society_focus_2#社会专精
+		has_trait = leader_trait_adventurous_spirit has_trait = leader_trait_adventurous_spirit_2#冒险精神
+		has_trait = leader_trait_prospector has_trait = leader_trait_prospector_2#资源勘探
+		has_trait = leader_trait_academic_dig_site_expert has_trait = leader_trait_academic_dig_site_expert_2#发掘专家
+		has_trait = leader_trait_academic_minor_artifacts_expert has_trait = leader_trait_academic_minor_artifacts_expert_2#文物学者
+		has_trait = leader_trait_explorer_cloaking_focus has_trait = leader_trait_explorer_cloaking_focus_2#机密研究
+		has_trait = leader_trait_salvager has_trait = leader_trait_salvager_2#残骸打捞
+		has_trait = leader_trait_ambassador_favor_maker has_trait = leader_trait_ambassador_favor_maker_2#见机行事
+		has_trait = leader_trait_federal_negotiator has_trait = leader_trait_federal_negotiator_2#袍泽之情
+		has_trait = leader_trait_federal_greeter has_trait = leader_trait_federal_greeter_2#古道热肠
+		has_trait = leader_trait_federal_sweet_talker has_trait = leader_trait_federal_sweet_talker_2#干戈玉帛
+		has_trait = leader_trait_federal_joint_navy has_trait = leader_trait_federal_joint_navy_2#联合演训
+		has_trait = leader_trait_academic_astral_rift_expert has_trait = leader_trait_academic_astral_rift_expert_2#裂隙行者
+		has_trait = leader_trait_resolution_category_commerce_focus has_trait = leader_trait_resolution_category_commerce_focus_2#专精：星系贸易
+		has_trait = leader_trait_resolution_category_industry_focus has_trait = leader_trait_resolution_category_industry_focus_2#专精：工业发展
+		has_trait = leader_trait_resolution_category_politics_traditions_focus has_trait = leader_trait_resolution_category_politics_traditions_focus_2#专精：权术传统
+		has_trait = leader_trait_resolution_category_greatergood_focus has_trait = leader_trait_resolution_category_greatergood_focus_2#专精：上上善道
+		has_trait = leader_trait_resolution_category_galacticreforms_focus has_trait = leader_trait_resolution_category_galacticreforms_focus_2#专精：星系改革
+		has_trait = leader_trait_resolution_category_ecology_focus has_trait = leader_trait_resolution_category_ecology_focus_2#专精：生态保护
+		has_trait = leader_trait_resolution_category_galacticstudies_focus has_trait = leader_trait_resolution_category_galacticstudies_focus_2#专精：解放知识
+		has_trait = leader_trait_resolution_category_divinity_focus has_trait = leader_trait_resolution_category_divinity_focus_2#专精：生命之神圣
+		has_trait = leader_trait_resolution_category_mutualdefense_focus has_trait = leader_trait_resolution_category_mutualdefense_focus_2#专精：共同防御
+		has_trait = leader_trait_resolution_category_rulesofwar_focus has_trait = leader_trait_resolution_category_rulesofwar_focus_2#专精：战争规则
+		has_trait = leader_trait_resolution_category_defenseprivatization_focus has_trait = leader_trait_resolution_category_defenseprivatization_focus_2#专精：防卫私有化
+		has_trait = leader_trait_resolution_category_intergalacticdirective_focus has_trait = leader_trait_resolution_category_intergalacticdirective_focus_2#专精：星系间指令
+		has_trait = leader_trait_resolution_category_bureaucraticsurveillance_focus has_trait = leader_trait_resolution_category_bureaucraticsurveillance_focus_2#专精：官僚监视
+		has_trait = leader_trait_resolution_category_pre_ftl_stances_focus has_trait = leader_trait_resolution_category_pre_ftl_stances_focus_2#专精：前超光速文明立场
+		has_trait = leader_trait_resolution_category_sanctions_focus has_trait = leader_trait_resolution_category_sanctions_focus_2#专精：制裁
+		has_trait = leader_trait_buccaneer has_trait = leader_trait_buccaneer_2#海盗
+		has_trait = leader_trait_trailblazer has_trait = leader_trait_trailblazer_2#开路者
+		has_trait = leader_trait_treasure_hoarder has_trait = leader_trait_treasure_hoarder_2#夺宝奇兵
+	}
+}
+daoyu_subclass_commander_trigger = { or = { has_trait = subclass_commander_general has_trait = subclass_commander_admiral has_trait = subclass_commander_governor has_trait = subclass_commander_councilor } }
+daoyu_subclass_official_trigger = { or = { has_trait = subclass_official_delegate has_trait = subclass_official_diplomacy_councilor has_trait = subclass_official_governor has_trait = subclass_official_economy_councilor } }
+daoyu_subclass_scientist_trigger = { or = { has_trait = subclass_scientist_explorer has_trait = subclass_scientist_scholar has_trait = subclass_scientist_governor has_trait = subclass_scientist_councilor } }
+#3阶内阁
+daoyu_leader_trait_inquisitive_trigger = { leader_class = scientist has_paragon_dlc = yes has_trait = subclass_scientist_councilor }
+daoyu_leader_trait_maniacal_trigger = { leader_class = scientist OR = { has_paragon_dlc = no has_trait = subclass_scientist_councilor } }
+daoyu_trait_ruler_expansionist_trigger = { leader_class = scientist OR = { has_paragon_dlc = no has_trait = subclass_scientist_councilor } }
+daoyu_leader_trait_science_communicator_trigger = { leader_class = scientist has_paragon_dlc = yes has_trait = subclass_scientist_councilor }
+daoyu_leader_trait_cartographer_trigger = { or = { leader_class = official leader_class = scientist } has_paragon_dlc = yes OR = { has_trait = subclass_official_economy_councilor has_trait = subclass_scientist_councilor } }
+daoyu_leader_trait_cultural_focus_trigger = { leader_class = official has_paragon_dlc = yes has_trait = subclass_official_economy_councilor }
+daoyu_trait_ruler_investor_trigger = { leader_class = official OR = { has_paragon_dlc = no has_trait = subclass_official_economy_councilor } }
+daoyu_trait_ruler_architectural_sense_trigger = { leader_class = official OR = { has_paragon_dlc = no has_trait = subclass_official_economy_councilor } }
+daoyu_trait_ruler_deep_connections_trigger = { leader_class = official OR = { has_paragon_dlc = no has_trait = subclass_official_diplomacy_councilor } }
+daoyu_leader_trait_reformer_trigger = { leader_class = official is_gestalt = no OR = { has_paragon_dlc = no has_trait = subclass_official_economy_councilor } }
+daoyu_leader_trait_courtroom_training_trigger = { leader_class = official has_paragon_dlc = yes has_trait = subclass_official_diplomacy_councilor is_xenophobe = no exists = owner owner = { is_homicidal = no } }
+daoyu_leader_trait_ambassador_ear_to_the_ground_trigger = { leader_class = official OR = { has_paragon_dlc = no has_trait = subclass_official_diplomacy_councilor } }
+daoyu_leader_trait_ambassador_whisper_networks_trigger = { leader_class = official OR = { has_paragon_dlc = no has_trait = subclass_official_diplomacy_councilor } }
+daoyu_leader_trait_ambassador_bully_trigger = { leader_class = official OR = { has_paragon_dlc = no has_trait = subclass_official_diplomacy_councilor } exists = owner owner = { is_homicidal = no } }
+daoyu_leader_trait_ambassador_pact_keeper_trigger = { leader_class = official OR = { has_paragon_dlc = no has_trait = subclass_official_diplomacy_councilor } exists = owner owner = { NOR = { is_homicidal = yes has_valid_civic = civic_inwards_perfection } } }
+daoyu_leader_trait_ambassador_commercial_pact_focus_trigger = {
+	leader_class = official OR = { has_paragon_dlc = no has_trait = subclass_official_diplomacy_councilor } exists = owner owner = { NOR = { has_valid_civic = civic_fanatic_purifiers has_valid_civic = civic_inwards_perfection is_gestalt = yes is_criminal_syndicate = yes } }
+}
+daoyu_leader_trait_ambassador_research_pact_focus_trigger = { leader_class = official OR = { has_paragon_dlc = no has_trait = subclass_official_diplomacy_councilor } exists = owner owner = { NOR = { is_homicidal = yes has_valid_civic = civic_inwards_perfection } } }
+daoyu_leader_trait_ambassador_extra_envoys_trigger = { leader_class = official OR = { has_paragon_dlc = no has_trait = subclass_official_diplomacy_councilor } }
+daoyu_leader_trait_expertise_materials_trigger = { leader_class = scientist is_specialist_researcher_engineering = no can_leader_get_council_trait_trigger = yes OR = { has_paragon_dlc = no has_trait = subclass_scientist_councilor } }
+daoyu_leader_trait_expertise_propulsion_trigger = { leader_class = scientist is_specialist_researcher_engineering = no can_leader_get_council_trait_trigger = yes OR = { has_paragon_dlc = no has_trait = subclass_scientist_councilor } }
+daoyu_leader_trait_expertise_voidcraft_trigger = { leader_class = scientist is_specialist_researcher_engineering = no can_leader_get_council_trait_trigger = yes OR = { has_paragon_dlc = no has_trait = subclass_scientist_councilor } }
+daoyu_leader_trait_expertise_industry_trigger = { leader_class = scientist is_specialist_researcher_engineering = no can_leader_get_council_trait_trigger = yes OR = { has_paragon_dlc = no has_trait = subclass_scientist_councilor } }
+daoyu_leader_trait_expertise_field_manipulation_trigger = { leader_class = scientist is_specialist_researcher_physics = no can_leader_get_council_trait_trigger = yes OR = { has_paragon_dlc = no has_trait = subclass_scientist_councilor } }
+daoyu_leader_trait_expertise_particles_trigger = { leader_class = scientist is_specialist_researcher_physics = no can_leader_get_council_trait_trigger = yes OR = { has_paragon_dlc = no has_trait = subclass_scientist_councilor } }
+daoyu_leader_trait_expertise_computing_trigger = { leader_class = scientist is_specialist_researcher_physics = no can_leader_get_council_trait_trigger = yes OR = { has_paragon_dlc = no has_trait = subclass_scientist_councilor } }
+daoyu_leader_trait_expertise_psionics_trigger = {
+	leader_class = scientist is_specialist_researcher_society = no can_leader_get_council_trait_trigger = yes OR = { has_paragon_dlc = no has_trait = subclass_scientist_councilor }
+	OR = { has_psionic_leader_trait = yes AND = { exists = owner owner = { OR = { has_technology = tech_psionic_theory has_origin = origin_shroudwalker_apprentice } } } species = { OR = { has_trait = trait_latent_psionic has_trait = trait_psionic } } }
+}
+daoyu_leader_trait_expertise_new_worlds_trigger = { leader_class = scientist is_specialist_researcher_society = no can_leader_get_council_trait_trigger = yes OR = { has_paragon_dlc = no has_trait = subclass_scientist_councilor } }
+daoyu_leader_trait_expertise_statecraft_trigger = { leader_class = scientist is_specialist_researcher_society = no can_leader_get_council_trait_trigger = yes OR = { has_paragon_dlc = no has_trait = subclass_scientist_councilor } }
+daoyu_leader_trait_expertise_biology_trigger = { leader_class = scientist is_specialist_researcher_society = no can_leader_get_council_trait_trigger = yes OR = { has_paragon_dlc = no has_trait = subclass_scientist_councilor } }
+daoyu_leader_trait_expertise_military_theory_trigger = { leader_class = scientist is_specialist_researcher_society = no can_leader_get_council_trait_trigger = yes OR = { has_paragon_dlc = no has_trait = subclass_scientist_councilor } }
+daoyu_leader_trait_expertise_archaeostudies_trigger = {
+	leader_class = scientist is_specialist_researcher_society = no can_leader_get_council_trait_trigger = yes OR = { has_paragon_dlc = no has_trait = subclass_scientist_councilor } has_ancrel = yes
+	exists = owner owner = { OR = { has_origin = origin_remnants has_ascension_perk = ap_archaeoengineers any_system_within_border = { any_archaeological_site = { is_site_completed = yes } } any_owned_planet = { has_active_building = building_archaeostudies_faculty } } }
+}
+#3阶总督
+daoyu_leader_trait_mining_focus_trigger = { is_ruler = no leader_class = commander has_paragon_dlc = yes has_any_governor_focus = no has_governor_subclass = yes }
+daoyu_leader_trait_generator_focus_trigger = { is_ruler = no leader_class = commander has_paragon_dlc = yes has_any_governor_focus = no has_governor_subclass = yes }
+daoyu_leader_trait_farming_focus_trigger = { is_ruler = no leader_class = commander has_paragon_dlc = yes exists = owner owner = { country_uses_food = yes } has_any_governor_focus = no has_governor_subclass = yes }
+daoyu_leader_trait_settler_trigger = { is_ruler = no leader_class = official has_paragon_dlc = yes trait_is_wilderness_check = no has_trait = subclass_official_governor }
+daoyu_leader_trait_naturalist_trigger = { is_ruler = no or = { leader_class = official leader_class = scientist } has_paragon_dlc = yes OR = { has_trait = subclass_official_governor has_trait = subclass_scientist_governor } }
+daoyu_leader_trait_forge_focus_trigger = { is_ruler = no leader_class = official has_paragon_dlc = yes has_any_governor_focus = no has_governor_subclass = yes }
+daoyu_leader_trait_industrial_focus_trigger = { is_ruler = no leader_class = official has_paragon_dlc = yes has_any_governor_focus = no has_governor_subclass = yes exists = owner owner = { country_uses_consumer_goods = yes } }
+daoyu_leader_trait_refinement_focus_trigger = { is_ruler = no leader_class = official has_paragon_dlc = yes has_any_governor_focus = no has_governor_subclass = yes }
+daoyu_leader_trait_assembler_trigger = {
+	is_ruler = no or = { leader_class = official leader_class = scientist } has_paragon_dlc = yes trait_is_wilderness_check = no OR = { has_trait = subclass_official_governor has_trait = subclass_scientist_governor } exists = owner owner = { OR = { is_gestalt = yes has_technology = tech_robotic_workers } }
+}
+daoyu_leader_trait_pop_focused_trigger = { is_ruler = no leader_class = official has_paragon_dlc = yes has_trait = subclass_official_governor }
+daoyu_leader_trait_distribution_lines_trigger = { is_ruler = no leader_class = official has_paragon_dlc = yes trait_is_wilderness_check = no has_trait = subclass_official_governor }
+daoyu_leader_trait_collaborator_trigger = { is_ruler = no leader_class = scientist has_paragon_dlc = yes has_trait = subclass_scientist_governor }
+daoyu_leader_trait_manufacturer_trigger = { is_ruler = no or = { leader_class = official leader_class = scientist } OR = { has_trait = subclass_scientist_governor has_trait = subclass_official_governor } has_paragon_dlc = yes }
+daoyu_leader_trait_space_miner_trigger = { is_ruler = no has_governor_subclass = yes has_paragon_dlc = yes }
+daoyu_leader_trait_engineering_focus_trigger = { is_ruler = no leader_class = scientist has_paragon_dlc = yes has_trait = subclass_scientist_governor has_scientist_focus = no }
+daoyu_leader_trait_physics_focus_trigger = { is_ruler = no leader_class = scientist has_paragon_dlc = yes has_trait = subclass_scientist_governor has_scientist_focus = no }
+daoyu_leader_trait_society_focus_trigger = { is_ruler = no leader_class = scientist has_paragon_dlc = yes has_trait = subclass_scientist_governor has_scientist_focus = no }
+#3阶其他
+daoyu_leader_trait_adventurous_spirit_trigger = { trait_is_crisis_faction_check = no has_paragon_dlc = yes is_ruler = no not = { has_trait = leader_trait_eager } }
+daoyu_leader_trait_prospector_trigger = { leader_class = scientist has_trait = subclass_scientist_explorer has_paragon_dlc = yes }
+daoyu_leader_trait_academic_dig_site_expert_trigger = { leader_class = scientist OR = { has_paragon_dlc = no has_trait = subclass_scientist_scholar } }
+daoyu_leader_trait_academic_minor_artifacts_expert_trigger = { leader_class = scientist has_ancrel = yes OR = { has_paragon_dlc = no has_trait = subclass_scientist_scholar } }
+daoyu_leader_trait_explorer_cloaking_focus_trigger = { leader_class = scientist has_trait = subclass_scientist_explorer has_paragon_dlc = yes }
+daoyu_leader_trait_salvager_trigger = { leader_class = scientist has_trait = subclass_scientist_scholar has_paragon_dlc = yes }
+daoyu_leader_trait_ambassador_favor_maker_trigger = { leader_class = official OR = { has_paragon_dlc = no has_trait = subclass_official_diplomacy_councilor } }
+daoyu_leader_trait_federal_negotiator_trigger = { leader_class = official OR = { AND = { exists = owner owner = { exists = federation } has_paragon_dlc = no } has_trait = subclass_official_delegate } }
+daoyu_leader_trait_federal_greeter_trigger = { leader_class = official OR = { AND = { exists = owner owner = { exists = federation } has_paragon_dlc = no } has_trait = subclass_official_delegate } }
+daoyu_leader_trait_federal_sweet_talker_trigger = { leader_class = official OR = { AND = { exists = owner owner = { exists = federation } has_paragon_dlc = no } has_trait = subclass_official_delegate } }
+daoyu_leader_trait_federal_joint_navy_trigger = { leader_class = official OR = { AND = { exists = owner owner = { exists = federation } has_paragon_dlc = no } has_trait = subclass_official_delegate } }
+daoyu_leader_trait_academic_astral_rift_expert_trigger = { leader_class = scientist has_astral_planes_dlc = yes OR = { has_paragon_dlc = no has_trait = subclass_scientist_scholar } }
+daoyu_leader_trait_resolution_category_commerce_focus_trigger = { leader_class = official OR = { AND = { exists = owner owner = { is_galactic_community_member = yes } has_paragon_dlc = no } has_trait = subclass_official_delegate } }
+daoyu_leader_trait_resolution_category_industry_focus_trigger = { leader_class = official OR = { AND = { exists = owner owner = { is_galactic_community_member = yes } has_paragon_dlc = no } has_trait = subclass_official_delegate } }
+daoyu_leader_trait_resolution_category_politics_traditions_focus_trigger = { leader_class = official OR = { AND = { exists = owner owner = { is_galactic_community_member = yes } has_paragon_dlc = no } has_trait = subclass_official_delegate } }
+daoyu_leader_trait_resolution_category_greatergood_focus_trigger = { leader_class = official OR = { AND = { exists = owner owner = { is_galactic_community_member = yes } has_paragon_dlc = no } has_trait = subclass_official_delegate } }
+daoyu_leader_trait_resolution_category_galacticreforms_focus_trigger = { leader_class = official OR = { AND = { exists = owner owner = { is_galactic_community_member = yes } has_paragon_dlc = no } has_trait = subclass_official_delegate } }
+daoyu_leader_trait_resolution_category_ecology_focus_trigger = { leader_class = official OR = { AND = { exists = owner owner = { is_galactic_community_member = yes } has_paragon_dlc = no } has_trait = subclass_official_delegate } }
+daoyu_leader_trait_resolution_category_galacticstudies_focus_trigger = { leader_class = official OR = { AND = { exists = owner owner = { is_galactic_community_member = yes } has_paragon_dlc = no } has_trait = subclass_official_delegate } }
+daoyu_leader_trait_resolution_category_divinity_focus_trigger = { leader_class = official OR = { AND = { exists = owner owner = { is_galactic_community_member = yes } has_paragon_dlc = no } has_trait = subclass_official_delegate } }
+daoyu_leader_trait_resolution_category_mutualdefense_focus_trigger = { leader_class = official OR = { AND = { exists = owner owner = { is_galactic_community_member = yes } has_paragon_dlc = no } has_trait = subclass_official_delegate } }
+daoyu_leader_trait_resolution_category_rulesofwar_focus_trigger = { leader_class = official OR = { AND = { exists = owner owner = { is_galactic_community_member = yes } has_paragon_dlc = no } has_trait = subclass_official_delegate } }
+daoyu_leader_trait_resolution_category_defenseprivatization_focus_trigger = { leader_class = official has_overlord_dlc = yes OR = { AND = { exists = owner owner = { is_galactic_community_member = yes } has_paragon_dlc = no } has_trait = subclass_official_delegate } }
+daoyu_leader_trait_resolution_category_intergalacticdirective_focus_trigger = { leader_class = official has_overlord_dlc = yes OR = { AND = { exists = owner owner = { is_galactic_community_member = yes } has_paragon_dlc = no } has_trait = subclass_official_delegate } }
+daoyu_leader_trait_resolution_category_bureaucraticsurveillance_focus_trigger = { leader_class = official has_overlord_dlc = yes OR = { AND = { exists = owner owner = { is_galactic_community_member = yes } has_paragon_dlc = no } has_trait = subclass_official_delegate } }
+daoyu_leader_trait_resolution_category_pre_ftl_stances_focus_trigger = { leader_class = official has_first_contact_dlc = yes OR = { AND = { exists = owner owner = { is_galactic_community_member = yes } has_paragon_dlc = no } has_trait = subclass_official_delegate } }
+daoyu_leader_trait_resolution_category_sanctions_focus_trigger = { leader_class = official OR = { AND = { exists = owner owner = { is_galactic_community_member = yes } has_paragon_dlc = no } has_trait = subclass_official_delegate } }
+#一般特质
+daoyu_trait_ruler_corvette_focus_trigger = { has_paragon_dlc = no leader_class = commander nor = { has_trait = trait_ruler_destroyer_focus has_trait = trait_ruler_cruiser_focus has_trait = trait_ruler_battleship_focus } }
+daoyu_trait_ruler_destroyer_focus_trigger = {has_paragon_dlc = no leader_class = commander nor = { has_trait = trait_ruler_corvette_focus has_trait = trait_ruler_cruiser_focus has_trait = trait_ruler_battleship_focus } }
+daoyu_trait_ruler_cruiser_focus_trigger = {has_paragon_dlc = no leader_class = commander nor = { has_trait = trait_ruler_corvette_focus has_trait = trait_ruler_destroyer_focus has_trait = trait_ruler_battleship_focus } }
+daoyu_trait_ruler_battleship_focus_trigger = { has_paragon_dlc = no leader_class = commander nor = { has_trait = trait_ruler_corvette_focus has_trait = trait_ruler_destroyer_focus has_trait = trait_ruler_cruiser_focus } }
+daoyu_leader_trait_skirmisher_trigger = { leader_class = commander }
+daoyu_leader_trait_curator_trigger = { has_global_flag = daoyu_show_more_trait leader_class = scientist }
+daoyu_leader_trait_defence_engineer_trigger = { leader_class = commander }
+daoyu_leader_trait_politician_trigger = { or = { is_gestalt = no and = { is_gestalt = yes is_councilor = yes } } }
+daoyu_trait_ruler_frontier_spirit_trigger = { has_paragon_dlc = no leader_class = official trait_is_wilderness_check = no }
+daoyu_leader_trait_army_veteran_trigger = { leader_class = official leader_class = scientist is_ruler = no not = { has_trait = leader_trait_retired_fleet_officer } }
+daoyu_leader_trait_retired_fleet_officer_trigger = { leader_class = official leader_class = scientist is_ruler = no not = { has_trait = leader_trait_army_veteran } }
+daoyu_trait_ruler_fertility_preacher_trigger = { leader_class = official trait_is_crisis_faction_check = no trait_is_wilderness_check = no owner = { OR = { NOT = { has_origin = origin_synthetic_fertility } AND = { has_origin = origin_synthetic_fertility has_technology = tech_synthetic_workers } } } }
+daoyu_leader_trait_shipwright_trigger = { leader_class = official }
+daoyu_trait_ruler_space_miner_trigger = { has_paragon_dlc = no leader_class = scientist }
+daoyu_trait_ruler_home_in_the_sky_trigger = { has_paragon_dlc = no leader_class = scientist }
+daoyu_leader_trait_percussive_maintainer_trigger = { has_ancrel = yes has_global_flag = daoyu_show_more_trait leader_class = scientist }
+daoyu_leader_trait_ruler_great_khan_trigger = { has_global_flag = daoyu_show_more_trait species = { nor = { is_species_class = MACHINE is_species_class = ROBOT is_species_class = LITHOID } } }
+daoyu_leader_trait_inspired_researcher_trigger = { leader_class = scientist }
+daoyu_leader_trait_scientist_mind_wipe_01_trigger = { has_global_flag = daoyu_show_more_trait leader_class = scientist owner = { is_gestalt = no } }
+daoyu_leader_trait_ruler_mind_wipe_01_trigger = { has_global_flag = daoyu_show_more_trait owner = { is_gestalt = no } }
+daoyu_leader_trait_ruler_mind_wipe_02_trigger = { has_global_flag = daoyu_show_more_trait owner = { is_gestalt = no } }
+daoyu_gestalt_trait_ruler_mind_wipe_01_trigger = { has_global_flag = daoyu_show_more_trait owner = { is_gestalt = yes } }
+daoyu_gestalt_trait_ruler_mind_wipe_02_trigger = { has_global_flag = daoyu_show_more_trait owner = { is_gestalt = yes } }
+daoyu_leader_trait_legendary_leader_trigger = { has_global_flag = daoyu_show_more_trait is_mechanical_species = no owner = { is_gestalt = no } }
+daoyu_leader_trait_the_cybernetic_luminary_trigger = { has_global_flag = daoyu_show_more_trait exists = owner owner = { has_tradition = tr_cybernetics_finish } has_trait = leader_trait_legendary_leader }
+daoyu_leader_trait_the_psionic_luminary_trigger = { has_global_flag = daoyu_show_more_trait exists = owner owner = { has_tradition = tr_psionics_finish } has_trait = leader_trait_legendary_leader }
+daoyu_leader_trait_the_synth_luminary_trigger = { has_global_flag = daoyu_show_more_trait exists = owner owner = { has_country_flag = synthetic_empire } has_trait = leader_trait_legendary_leader }
+daoyu_leader_trait_the_genetic_luminary_trigger = { exists = owner owner = { or = { has_tradition = tr_genetics_finish has_tradition = tr_cloning_finish has_tradition = tr_purity_finish has_tradition = tr_mutation_finish } } has_trait = leader_trait_legendary_leader }
+daoyu_leader_trait_fotd_scientist_trigger = { has_global_flag = daoyu_show_more_trait has_first_contact_dlc = yes leader_class = scientist }
+daoyu_leader_trait_sanitary_drone_trigger = { has_global_flag = daoyu_show_more_trait has_astral_planes_dlc = yes leader_class = scientist }
+daoyu_leader_trait_has_backup_clone_trigger = { has_global_flag = daoyu_show_more_trait leader_can_have_backup_clone = yes }
+daoyu_leader_trait_govenor_caretaker_trigger = { has_global_flag = daoyu_show_more_trait leader_class = official }
+daoyu_leader_trait_govenor_caretaker_node_trigger = { has_global_flag = daoyu_show_more_trait is_councilor_type = councilor_gestalt_growth }
+daoyu_leader_trait_admiral_warform_trigger = { has_global_flag = daoyu_show_more_trait leader_class = commander }
+daoyu_leader_trait_admiral_warform_node_trigger = { has_global_flag = daoyu_show_more_trait is_councilor_type = councilor_gestalt_legion }
+daoyu_leader_trait_storm_rider_scientist_trigger = { has_cosmic_storms_dlc = yes leader_class = scientist or = { has_global_flag = daoyu_show_more_trait owner = { has_origin = origin_storm_chasers } } }
+daoyu_leader_trait_storm_rider_official_trigger = { has_cosmic_storms_dlc = yes leader_class = official or = { has_global_flag = daoyu_show_more_trait owner = { has_origin = origin_storm_chasers } } }
+daoyu_leader_trait_storm_rider_commander_trigger = { has_cosmic_storms_dlc = yes leader_class = commander or = { has_global_flag = daoyu_show_more_trait owner = { has_origin = origin_storm_chasers } } }
+daoyu_leader_trait_shroudwalker_trigger = { has_global_flag = daoyu_show_more_trait leader_class = official }
+daoyu_leader_trait_enclave_trader_trigger = { has_global_flag = daoyu_show_more_trait leader_class = official }
+daoyu_leader_trait_xuracorp_liaison_trigger = { has_global_flag = daoyu_show_more_trait leader_class = official }
+daoyu_leader_trait_muutagan_liaison_trigger = { has_global_flag = daoyu_show_more_trait leader_class = official }
+daoyu_leader_trait_bureaucrat_trigger = { trait_is_crisis_faction_check = no }
+daoyu_leader_trait_agrarian_upbringing_trigger = { trait_is_crisis_faction_check = no trait_is_wilderness_check = no has_global_flag = game_started exists = owner owner = { country_uses_food = yes } is_ruler = no }
+daoyu_leader_trait_environmental_engineer_trigger = { trait_is_crisis_faction_check = no exists = owner owner = { has_blocker_removal_tech = yes } }
+daoyu_leader_trait_enlister_trigger = { leader_class = commander trait_is_crisis_faction_check = no }
+daoyu_leader_trait_architectural_interest_trigger = { leader_class = official leader_class = scientist trait_is_crisis_faction_check = no }
+daoyu_leader_trait_waste_management_specialist_trigger = { leader_class = official }
+daoyu_leader_trait_nuumismatic_priest_trigger = { has_megacorp = yes has_global_flag = daoyu_show_more_trait leader_class = official }
+daoyu_leader_trait_governor_oracle_trigger = { has_ancrel = yes has_global_flag = daoyu_show_more_trait leader_class = official }
+daoyu_leader_trait_scholarium_investigator_trigger = { has_overlord_dlc = yes leader_class = scientist }
+daoyu_leader_trait_prospectorium_extractor_trigger = { has_overlord_dlc = yes leader_class = official }
+daoyu_leader_trait_prospectorium_optimizer_trigger = { has_overlord_dlc = yes leader_class = official }
+daoyu_leader_trait_prospectorium_refiner_trigger = { has_overlord_dlc = yes leader_class = official }
+daoyu_leader_trait_gorky_trigger = { has_paragon_dlc = yes has_global_flag = daoyu_show_more_trait leader_class = scientist }
+daoyu_leader_trait_governor_psionic_communion_trigger = { has_paragon_dlc = yes has_global_flag = daoyu_show_more_trait leader_class = official nor = { has_trait = leader_trait_cyborg has_trait = leader_trait_synthetic } }
+daoyu_leader_trait_preftl_haggler_trigger = { has_first_contact_dlc = yes has_global_flag = daoyu_show_more_trait leader_class = official }
+daoyu_leader_trait_zealot_trigger = { leader_class = official }
+daoyu_leader_trait_fleet_logistician_trigger = { has_paragon_dlc = no leader_class = commander }
+daoyu_leader_trait_aggressive_trigger = { leader_class = commander not = { has_trait = leader_trait_cautious } }
+daoyu_leader_trait_cautious_trigger = { leader_class = commander not = { has_trait = leader_trait_aggressive } }
+daoyu_leader_trait_unyielding_trigger = { leader_class = commander not = { has_trait = leader_trait_trickster } }
+daoyu_leader_trait_trickster_trigger = { leader_class = commander not = { has_trait = leader_trait_unyielding } }
+daoyu_leader_trait_engineer_trigger = { leader_class = commander }
+daoyu_leader_trait_clone_army_commander_trigger = { leader_class = commander species = { has_trait = trait_clone_soldier_infertile } }
+daoyu_leader_trait_clone_army_fertile_commander_trigger = { leader_class = commander species = { has_trait = trait_clone_soldier_fertile } }
+daoyu_leader_trait_clone_army_full_commander_trigger = { leader_class = commander species = { has_trait = trait_clone_soldier_infertile_full_potential } }
+daoyu_leader_trait_foredoomed_to_a_rendezvous_trigger = { has_global_flag = daoyu_show_more_trait leader_class = commander }
+daoyu_leader_trait_admiral_hells_heart_trigger = { has_distar = yes leader_class = commander }
+daoyu_leader_trait_caravan_counter_trigger = { has_megacorp = yes leader_class = commander }
+daoyu_leader_trait_bulwark_watcher_trigger = { has_overlord_dlc = yes leader_class = commander }
+daoyu_leader_trait_bulwark_retaliator_trigger = { has_overlord_dlc = yes leader_class = commander }
+daoyu_leader_trait_bulwark_sentinel_trigger = { has_overlord_dlc = yes leader_class = commander }
+daoyu_leader_trait_fotd_commander_trigger = { has_first_contact_dlc = yes has_global_flag = daoyu_show_more_trait leader_class = commander }
+daoyu_leader_trait_unplugged_cybernetic_positives_1_trigger = { leader_class = commander species = { has_trait = trait_unplugged_cybernetic_positives_1 } owner = { has_origin = origin_unplugged } }
+daoyu_leader_trait_unplugged_cybernetic_positives_2_trigger = { leader_class = commander species = { has_trait = trait_unplugged_cybernetic_positives_2 } owner = { has_origin = origin_unplugged } }
+daoyu_leader_trait_unplugged_cybernetic_positives_3_trigger = { leader_class = commander species = { has_trait = trait_unplugged_cybernetic_positives_3 } owner = { has_origin = origin_unplugged } }
+daoyu_leader_trait_erudite_trigger = { has_utopia = yes trait_is_wilderness_check = no }
+daoyu_leader_trait_chosen_trigger = { nor = { has_ethic = ethic_gestalt_consciousness has_trait = leader_trait_cyborg has_trait = leader_trait_synthetic } or = { has_global_flag = daoyu_show_more_trait owner = { has_country_flag = breached_shroud } } }
+daoyu_leader_trait_whisperers_chosen_trigger = { nor = { has_ethic = ethic_gestalt_consciousness has_trait = leader_trait_cyborg has_trait = leader_trait_synthetic } or = { has_global_flag = daoyu_show_more_trait owner = { has_country_flag = breached_shroud } } }
+daoyu_leader_trait_eater_chosen_trigger = { nor = { has_ethic = ethic_gestalt_consciousness has_trait = leader_trait_cyborg has_trait = leader_trait_synthetic } or = { has_global_flag = daoyu_show_more_trait owner = { has_country_flag = breached_shroud } } }
+daoyu_leader_trait_composer_chosen_trigger = { nor = { has_ethic = ethic_gestalt_consciousness has_trait = leader_trait_cyborg has_trait = leader_trait_synthetic } or = { has_global_flag = daoyu_show_more_trait owner = { has_country_flag = breached_shroud } } }
+daoyu_leader_trait_instrument_chosen_trigger = { nor = { has_ethic = ethic_gestalt_consciousness has_trait = leader_trait_cyborg has_trait = leader_trait_synthetic } or = { has_global_flag = daoyu_show_more_trait owner = { has_country_flag = breached_shroud } } }
+daoyu_leader_trait_brainslug_trigger = { has_distar = yes has_global_flag = daoyu_show_more_trait owner = { is_machine_empire = no } species = { nor = { has_trait = trait_cybernetic has_trait = trait_mechanical has_trait = trait_machine_unit } } }
+daoyu_leader_trait_ancient_knowledge_trigger = { has_federations_dlc = yes has_global_flag = daoyu_show_more_trait }
+daoyu_leader_trait_legendary_ancestors_knowledge_trigger = { has_paragon_dlc = yes has_global_flag = daoyu_show_more_trait }
+daoyu_leader_trait_dragonslayer_trigger = { has_global_flag = daoyu_show_more_trait leader_class = commander owner = { is_country_type = origin_dragon } }
+daoyu_leader_trait_restrained_trigger = { leader_class = commander not = { has_trait = leader_trait_butcher } trait_is_crisis_faction_check = no }
+daoyu_leader_trait_butcher_trigger = { leader_class = commander not = { has_trait = leader_trait_restrained } trait_is_crisis_faction_check = no }
+daoyu_leader_trait_mercenary_warrior_trigger = { leader_class = commander }
+daoyu_leader_trait_admiral_mind_wipe_01_trigger = { leader_class = commander has_global_flag = daoyu_show_more_trait owner = { is_gestalt = no } }
+daoyu_leader_trait_admiral_mind_wipe_02_trigger = { leader_class = commander has_global_flag = daoyu_show_more_trait owner = { is_gestalt = no } }
+daoyu_gestalt_trait_commander_mind_wipe_01_trigger = { leader_class = commander has_global_flag = daoyu_show_more_trait owner = { is_gestalt = yes } }
+daoyu_gestalt_trait_commander_mind_wipe_02_trigger = { leader_class = commander has_global_flag = daoyu_show_more_trait owner = { is_gestalt = yes } }
+daoyu_leader_trait_general_mind_wipe_01_trigger = { leader_class = commander has_global_flag = daoyu_show_more_trait owner = { is_gestalt = no } }
+daoyu_leader_trait_general_mind_wipe_02_trigger = { leader_class = commander has_global_flag = daoyu_show_more_trait owner = { is_gestalt = no } }
+daoyu_gestalt_trait_general_mind_wipe_01_trigger = { leader_class = commander has_global_flag = daoyu_show_more_trait owner = { is_gestalt = yes } }
+daoyu_gestalt_trait_general_mind_wipe_02_trigger = { leader_class = commander has_global_flag = daoyu_show_more_trait owner = { is_gestalt = yes } }
+daoyu_leader_trait_scientist_mind_wipe_02_trigger = { leader_class = scientist has_global_flag = daoyu_show_more_trait owner = { is_gestalt = no } }
+daoyu_gestalt_trait_scientist_mind_wipe_02_trigger = { leader_class = scientist has_global_flag = daoyu_show_more_trait owner = { is_gestalt = yes } }
+daoyu_leader_trait_master_salvager_trigger = { has_paragon_dlc = yes leader_class = scientist }
+daoyu_leader_trait_eager_trigger = { trait_is_crisis_faction_check = no is_ruler = no NOT = { has_trait_tier1or2or3 = { TRAIT = leader_trait_adventurous_spirit } } }
+daoyu_leader_trait_resilient_trigger = { trait_is_crisis_faction_check = no is_immortal = no }
+daoyu_leader_trait_adaptable_trigger = { has_distar = yes }
+daoyu_leader_trait_emotional_support_pet_trigger = { has_paragon_dlc = yes is_ruler = no owner = { is_machine_empire = no } }
+daoyu_leader_trait_intemporal_trigger = { has_global_flag = daoyu_show_more_trait }
+daoyu_leader_trait_intellectual_trigger = { has_paragon_dlc = no leader_class = official }
+daoyu_leader_trait_custom_AI_assistant_trigger = { leader_class = scientist not = { has_trait = leader_trait_sapient_AI_assistant } }
+daoyu_leader_trait_sapient_AI_assistant_trigger = { leader_class = scientist not = { has_trait = leader_trait_custom_AI_assistant } owner = { not = { has_policy_flag = ai_outlawed } } }
+daoyu_leader_trait_towel_trigger = { leader_class = scientist }
+daoyu_leader_trait_shroud_age_trigger = { has_utopia = yes }
+daoyu_leader_trait_inspired_archaeologist_trigger = { leader_class = scientist }
+daoyu_leader_trait_inspired_surveyor_trigger = { leader_class = scientist }
+daoyu_leader_trait_scholarium_explorer_trigger = { has_overlord_dlc = yes leader_class = scientist }
+daoyu_leader_trait_scholarium_observer_trigger = { has_overlord_dlc = yes leader_class = scientist }
+daoyu_leader_trait_legendary_offspring_trigger = { has_paragon_dlc = yes or = { has_global_flag = daoyu_show_more_trait has_origin = origin_legendary_leader } }
+daoyu_leader_trait_rift_warped_trigger = { has_astral_planes_dlc = yes leader_class = scientist has_global_flag = daoyu_show_more_trait }
+#殖民地类型
+daoyu_col_default = { exists = owner owner = { is_regular_empire = yes } has_upgraded_capital = no is_special_colony_type = no num_sapient_pops < 5 is_capital = no not = { is_planet_class = pc_nanotech } }
+daoyu_col_default_machine = { exists = owner owner = { is_machine_empire = yes } has_upgraded_capital = no is_special_colony_type = no num_sapient_pops < 5 }
+daoyu_col_city = { exists = owner owner = { is_regular_empire = yes } nor = { uses_district_set = city_world uses_district_set = ring_world uses_district_set = habitat uses_district_set = cosmogenesis_world } is_special_colony_type = no is_capital = no not = { is_planet_class = pc_nanotech } }
+daoyu_col_mining = { exists = owner nor = { uses_district_set = city_world uses_district_set = ring_world uses_district_set = habitat uses_district_set = cosmogenesis_world } is_special_colony_type = no is_capital = no not = { is_planet_class = pc_nanotech } }
+daoyu_col_farming = {
+	exists = owner owner = { country_uses_food = yes } nor = { uses_district_set = city_world uses_district_set = ring_world uses_district_set = habitat uses_district_set = machine_world uses_district_set = cosmogenesis_world }
+	is_special_colony_type = no is_capital = no not = { is_planet_class = pc_nanotech }
+}
+daoyu_col_generator = {
+	exists = owner nor = { uses_district_set = city_world uses_district_set = ring_world uses_district_set = habitat uses_district_set = cosmogenesis_world
+	and = { owner = { is_gestalt = no } uses_district_set = shattered_ring_world } } is_special_colony_type = no is_capital = no not = { is_planet_class = pc_nanotech }
+}
+daoyu_col_hive = { nor = { uses_district_set = ring_world uses_district_set = habitat uses_district_set = cosmogenesis_world } exists = owner owner = { is_hive_empire = yes } is_special_colony_type = no is_capital = no }
+daoyu_col_nexus = { nor = { uses_district_set = machine_world uses_district_set = ring_world uses_district_set = habitat uses_district_set = cosmogenesis_world } exists = owner owner = { is_machine_empire = yes } is_special_colony_type = no is_capital = no not = { is_planet_class = pc_nanotech } }
+daoyu_col_industrial = {
+	exists = owner owner = { country_uses_consumer_goods = yes } nor = { uses_district_set = city_world uses_district_set = habitat uses_district_set = machine_world uses_district_set = hive_world uses_district_set = cosmogenesis_world }
+	is_special_colony_type = no is_capital = no not = { is_planet_class = pc_nanotech }
+}
+daoyu_col_foundry = { exists = owner nor = { uses_district_set = city_world uses_district_set = habitat uses_district_set = machine_world uses_district_set = hive_world uses_district_set = cosmogenesis_world } is_special_colony_type = no is_capital = no not = { is_planet_class = pc_nanotech } }
+daoyu_col_factory = {
+	exists = owner owner = { country_uses_consumer_goods = yes } nor = { uses_district_set = city_world uses_district_set = habitat uses_district_set = machine_world uses_district_set = hive_world uses_district_set = cosmogenesis_world }
+	is_special_colony_type = no is_capital = no not = { is_planet_class = pc_nanotech }
+}
+daoyu_col_bureau = { exists = owner owner = { is_regular_empire = yes is_spiritualist = no has_make_spiritualist_perk = no } nor = { uses_district_set = habitat uses_district_set = cosmogenesis_world } is_special_colony_type = no is_capital = no not = { is_planet_class = pc_nanotech } }
+daoyu_col_bureau_spiritualist = {
+	exists = owner owner = { is_regular_empire = yes or = { is_spiritualist = yes has_make_spiritualist_perk = yes } } nor = { uses_district_set = habitat uses_district_set = cosmogenesis_world } is_special_colony_type = no is_capital = no not = { is_planet_class = pc_nanotech }
+}
+daoyu_col_bureau_hive = { exists = owner owner = { is_hive_empire = yes } nor = { uses_district_set = habitat uses_district_set = cosmogenesis_world } is_special_colony_type = no is_capital = no }
+daoyu_col_bureau_machine = { exists = owner owner = { is_machine_empire = yes not = { has_valid_civic = civic_machine_servitor } } nor = { uses_district_set = habitat uses_district_set = cosmogenesis_world } is_special_colony_type = no is_capital = no not = { is_planet_class = pc_nanotech } }
+daoyu_col_refinery = { exists = owner nor = { uses_district_set = city_world uses_district_set = ring_world uses_district_set = habitat uses_district_set = cosmogenesis_world } is_special_colony_type = no is_capital = no not = { is_planet_class = pc_nanotech } }
+daoyu_col_research = { exists = owner nor = { uses_district_set = city_world uses_district_set = ring_world uses_district_set = habitat uses_district_set = cosmogenesis_world } is_special_colony_type = no is_capital = no not = { is_planet_class = pc_nanotech } }
+daoyu_col_fortress = { exists = owner nor = { uses_district_set = city_world uses_district_set = ring_world uses_district_set = habitat uses_district_set = cosmogenesis_world } is_capital = no is_special_colony_type = no not = { is_planet_class = pc_nanotech } }
+daoyu_col_capital = { is_capital = yes nand = { exists = owner owner = { or = { not = { is_country_type = default } is_gestalt = yes } } } }
+daoyu_col_capital_foundry = { is_capital = yes exists = owner owner = { and = { is_country_type = default or = { is_ai = no and = { years_passed > 25 num_owned_planets >= 5 } } } } }
+daoyu_col_capital_factory = { is_capital = yes exists = owner owner = { and = { is_country_type = default country_uses_consumer_goods = yes or = { is_ai = no and = { years_passed > 25 num_owned_planets >= 5 } } } } }
+daoyu_col_capital_trade = { is_capital = yes exists = owner owner = { and = { is_country_type = default is_gestalt = no or = { is_ai = no and = { years_passed > 25 num_owned_planets >= 5 } } } } }
+daoyu_col_capital_extraction = { is_capital = yes exists = owner owner = { and = { is_country_type = default or = { is_ai = no and = { years_passed > 25 num_owned_planets >= 5 } } } } }
+daoyu_col_capital_hive = { is_capital = yes exists = owner owner = { is_country_type = default is_hive_empire = yes } }
+daoyu_col_capital_machine = { is_capital = yes exists = owner owner = { is_country_type = default is_machine_empire = yes } }
+daoyu_col_habitat = { uses_district_set = habitat is_capital = no num_sapient_pops < 5 }
+daoyu_col_habitat_energy = { uses_district_set = habitat exists = owner check_modifier_value = { modifier = district_hab_energy_max value > 0 } is_capital = no }
+daoyu_col_habitat_trade = { uses_district_set = habitat exists = owner owner = { is_gestalt = no } is_capital = no }
+daoyu_col_habitat_research = { uses_district_set = habitat exists = owner check_modifier_value = { modifier = district_hab_science_max value > 0 } is_capital = no }
+daoyu_col_habitat_mining = { uses_district_set = habitat check_modifier_value = { modifier = district_hab_mining_max value > 0 } is_capital = no }
+daoyu_col_habitat_farming = { uses_district_set = habitat exists = owner owner = { is_gestalt = no } is_capital = no }
+daoyu_col_habitat_gestalt_farming = { uses_district_set = habitat exists = owner owner = { is_gestalt = yes } is_capital = no }
+daoyu_col_habitat_fortress = { uses_district_set = habitat is_capital = no }
+daoyu_col_habitat_industrial = { exists = owner owner = { country_uses_consumer_goods = yes } uses_district_set = habitat is_capital = no }
+daoyu_col_habitat_foundry = { uses_district_set = habitat is_capital = no }
+daoyu_col_habitat_factory = { uses_district_set = habitat exists = owner owner = { country_uses_consumer_goods = yes } is_capital = no }
+daoyu_col_habitat_bureau = { exists = owner owner = { is_regular_empire = yes is_spiritualist = no has_make_spiritualist_perk = no } uses_district_set = habitat is_special_colony_type = no is_capital = no }
+daoyu_col_habitat_bureau_spiritualist = { exists = owner owner = { is_regular_empire = yes or = { is_spiritualist = yes has_make_spiritualist_perk = yes } } uses_district_set = habitat is_special_colony_type = no is_capital = no }
+daoyu_col_habitat_bureau_hive = { exists = owner owner = { is_hive_empire = yes } uses_district_set = habitat is_special_colony_type = no is_capital = no }
+daoyu_col_habitat_bureau_machine = { exists = owner owner = { is_machine_empire = yes } uses_district_set = habitat is_special_colony_type = no }
+daoyu_col_habitat_refinery = { uses_district_set = habitat is_capital = no }
+daoyu_col_rural_gestalt = { nor = { uses_district_set = habitat uses_district_set = ring_world uses_district_set = machine_world uses_district_set = hive_world } exists = owner owner = { is_gestalt = yes } is_special_colony_type = no is_capital = no not = { is_planet_class = pc_nanotech } }
+daoyu_col_rural = { exists = owner owner = { is_gestalt = no } nor = { uses_district_set = habitat uses_district_set = ring_world uses_district_set = city_world uses_district_set = cosmogenesis_world } is_special_colony_type = no is_capital = no not = { is_planet_class = pc_nanotech } }
+daoyu_col_ring_mix = { uses_district_set = ring_world is_capital = no }
+daoyu_col_ring_research = { uses_district_set = ring_world is_capital = no }
+daoyu_col_ring_farming = { uses_district_set = ring_world is_capital = no }
+daoyu_col_ring_trade = { uses_district_set = ring_world exists = owner owner = { is_gestalt = no } is_capital = no }
+daoyu_col_ring_generator = { uses_district_set = ring_world exists = owner owner = { is_gestalt = yes } is_capital = no }
+daoyu_col_ecu_mix = { uses_district_set = city_world is_capital = no }
+daoyu_col_ecu_industrial = { exists = owner owner = { country_uses_consumer_goods = yes } uses_district_set = city_world is_capital = no }
+daoyu_col_ecu_foundry = { uses_district_set = city_world is_capital = no }
+daoyu_col_ecu_factory = { uses_district_set = city_world exists = owner owner = { country_uses_consumer_goods = yes } is_capital = no }
+daoyu_col_ecu_research = { uses_district_set = city_world is_capital = no }
+daoyu_col_mac = { uses_district_set = machine_world is_capital = no }
+daoyu_col_mac_foundry = { uses_district_set = machine_world is_capital = no }
+daoyu_col_mac_factory = { uses_district_set = machine_world owner = { country_uses_consumer_goods = yes } is_capital = no }
+daoyu_col_hiv = { uses_district_set = hive_world is_capital = no }
+daoyu_col_hiv_foundry = { uses_district_set = hive_world is_capital = no }
+daoyu_col_trophy_machine = { exists = owner owner = { has_valid_civic = civic_machine_servitor } not = { uses_district_set = habitat } is_special_colony_type = no is_capital = no not = { is_planet_class = pc_nanotech } }
+daoyu_col_fe_capital = { is_capital = yes exists = owner owner = { is_fallen_empire = yes } }
+daoyu_col_fe_colony = { is_capital = no exists = owner owner = { is_fallen_empire = yes } }
+daoyu_col_resort = { has_modifier = resort_colony }
+daoyu_col_penal = { has_modifier = penal_colony }
+daoyu_col_gestation = { has_modifier = gestation_colony is_capital = no }
+daoyu_col_infested = { exists = owner is_capital = no owner = { is_country_type = swarm } }
+daoyu_col_contingency = { exists = owner owner = { is_country_type = ai_empire } is_capital = no }
+daoyu_col_slave = { has_modifier = slave_colony }
+daoyu_col_cosmogenesis_world = { is_planet_class = pc_cosmogenesis_world }
+daoyu_col_nanotech_world = { is_planet_class = pc_nanotech exists = owner owner = { has_active_tradition = tr_nanotech_3 } }
+daoyu_all_origin_trigger = {
+	or = {
+		has_origin = origin_hegemon#一方霸主
+		has_origin = origin_here_be_dragons#与龙共舞
+		has_origin = origin_cybernetic_creed#义体信条
+		has_origin = origin_scion#先辈子弟
+		has_origin = origin_clone_army#克隆大军
+		has_origin = origin_common_ground#共同命运
+		has_origin = origin_common_ground_npc#共同命运
+		has_origin = origin_separatists#分离主义者
+		has_origin = origin_syncretic_evolution#协同进化
+		has_origin = origin_primal_calling#原始呼唤
+		has_origin = origin_default_pre_ftl#发展中文明
+		has_origin = origin_khan_successor#可汗的继业者
+		has_origin = origin_synthetic_fertility#合成繁衍
+		has_origin = origin_post_apocalyptic#后启示录
+		has_origin = origin_legendary_leader#君临天下
+		has_origin = origin_legendary_leader_dictatorial#君临天下
+		has_origin = origin_legendary_leader_imperial#君临天下
+		has_origin = origin_enlightened#启蒙开化
+		has_origin = origin_subterranean#地底人
+		has_origin = origin_subterranean_machines#地底机械
+		has_origin = origin_remnants#复国孑遗
+		has_origin = origin_lost_colony#失落行星
+		has_origin = origin_progenitor_hive#始祖蜂巢
+		has_origin = origin_treasure_hunters#寻宝猎人
+		has_origin = origin_star_slingshot#射向星际
+		has_origin = origin_shoulders_of_giants#屹于巨人之肩
+		has_origin = origin_imperial_vassal#帝国封邑
+		has_origin = origin_imperial_vassal_overlord#帝国领主
+		has_origin = origin_overtuned#强夺天工
+		has_origin = origin_demonic_incursion#恶魔侵军
+		has_origin = origin_doomsday#末日将临
+		has_origin = origin_mechanists#机械师
+		has_origin = origin_toxic_knights#毒圣骑士
+		has_origin = origin_ocean_machines#水生机械
+		has_origin = origin_ocean_paradise#海洋天堂
+		has_origin = origin_tree_of_life#生命之树
+		has_origin = origin_life_seeded#生命之籽
+		has_origin = origin_life_seeded_ai_only#生命之籽
+		has_origin = origin_arc_welders#电弧焊机
+		has_origin = origin_shattered_ring#破碎之环
+		has_origin = origin_fruitful#硕果协作
+		has_origin = origin_broken_shackles#粉碎的枷锁
+		has_origin = origin_galactic_doorstep#繁星门阶
+		has_origin = origin_default#繁荣一统
+		has_origin = origin_legendary_leader_death#统治崩坏
+		has_origin = origin_shroudwalker_apprentice#虚境导师
+		has_origin = origin_void_dwellers#虚空居者
+		has_origin = origin_void_machines#虚空机者
+		has_origin = origin_payback#血债血偿
+		has_origin = origin_riftworld#裂隙当空
+		has_origin = origin_machine#资源统合
+		has_origin = origin_liberated#赢得解放
+		has_origin = origin_post_apocalyptic_machines#辐射漫游机
+		has_origin = origin_storm_chasers#追风者
+		has_origin = origin_slavers#通天之梯
+		has_origin = origin_fallen_empire#长者之裔
+		has_origin = origin_lithoid#降世灾星
+		has_origin = origin_hegemon_npc#霸主部从
+		has_origin = origin_necrophage#食尸文化
+		has_origin = origin_fear_of_the_dark#黑暗之怖
+	}
+}
+daoyu_cannot_subjugate_empire_member = { custom_tooltip = { fail_text = cannot_subjugate_empire_member NAND = { has_galactic_emperor = yes is_galactic_community_member = no from = { is_galactic_community_member = yes } } } }
+daoyu_cannot_use_against_btc = { custom_tooltip = { fail_text = cannot_use_against_btc from = { has_been_declared_crisis = no } } }
+daoyu_cannot_use_against_custodian = { custom_tooltip = { fail_text = cannot_use_against_custodian from = { is_galactic_custodian = no } } }
+daoyu_cannot_use_against_emperor = { custom_tooltip = { fail_text = cannot_use_against_emperor or = { from = { is_galactic_emperor = no } is_galactic_community_member = no } } }
+daoyu_has_claimed_all_systems = { from = { is_country_type = default any_owned_planet = { is_colony = yes root = { NOT = { has_claim = prev.solar_system } } } } }
+#物种负面特质
+daoyu_pop_has_negative_traits = {
+	or = {
+		has_trait = trait_nonadaptive
+		has_trait = trait_slow_breeders
+		has_trait = trait_slow_learners
+		has_trait = trait_quarrelsome
+		has_trait = trait_unruly
+		has_trait = trait_weak
+		has_trait = trait_sedentary
+		has_trait = trait_solitary
+		has_trait = trait_repugnant
+		has_trait = trait_deviants
+		has_trait = trait_fleeting
+		has_trait = trait_fleeting_lithoid
+		has_trait = trait_decadent
+		has_trait = trait_wasteful
+		has_trait = trait_humanoid_psychological_infertility
+		has_trait = trait_humanoid_jinxed
+		has_trait = trait_robot_bulky
+		has_trait = trait_robot_uncanny
+		has_trait = trait_robot_high_maintenance
+		has_trait = trait_robot_repurposed_hardware
+		has_trait = trait_robot_custom_made
+		has_trait = trait_robot_luxurious
+		has_trait = trait_robot_high_bandwidth
+		has_trait = trait_robot_quarrelsome
+		has_trait = trait_robot_deviants
+		has_trait = trait_robot_decadent
+		has_trait = trait_robot_wasteful
+		has_trait = trait_robot_delicate_frames
+		has_trait = trait_robot_scarcity_algorithms
+		has_trait = trait_cyborg_bulky
+		has_trait = trait_cyborg_high_maintenance
+		has_trait = trait_cyborg_power_intensive
+		has_trait = trait_cyborg_neural_limiters
+		has_trait = trait_cyborg_high_bandwidth
+		has_trait = trait_cyborg_welded_countenance
+		has_trait = trait_cyborg_apathy_loops
+		has_trait = trait_cyborg_delicate_frames
+		has_trait = trait_cyborg_limited_memory
+		has_trait = trait_cyborg_scarcity_algorithms
+		has_trait = trait_pathogenic_genes
+		has_trait = trait_nuumismatic_administration
+	}
+}
+daoyu_add_global_flag_trigger = {
+	custom_tooltip = { fail_text = USED has_global_flag = daoyu_add_global_flag not = { has_global_flag = $FLAG$ } }
+}
+daoyu_remove_global_flag_trigger = {
+	custom_tooltip = { fail_text = UNUSED has_global_flag = daoyu_remove_global_flag has_global_flag = $FLAG$ }
+}
+daoyu_has_auto_flag_trigger = {
+	or = {
+		has_global_flag = daoyu_auto_remove_leader_negative_traits
+		has_global_flag = daoyu_auto_build_mining_or_research_station
+		has_global_flag = daoyu_auto_build_hyper_relay
+		has_global_flag = daoyu_auto_build_outpost_at_arc_site
+		has_global_flag = daoyu_auto_excavate_site_add_stage_clues
+		has_global_flag = daoyu_auto_first_contact_add_stage_clues
+		has_global_flag = daoyu_auto_free_leader
+		has_global_flag = daoyu_auto_reduce_resource_scarcity
+		has_global_flag = daoyu_auto_build_outpost_at_unclaimed
+		has_global_flag = daoyu_auto_project_complete
+		has_global_flag = daoyu_auto_seek_unity_of_ethic
+	}
+}
+daoyu_has_restriction_flag_trigger = {
+	or = {
+		has_global_flag = daoyu_can_excavate_outside_borders
+		has_global_flag = daoyu_ai_can_not_build_starbase
+	}
+}
+daoyu_has_archaeological_site_trigger = {
+	exists = archaeological_site
+	archaeological_site = {
+		or = {
+			is_site_type = site_ruins_of_shallash
+			is_site_type = site_space_shanty_dig
+			is_site_type = site_fumongus_dig
+			is_site_type = site_ancient_robot_world
+			is_site_type = site_transformation_dig
+			is_site_type = site_tiyanki_graveyard
+			is_site_type = site_ice_trauma
+			is_site_type = site_engineered_species
+			is_site_type = site_debris_belt
+			is_site_type = site_krazura_dig
+			is_site_type = zroni_digsite_1
+			is_site_type = zroni_digsite_2
+			is_site_type = zroni_digsite_3
+			is_site_type = zroni_digsite_4
+			is_site_type = zroni_digsite_5
+			is_site_type = zroni_digsite_6
+			is_site_type = grunur_digsite_1
+			is_site_type = baol_digsite_1
+			is_site_type = baol_digsite_2
+			is_site_type = baol_digsite_3
+			is_site_type = omnirelic_site
+			is_site_type = site_command_center
+			is_site_type = site_hunting_ground
+			is_site_type = site_zarqlan
+			is_site_type = site_minigalaxy_1
+			is_site_type = site_minigalaxy_2
+			is_site_type = site_star_petal
+			is_site_type = site_robot_debris
+			is_site_type = site_freighter_crash
+			is_site_type = site_moon_bump
+			is_site_type = site_echoes_inside
+			is_site_type = site_target_from_orbit
+			is_site_type = site_shot_into_the_ground
+			is_site_type = site_cut_to_fit
+			is_site_type = site_deja_vu_dig
+			is_site_type = site_trench_world
+			is_site_type = site_ebb_and_flow
+			is_site_type = site_sky_glow_hymn
+			is_site_type = site_warmer_climates
+			is_site_type = site_phoenix_collective
+			is_site_type = site_grand_herald
+			is_site_type = site_hive_coral
+			is_site_type = site_orbital_rain
+			is_site_type = site_fossilized_jellyfish
+			is_site_type = site_popular_rock
+			is_site_type = site_strange_flows
+			is_site_type = site_lost_moments
+			is_site_type = site_lesser_messenger
+			is_site_type = asteroid_vault_1
+			is_site_type = planetary_mechanocalibrator
+			is_site_type = it_was_aliens_site
+			is_site_type = ancient_battle_site
+			is_site_type = mutation_vats
+			is_site_type = city_of_bones
+			is_site_type = the_host
+			is_site_type = site_hidden_lab_a
+			is_site_type = endless_expanse_digsite
+			is_site_type = endless_expanse_digsite_2
+			is_site_type = site_percussive_maintenance
+			is_site_type = lithoids_digsite
+			is_site_type = rubricator_digsite
+			is_site_type = oracle_digsite
+			is_site_type = sentinels_digsite
+			is_site_type = site_the_library
+			is_site_type = relicrails_digsite
+			is_site_type = site_polaris_seed_vault
+			is_site_type = site_tombworld_weapon_cache
+			is_site_type = site_rage_sage_dig
+			is_site_type = site_from_gateway_sent
+			is_site_type = site_ex_gravitas
+			is_site_type = site_something_waiting
+			is_site_type = site_buried_deep
+			is_site_type = site_in_memoriam
+			is_site_type = site_the_last_stand
+			is_site_type = site_dark_secret
+			is_site_type = site_benign_cover_up
+			is_site_type = site_bury_the_hatchet
+			is_site_type = leylines_digsite
+			is_site_type = broken_world_digsite
+			is_site_type = clone_army_digsite
+			is_site_type = slingshot_digsite
+			is_site_type = larion_digsite
+			is_site_type = zevox_digsite
+			is_site_type = payback_digsite
+			is_site_type = broken_shackles_digsite
+			is_site_type = site_the_chosen_backstory
+			is_site_type = paragon_legendary_leader_homeworld
+			is_site_type = riftworld_digsite
+			is_site_type = site_green_skies
+			is_site_type = site_weathermanipulators_the_ancient_storm_shelters
+			is_site_type = site_weathermanipulators_CoordinatesA_Residential_Planet
+			is_site_type = site_weathermanipulators_CoordinatesB_Industrial_Planet
+			is_site_type = site_weathermanipulators_CoordinatesC_Barren_Planet
+			is_site_type = site_weathermanipulators_storm_formation
+			is_site_type = site_weathermanipulators_last_shelter
+			is_site_type = site_adakkaria_the_propaganda_station
+			is_site_type = site_adakarria_windswept_fates
+			is_site_type = site_adakkaria_fleets_of_the_thrice_damned
+			is_site_type = site_adakkaria_the_patriotic_institute
+			is_site_type = site_adakkaria_celebration
+			is_site_type = site_hold_the_line
+			is_site_type = site_repowered_complex
+			is_site_type = synth_queen_history_site_1
+			is_site_type = synth_queen_history_site_2
+			is_site_type = smeegibb_digsite
+		}
+	}
+}
+daoyu_councilor_post_trigger = {
+	or = {
+		is_ruler = yes
+		is_councilor_type = councilor_research
+		is_councilor_type = councilor_defense
+		is_councilor_type = councilor_state
+		is_councilor_type = councilor_agrarian_idyll
+		is_councilor_type = councilor_anglers
+		is_councilor_type = councilor_machine_anglers
+		is_councilor_type = councilor_aristocratic_elite
+		is_councilor_type = councilor_ascensionists
+		is_councilor_type = councilor_barbaric_despoilers
+		is_councilor_type = councilor_beacon_of_liberty
+		is_councilor_type = councilor_byzantine_bureaucracy
+		is_councilor_type = councilor_catalytic_processing
+		is_councilor_type = councilor_citizen_service
+		is_councilor_type = councilor_corporate_dominion
+		is_councilor_type = councilor_corvee_system
+		is_councilor_type = councilor_crafters
+		is_councilor_type = councilor_crusader_spirit
+		is_councilor_type = councilor_cutthroat_politics
+		is_councilor_type = councilor_death_cult
+		is_councilor_type = councilor_diplomatic_corps
+		is_councilor_type = councilor_distinguished_admiralty
+		is_councilor_type = councilor_eager_explorers
+		is_councilor_type = councilor_efficient_bureaucracy
+		is_councilor_type = councilor_environmentalist
+		is_councilor_type = councilor_exalted_priesthood
+		is_councilor_type = councilor_fanatic_purifiers
+		is_councilor_type = councilor_feudal_realm
+		is_councilor_type = councilor_free_haven
+		is_councilor_type = councilor_functional_architecture
+		is_councilor_type = councilor_idealistic_foundation
+		is_councilor_type = councilor_idyllic_bloom
+		is_councilor_type = councilor_imperial_cult
+		is_councilor_type = councilor_inwards_perfection
+		is_councilor_type = councilor_memorialist
+		is_councilor_type = councilor_memory_vaults
+		is_councilor_type = councilor_merchant_guilds
+		is_councilor_type = councilor_meritocracy
+		is_councilor_type = councilor_mining_guilds
+		is_councilor_type = councilor_nationalistic_zeal
+		is_councilor_type = councilor_parliamentary_system
+		is_councilor_type = councilor_philosopher_king
+		is_councilor_type = councilor_pleasure_seekers
+		is_councilor_type = councilor_police_state
+		is_councilor_type = councilor_pompous_purists
+		is_councilor_type = councilor_reanimated_armies
+		is_councilor_type = councilor_relentless_industrialists
+		is_councilor_type = councilor_scavengers
+		is_councilor_type = councilor_shadow_council
+		is_councilor_type = councilor_shared_burden
+		is_councilor_type = councilor_slaver_guilds
+		is_councilor_type = councilor_technocracy
+		is_councilor_type = councilor_toxic_baths
+		is_councilor_type = councilor_toxic_baths_individual_machine
+		is_councilor_type = councilor_corporate_toxic_baths_individual_machine
+		is_councilor_type = councilor_warrior_culture
+		is_councilor_type = councilor_heroic_tales
+		is_councilor_type = councilor_dystopian_society
+		is_councilor_type = councilor_selective_kinship
+		is_councilor_type = councilor_civic_guided_sapience
+		is_councilor_type = councilor_memory_vault_corporate
+		is_councilor_type = councilor_crusader_spirit_corporate
+		is_councilor_type = councilor_task_delegation_corporate
+		is_councilor_type = councilor_private_healthcare_corporate
+		is_councilor_type = councilor_brand_loyalty
+		is_councilor_type = councilor_corporate_anglers
+		is_councilor_type = councilor_corporate_machine_anglers
+		is_councilor_type = councilor_corporate_ascensionists
+		is_councilor_type = councilor_corporate_catalytic_processing
+		is_councilor_type = councilor_corporate_crafters
+		is_councilor_type = councilor_corporate_hedonism
+		is_councilor_type = councilor_corporate_scavengers
+		is_councilor_type = councilor_corporate_relentless_industrialists
+		is_councilor_type = councilor_corporate_toxic_baths
+		is_councilor_type = councilor_criminal_heritage
+		is_councilor_type = councilor_franchising
+		is_councilor_type = councilor_death_cult_corporate
+		is_councilor_type = councilor_free_traders
+		is_councilor_type = councilor_gospel_of_the_masses
+		is_councilor_type = councilor_indentured_assets
+		is_councilor_type = councilor_media_conglomerate
+		is_councilor_type = councilor_naval_contractors
+		is_councilor_type = councilor_permanent_employment
+		is_councilor_type = councilor_private_military_companies
+		is_councilor_type = councilor_private_prospectors
+		is_councilor_type = councilor_privatized_exploration
+		is_councilor_type = councilor_public_relations_specialists
+		is_councilor_type = councilor_ruthless_competition
+		is_councilor_type = councilor_trading_posts
+		is_councilor_type = councilor_worker_coop
+		is_councilor_type = councilor_civic_guided_sapience_corperate
+		is_councilor_type = councilor_gestalt_growth
+		is_councilor_type = councilor_gestalt_cognitive
+		is_councilor_type = councilor_gestalt_legion
+		is_councilor_type = councilor_gestalt_regulatory
+		is_councilor_type = councilor_psionic_sovereign
+		is_councilor_type = councilor_galactic_sovereign
+		is_councilor_type = councilor_galactic_sovereign_megacorp
+		is_councilor_type = councilor_diadochi
+		is_councilor_type = councilor_great_khans_legacy
+		is_councilor_type = councilor_revanchist_fervor
+		is_councilor_type = councilor_ancient_caches_of_technology
+	}
+}
+daoyu_has_single_relic_trigger = {
+	or = {
+		and = { has_global_flag = daoyu_add_relic not = { has_relic = $RELIC$ } }
+		and = { not = { has_global_flag = daoyu_add_relic } has_relic = $RELIC$ }
+	}
+}
+daoyu_has_all_relic_trigger = {
+	and = { has_leviathans = yes has_relic = r_dragon_trophy }
+	and = { host_has_dlc = "Apocalypse" has_relic = r_khans_throne }
+	has_relic = r_worm_scales
+	and = { has_ancrel = yes has_relic = r_surveyor }
+	and = { has_grand_archive_dlc = yes has_relic = r_mutated_voidworm_nest }
+	and = { has_ancrel = yes has_relic = r_rubricator }
+	and = { has_ancrel = yes has_relic = r_galaxy }
+	and = { has_ancrel = yes has_relic = r_omnicodex }
+	and = { has_ancrel = yes has_relic = r_ancient_sword }
+	and = { has_ancrel = yes has_relic = r_severed_head }
+	and = { has_ancrel = yes has_relic = r_the_defragmentor }
+	and = { has_ancrel = yes has_relic = r_odryskan_crystal }
+	and = { has_megacorp = yes has_relic = r_galatron }
+	and = { has_machine_age_dlc = yes has_relic = r_the_rulerchip }
+	and = { has_paragon_dlc = yes has_relic = r_wormhole_key }
+	has_relic = r_vacuum_flower
+	has_relic = r_prethoryn_queen
+	has_relic = r_unbidden_warlock
+	has_relic = r_contingency_core
+	and = { has_machine_age_dlc = yes has_relic = r_cetanas_heart }
+	and = { has_ancrel = yes has_relic = r_zro_crystal }
+	and = { has_ancrel = yes has_relic = r_the_last_baol }
+	and = { has_ancrel = yes has_relic = r_reality_perforator }
+	and = { has_ancrel = yes has_relic = r_pox_sample }
+	and = { has_ancrel = yes has_relic = r_cryo_core }
+	and = { has_ancrel = yes has_relic = r_war_forge }
+	and = { has_cosmic_storms_dlc = yes has_relic = r_weather_manipulator }
+	and = { has_cosmic_storms_dlc = yes has_relic = r_the_tempest_invocator }
+	and = { has_toxoids = yes has_relic = r_toxic_god }
+	and = { has_grand_archive_dlc = yes has_relic = r_celestial_chart_4 }
+	and = { has_astral_planes_dlc = yes has_relic = r_celestial_tear }
+	and = { has_astral_planes_dlc = yes has_relic = r_daedalus_seal }
+	and = { has_astral_planes_dlc = yes has_relic = r_ever_spinning_top }
+	and = { has_astral_planes_dlc = yes has_relic = r_infinity_root }
+	and = { has_astral_planes_dlc = yes has_relic = r_plasmic_core }
+	and = { has_astral_planes_dlc = yes has_relic = r_continuum }
+	and = { has_astral_planes_dlc = yes has_relic = r_time_crystal }
+	and = { has_astral_planes_dlc = yes has_relic = r_eternal_throne }
+	has_relic = r_celestial_resonator
+	has_relic = r_gavel_of_the_tribunal
+	has_relic = r_the_pattern_maker
+	has_relic = r_tiyanki_matriarch_nerve_core
+	has_relic = r_vaporous_mega_orchid
+	has_relic = r_entangled_relay
+	has_relic = r_executus_compendium
+	has_relic = r_prototype_vir_core
+	has_relic = r_preservation_chamber
+	has_relic = r_propagandosphere
+	has_relic = r_crystallinus_diffuser
+	has_relic = r_everchanging_stone
+	has_relic = r_flowmetal_alloy
+	has_relic = r_pulsestone
+	has_relic = r_the_modularium
+}
+daoyu_has_relic_trigger = {
+	or = {
+		has_relic = r_dragon_trophy
+		has_relic = r_khans_throne
+		has_relic = r_worm_scales
+		has_relic = r_surveyor
+		has_relic = r_mutated_voidworm_nest
+		has_relic = r_rubricator
+		has_relic = r_galaxy
+		has_relic = r_omnicodex
+		has_relic = r_ancient_sword
+		has_relic = r_severed_head
+		has_relic = r_the_defragmentor
+		has_relic = r_odryskan_crystal
+		has_relic = r_galatron
+		has_relic = r_the_rulerchip
+		has_relic = r_wormhole_key
+		has_relic = r_vacuum_flower
+		has_relic = r_prethoryn_queen
+		has_relic = r_unbidden_warlock
+		has_relic = r_contingency_core
+		has_relic = r_cetanas_heart
+		has_relic = r_zro_crystal
+		has_relic = r_the_last_baol
+		has_relic = r_reality_perforator
+		has_relic = r_pox_sample
+		has_relic = r_cryo_core
+		has_relic = r_war_forge
+		has_relic = r_weather_manipulator
+		has_relic = r_the_tempest_invocator
+		has_relic = r_toxic_god
+		has_relic = r_celestial_chart_4
+		has_relic = r_celestial_tear
+		has_relic = r_daedalus_seal
+		has_relic = r_ever_spinning_top
+		has_relic = r_infinity_root
+		has_relic = r_plasmic_core
+		has_relic = r_continuum
+		has_relic = r_time_crystal
+		has_relic = r_eternal_throne
+		has_relic = r_celestial_resonator
+		has_relic = r_gavel_of_the_tribunal
+		has_relic = r_the_pattern_maker
+		has_relic = r_tiyanki_matriarch_nerve_core
+		has_relic = r_vaporous_mega_orchid
+		has_relic = r_entangled_relay
+		has_relic = r_executus_compendium
+		has_relic = r_prototype_vir_core
+		has_relic = r_preservation_chamber
+		has_relic = r_propagandosphere
+		has_relic = r_crystallinus_diffuser
+		has_relic = r_everchanging_stone
+		has_relic = r_flowmetal_alloy
+		has_relic = r_pulsestone
+		has_relic = r_the_modularium
+	}
+}
+daoyu_has_planet_modifiers_trigger = {
+	or = {
+		has_modifier = daoyu_enigmatic_cache_in_orbit
+		has_modifier = infiltration_happiness#兼并狂潮
+		has_modifier = planet_forced_growth#强制增长
+		has_modifier = hazardous_weather#变幻莫测的天气
+		has_modifier = dangerous_wildlife#闹事的动物
+		has_modifier = weak_magnetic_field#弱磁场
+		has_modifier = strong_magnetic_field#强力磁场
+		has_modifier = unstable_tectonics#搿㡖拗鍋稳定的构造
+		has_modifier = tidal_locked#潮汐锁定
+		has_modifier = chthonian_planet#气殒星核
+		has_modifier = asteroid_impacts#小行星撞击
+		has_modifier = extensive_moon_system#卫星繁多
+		has_modifier = carbon_world#碳化世界
+		has_modifier = wild_storms#狂野之风
+		has_modifier = mineral_rich#高品质矿物
+		has_modifier = ultra_rich#超品矿物
+		has_modifier = mineral_poor#低品矿物
+		has_modifier = titanic_life#泰坦巨兽
+		has_modifier = eat_the_titans#美味巨兽
+		has_modifier = asteroid_belt#小行星带
+		has_modifier = natural_beauty#自然景观
+		has_modifier = atmospheric_aphrodisiac#催情大气
+		has_modifier = atmospheric_hallucinogen#致幻大气
+		has_modifier = atmospheric_hallucinogen_good#过滤的致幻大气
+		has_modifier = lush_planet#郁郁葱葱
+		has_modifier = bleak_planet#苍茫大地
+		has_modifier = irradiated_planet#辐照天地
+		has_modifier = low_gravity#低重力
+		has_modifier = high_gravity#高重力
+		has_modifier = abundant_geothermal_activity#丰富的地热活动
+		has_modifier = subterranean_wildlife#地底野生动物
+		has_modifier = rich_mircoflora#丰富的菌群
+		has_modifier = migrating_forests#迁徙森林
+		has_modifier = migrating_forests_2#温顺的迁徙森林
+		has_modifier = dead_creatures#太空墓地
+		has_modifier = starship_graveyard#星空舰塚
+		has_modifier = organic_starship#有机星舰
+		has_modifier = abandoned_cities#遗弃之城
+		has_modifier = subterranean_ocean#地下海洋
+		has_modifier = colony_enclaves#加固的飞地
+		has_modifier = primitive_reservation#外星人保留地
+		has_modifier = atmospheric_ecosystem#大气层生态系统
+		has_modifier = asteroid_life#小行星上的生命
+		has_modifier = asteroid_coprolite#粪化石小行星
+		has_modifier = derelict_shipyard#废弃船厂
+		has_modifier = junkyard#垃圾场
+		has_modifier = target_range#武器标靶
+		has_modifier = ore_freighter#坠毁的矿石货船
+		has_modifier = aerostat_colonies#浮空殖民地
+		has_modifier = debris_field#残骸场
+		has_modifier = extreme_storms#究极风暴
+		has_modifier = precious_moon#珍宝卫星
+		has_modifier = asteroid_collision#小行星碰撞
+		has_modifier = microsingularity#微型奇点
+		has_modifier = alien_writing#外星手迹
+		has_modifier = towed_asteroid#被牵引的小行星
+		has_modifier = nuclear_devastation#核毁灭
+		has_modifier = gamma_ray#伽马线爆
+		has_modifier = greenhouse_effect#失控温室效应
+		has_modifier = ammonia_biosphere#氨生物圈
+		has_modifier = silicon_lifeforms#硅基生命
+		has_modifier = colony_ruins#殖民地遗迹
+		has_modifier = alien_mural#外星壁画
+		has_modifier = damaged_ecology#生态受损
+		has_modifier = friendly_trees#适应共存
+		has_modifier = subterranean_civilization#地下文明
+		has_modifier = subterranean_expansion#地下城市
+		has_modifier = gas_giant_civ#达斯纳克首都
+		has_modifier = gas_giant_colony#达斯纳克殖民地
+		has_modifier = abandoned_terraforming#废弃的环境改造计划
+		has_modifier = gaia_world#古代环境改造技术
+		has_modifier = mutant_stalker#掠杀怪物
+		has_modifier = wasteland_infrastructure#幸存的基础设施
+		has_modifier = wasteland_radiation#废土辐照
+		has_modifier = wasteland_orbital_debris#轨道残骸
+		has_modifier = upliftable_species#可提升的物种
+		has_modifier = ancient_automation#古代自动化技术
+		has_modifier = ancient_factory#古代工厂
+		has_modifier = robot_workers#机器人劳工
+		has_modifier = ancient_forgeworld#古代铸造星球
+		has_modifier = ancient_weapon#古代轨道武器
+		has_modifier = holy_planet#圣地
+		has_modifier = terraforming_candidate#环境改造候选
+		has_modifier = frozen_terraforming_candidate#冰封环境改造候选
+		has_modifier = toxic_terraforming_candidate#剧毒环境改造候选
+		has_modifier = planet_uncertain_past#模糊的过往
+		has_modifier = recent_quake#近期板块变动
+		has_modifier = recent_comet#发现彗星
+		has_modifier = recent_impact#近期陨石撞击
+		has_modifier = magnetic_research_boost#磁力奇迹
+		has_modifier = magnetic_disruption#磁力破坏
+		has_modifier = forest_fire#森林大火
+		has_modifier = nationalist_corruption#民族主义者的腐败
+		has_modifier = planet_separatist_strikes#分离主义者罢工
+		has_modifier = planet_separatist_supporter#行星分离主义支持者
+		has_modifier = stellarite_high_temp#升温
+		has_modifier = stellarite_low_temp#降温
+		has_modifier = land_appropriation#土地征用
+		has_modifier = vultaum_homeworld#沃陶姆母星
+		has_modifier = vultaum_minerals#轨道设施残骸
+		has_modifier = vultaum_energy#浮空采矿网络
+		has_modifier = yuht_homeworld#尤特母星
+		has_modifier = yuht_minerals#资源丰富的小行星带
+		has_modifier = yuht_energy#太阳能收集阵列
+		has_modifier = first_league_homeworld#第一联盟首都星
+		has_modifier = first_league_minerals#废弃的采矿设施
+		has_modifier = first_league_energy#维修平台
+		has_modifier = irassian_homeworld#伊拉斯人母星
+		has_modifier = irassian_minerals#前锚地
+		has_modifier = irassian_energy#发电站点
+		has_modifier = turtle_world_modifier#移动之岛
+		has_modifier = turtle_world_modifier_alone#在尼玛的背上
+		has_modifier = turtle_world_slaves_modifier#奴役尼玛
+		has_modifier = relentless_industrialists_tomb#环境恶化
+		has_modifier = synth_planet_paranoia#合成人妄想症
+		has_modifier = dportal_trade_normal#跨次元贸易
+		has_modifier = dportal_trade_low#跨次元贸易减少
+		has_modifier = dportal_trade_high#跨次元贸易增加
+		has_modifier = dportal_trade_crisis#跨次元危机
+		has_modifier = flooded_habitat#洪潮居住站
+		has_modifier = instability_join_revolt#动乱扩散
+		has_modifier = trash_rings#垃圾环带
+		has_modifier = clear_skies#天清空净
+		has_modifier = shooting_stars#流星
+		has_modifier = ground_locked#封锁之地
+		has_modifier = active_melting#上涨的水面
+		has_modifier = boosted_melting#雪球效应
+		has_modifier = ancient_plague#远古病毒
+		has_modifier = cruel_actions#谋杀性的预防措施
+		has_modifier = halted_production#停止止生产
+		has_modifier = ecological_emergency#生态紧急状况
+		has_modifier = alien_infestation#外星感染
+		has_modifier = adopted_aliens#驯化外星动物
+		has_modifier = national_pets#不太可能的纽带
+		has_modifier = rodent_war#极限灭绝
+		has_modifier = drone_space_elevator#碍事的太空电梯
+		has_modifier = drone_mineral_gift#矿物无人机的礼物
+		has_modifier = drone_fl_satellite#坠毁的第一联盟人造卫星
+		has_modifier = rock_brain#石脑
+		has_modifier = cunning_flora#狡猾的植物
+		has_modifier = fascinating_flora#神奇的植物
+		has_modifier = old_genetic_library#远古基因库
+		has_modifier = zro_ice#泽珞冰晶
+		has_modifier = dark_matter_funnel#暗物质漏斗
+		has_modifier = pheromoned_1#信息素，第一阶段
+		has_modifier = pheromoned_2#信息素，第二阶段
+		has_modifier = depheromoned_1#信息素，解决方法
+		has_modifier = pheromoned_3#信息素，第三阶段
+		has_modifier = pheromoned_4#信息素，第四阶段
+		has_modifier = pheromoned_detox#信息素排毒
+		has_modifier = uplift_rocky#艰难的开端
+		has_modifier = unhappy_with_experiments#令人不愉快的实验
+		has_modifier = unproductive_without_experiments#无实验低产出
+		has_modifier = projecting_moon#蜃月
+		has_modifier = unbalanced_ecosystem#失衡的生态系统
+		has_modifier = cornucopia#丰饶
+		has_modifier = raw_materials#原矿石
+		has_modifier = shadow_play#皮影戏
+		has_modifier = grimacing#诡变多端
+		has_modifier = comet_sighted_negative#发现彗星
+		has_modifier = comet_sighted_positive#发现彗星
+		has_modifier = skid_marks#刹车痕迹
+		has_modifier = dust_circuits#死亡赛道
+		has_modifier = unusual_tectonics#不寻常的地壳
+		has_modifier = culture_shock_stone_age#星际文化冲击
+		has_modifier = culture_shock_bronze_age#星际文化冲击
+		has_modifier = culture_shock_iron_age#星际文化冲击
+		has_modifier = culture_shock_late_medieval_age#星际文化冲击
+		has_modifier = culture_shock_renaissance_age#星际文化冲击
+		has_modifier = culture_shock_steam_age#星际文化冲击
+		has_modifier = culture_shock_industrial_age#星际文化冲击
+		has_modifier = culture_shock_machine_age#星际文化冲击
+		has_modifier = culture_shock_atomic_age#星际文化冲击
+		has_modifier = culture_shock_early_space_age#星际文化冲击
+		has_modifier = syndaw_congregating_robots#聚集的机器人
+		has_modifier = acid_jungles#酸性丛林
+		has_modifier = hostile_environment#恶劣环境
+		has_modifier = ex_planet#曾为行星
+		has_modifier = ship_graveyard#星空舰塚
+		has_modifier = ai_fleet#坠毁的人工智能舰队
+		has_modifier = irradiated_wasteland#辐射废土
+		has_modifier = ancient_one#远古造物
+		has_modifier = fallen_robots#机器人残骸
+		has_modifier = liquid_sands#液态沙
+		has_modifier = abandoned_mining#被遗弃的采矿设施
+		has_modifier = gas_responsible_mining#合理气体开采
+		has_modifier = gas_rich_planet#丰富气藏
+		has_modifier = gas_rich_planet_fo_realz#无节制气体开采
+		has_modifier = food_rich_planet#营养食品
+		has_modifier = super_sensor_array#超级传感器阵列
+		has_modifier = horse_powered_factories_low#强迫动物劳役
+		has_modifier = horse_powered_factories_medium#不情愿动物劳役
+		has_modifier = horse_powered_factories_high#自愿动物劳役
+		has_modifier = hostile_animal_life#危险的野生动物
+		has_modifier = society_animal_life#奇异的野生动物
+		has_modifier = shifting_sands#流沙
+		has_modifier = suppressed_opposition#镇压反对派
+		has_modifier = scared_population#恐惧的平民
+		has_modifier = secured_factory#安全的外星工厂
+		has_modifier = fear_as_control#铁律
+		has_modifier = fear_as_control_militarist#铁律
+		has_modifier = infectious_disease#传染病
+		has_modifier = pyramid_wars#天人之战
+		has_modifier = spiritualist_attraction#唯心主义吸引力
+		has_modifier = materialist_attraction#唯物主义吸引力
+		has_modifier = syndaw_automated_work#自动化工作流程
+		has_modifier = syndaw_unfriendly_robots#紧张的人机关系
+		has_modifier = syndaw_research_malus#人工智能故障
+		has_modifier = celebrate_idyllic_bloom#庆祝田园改造
+		has_modifier = nanite_swarm_modifier#纳米虫群
+		has_modifier = tamed_nanite_swarm_modifier#驯化的纳米虫群
+		has_modifier = fumongus_monitor_pops#当地蘑菇网络
+		has_modifier = engineered_nature#改造的自然
+		has_modifier = second_home#第二家园
+		has_modifier = intentionally_tidally_locked#有意的潮汐锁定
+		has_modifier = perfect_organization_modifier#完美的组织
+		has_modifier = imperfect_organization_modifier#完美的组织
+		has_modifier = paradise_made#拟造天堂
+		has_modifier = crystal_kraken#晶体体灾厄
+		has_modifier = energy_poor#枯竭能源
+		has_modifier = snake_infestation#感染国度
+		has_modifier = mining_equipment_offline#遗弃矿道
+		has_modifier = broken_assembly_line#故障生产线
+		has_modifier = syamelles_curse_habitat#情人的疱疹
+		has_modifier = machine_care_museum#有机一机械接口博物馆
+		has_modifier = locust_planet_cracked#粉碎星球
+		has_modifier = nascent_locust#蝗灾萌发
+		has_modifier = all_seeing_shard#全知裂爪龙
+		has_modifier = reactor_overdrive#反应堆过载
+		has_modifier = infused_atmosphere#幽魂灌注大气
+		has_modifier = ether_trophy#龙牙
+		has_modifier = shard_trophy#裂爪之眼
+		has_modifier = dread_trophy#自动无畏战舰反应堆
+		has_modifier = tiyanki_trophy#祖姆鞭毛
+		has_modifier = burnt_tiyanki_trophy#烧毁的祖姆鞭毛
+		has_modifier = sky_dragon_trophy#天龙羽翼
+		has_modifier = scavenger_trophy#拾荒机器人压缩器
+		has_modifier = wraith_trophy#幽魂散布器囊
+		has_modifier = horror_study_trophy#恐怖负相物质
+		has_modifier = horror_study_trophy2#不稳定恐怖负相物质
+		has_modifier = horror_deify_trophy#恐怖负相物质
+		has_modifier = horror_deify_trophy2#不稳定恐怖负相物质
+		has_modifier = horror_too_late#为时已晚
+		has_modifier = horror_stabilized#已稳定恐怖负相物质
+		has_modifier = fortress_trophy#神秘堡垒舱室
+		has_modifier = voidspawn_trophy#净化虚空孳孽毒腺
+		has_modifier = voidspawn_contaminant#虚空孳孽污染物
+		has_modifier = stellar_devourer_trophy#噬星者卯鞘
+		has_modifier = low_stellar_output_1#恒星低产
+		has_modifier = low_stellar_output_2#恒星低产
+		has_modifier = low_stellar_output_3#恒星低产
+		has_modifier = planet_political_frontier#政治热点
+		has_modifier = planet_political_safezone#政治维稳
+		has_modifier = planet_political_crackdown#政治打压
+		has_modifier = planet_political_admittance#宽松的政治
+		has_modifier = reassured_tracking#监控结果令人欣慰
+		has_modifier = collective_autophobia#集体孤独症
+		has_modifier = freed_stasis_criminals#顽固罪犯获释
+		has_modifier = freed_stasis_dissidents#顽固异见者获释
+		has_modifier = star_mall_habitat#星达广场
+		has_modifier = planet_myrmeku_attacks#密弥库蚁袭击
+		has_modifier = planet_myrmeku_seal_colony#密弥库蚁袭击
+		has_modifier = planet_myrmeku_upgrade_robots#密弥库蚁袭击
+		has_modifier = planet_myrmeku_pest_control#密弥库蚁袭击
+		has_modifier = planet_myrmeku_lured#资源转移
+		has_modifier = being_devoured_modifier#被吞噬
+		has_modifier = stratovents#平流层喷口
+		has_modifier = stratovent_world_modifier_tourism#原封不动的平流层喷口
+		has_modifier = stratovent_world_modifier_tourism_boost#平流层喷口观光平台
+		has_modifier = stratovent_world_modifier_refining#平流层喷口精炼厂
+		has_modifier = stratovent_world_modifier_refining_upg#扩展平流层喷口
+		has_modifier = stratovent_world_modifier_refining_minerals#倒塌的平流层喷口
+		has_modifier = being_devoured_modifier_nanotech#纳米机器人改造
+		has_modifier = enclave_artist_patron#艺术赞助者
+		has_modifier = enclave_artist_festival_outrage#乐极生悲
+		has_modifier = black_hole_pantagruel#知识之镜
+		has_modifier = germinating_wraith#脉冲萌发
+		has_modifier = enclave_artist_festival#星球艺术节
+		has_modifier = happy_with_open_loop_temple#圆环神庙:游客中心
+		has_modifier = spiritual_happy_with_open_loop_temple#圆环神庙:朝圣之路
+		has_modifier = waiting_world_ruins#寂绝废墟
+		has_modifier = worm_quarantined#隔世独立
+		has_modifier = native_indoctrination#教化任务
+		has_modifier = covenant_shroud_marked#虚境标记
+		has_modifier = minor_terrorist_action#恐袭受害者
+		has_modifier = major_terrorist_action#恐袭受害者(严重)
+		has_modifier = riots_averted#勇敢的公民
+		has_modifier = spiritualist_unrest#不满(趋向唯心主义)
+		has_modifier = authoritarian_unrest#不满(趋向威权主义)
+		has_modifier = xenophobe_unrest#不满(趋向排外主义)
+		has_modifier = materialist_unrest#不满(趋向唯物主义)
+		has_modifier = xenophile_unrest#不满(趋向亲外主义)
+		has_modifier = egalitarian_unrest#不满(趋向平等主义)
+		has_modifier = pacifist_unrest#不满(趋向和平主义)
+		has_modifier = militarist_unrest#不满(趋向军国主义)
+		has_modifier = adding_unrest_slaves#激进的奴隶
+		has_modifier = revolt_suppressed#镇压奴隶叛乱
+		has_modifier = revolt_suppressed_2#叛乱被镇压
+		has_modifier = slave_hunger_strike#绝食罢工
+		has_modifier = slave_riots#奴隶暴动
+		has_modifier = slaves_defected#终获自由
+		has_modifier = free_at_last#终获自由
+		has_modifier = insurgents_free#终获自由
+		has_modifier = pop_disappearances#危机四伏
+		has_modifier = whisperers_madness#虚境:疯狂
+		has_modifier = whisperers_psychosis#虚境:精神错乱
+		has_modifier = eater_unhappiness_planet_1#虚境:人口被吞噬
+		has_modifier = eater_unhappiness_planet_2#虚境:人口被吞噬
+		has_modifier = instrument_consumer_goods#虚境:腐化
+		has_modifier = instrument_deviance_planet#虚境:越轨
+		has_modifier = master_builders_habitats#太空子民:扩张
+		has_modifier = god_rayed#神之光
+		has_modifier = neutron_bombarded#中子轰炸
+		has_modifier = uneasy_faith#信仰动摇
+		has_modifier = holy_player_planet#神圣之地
+		has_modifier = frozen_in_time#在时光中冻结
+		has_modifier = superflare_star#超强耀斑
+		has_modifier = superflare_planet#超强耀斑警告
+		has_modifier = superflare_struck#超强耀斑后果
+		has_modifier = superflare_avoided#超级耀斑防护
+		has_modifier = black_hole_hologram#舰队全息投影
+		has_modifier = black_hole_energy#能源积累
+		has_modifier = primitive_robots#原始机器人
+		has_modifier = researcher_rage#疯狂科学家
+		has_modifier = clones_in_cryo#冷仓中的克隆体
+		has_modifier = dead_god#沉默巨兽
+		has_modifier = dead_god_planet#逝往神灵
+		has_modifier = dead_god_planet_hidden#神秘脉冲
+		has_modifier = life_electric#电流生命
+		has_modifier = soothing_crystals#共鸣水晶
+		has_modifier = good_vibrations#舒缓磁性
+		has_modifier = exofungus#外来真菌感染
+		has_modifier = watery_grave#水下坟墓
+		has_modifier = brainslug_woes#蛞蝓恐怖症
+		has_modifier = brainslug_woes_phobe#蛞蝓恐怖症
+		has_modifier = brainslug_hive#蛞蝓适应
+		has_modifier = predatory_plants#食肉植物
+		has_modifier = living_sea#自觉之海
+		has_modifier = phaseshifted#相位转移
+		has_modifier = building_blocks#生命摇篮
+		has_modifier = nanite_network#计算网络
+		has_modifier = appeased_populace#被安抚的民众
+		has_modifier = angered_populace#愤怒的民众
+		has_modifier = stolen_great_work#被盗巨著
+		has_modifier = multiple_stolen_great_works#多部被盗巨著
+		has_modifier = b_world_saved#被拯救
+		has_modifier = paradise_planet#帕丽达雅
+		has_modifier = ancient_harvesters#远古收割机
+		has_modifier = seismological_phenomena#地震现象
+		has_modifier = seismological_phenomena_2#地震现象
+		has_modifier = egg_rifts#裂隙
+		has_modifier = enigmatic_cache_in_orbit#对外星物体的研究
+		has_modifier = ancient_trade_route#远古贸易路线
+		has_modifier = bunkbeds_deployed#范格利集团:已部署双层床铺
+		has_modifier = tupperware_deployed#范格利集团:已部署食品保鲜容器
+		has_modifier = atmospheric_deodorizer_deployed#范格利集团:大气层除臭器已部署
+		has_modifier = racket_energy_extractor#拉奇牌能源开采器
+		has_modifier = racket_generator_regulator#拉奇牌发电机调节器
+		has_modifier = contingency_sabotage#琭容正协议的破坏
+		has_modifier = criminal_underworld#黑社会组织
+		has_modifier = drone_deviancy#反常子个体
+		has_modifier = drone_corruption#腐化无人机
+		has_modifier = gang_wars#帮派战争
+		has_modifier = center_of_drug_trade#毒品交易中心
+		has_modifier = mob_rule#黑道统治
+		has_modifier = bribed_officials#官员受贿
+		has_modifier = substance_abuse#药物滥用
+		has_modifier = smuggler_activity#走私活动
+		has_modifier = crime_wave#犯罪狂潮
+		has_modifier = travel_advisory#旅行警告建议
+		has_modifier = cartel_war#毒品战争
+		has_modifier = protection_racket#强制性保护费收取
+		has_modifier = corrupt_administration#政府腐败
+		has_modifier = trade_pilfering#货物掠夺
+		has_modifier = crime_boss_arrested#犯罪头目落网
+		has_modifier = deviant_interference#反常干扰
+		has_modifier = drone_signal_interference#无人机信号干扰
+		has_modifier = ringleader_killed#叛乱帮派首领伏诛
+		has_modifier = corrupt_network_terminated#腐败网络已被终结
+		has_modifier = anticrime_campaign#扫黑除恶行动
+		has_modifier = crime_lord_deal#与犯务犯罪头目达成协议
+		has_modifier = crime_lord_deal_broken#与犯务犯罪头目的协议已终止
+		has_modifier = unemployment_benefits#补助提升
+		has_modifier = activity_program#活动计划
+		has_modifier = standby_mode#待命模式
+		has_modifier = numistic_magnetostrips#拜金教磁条已分配
+		has_modifier = planet_culture_shock#星际文化冲击
+		has_modifier = martial_law#戒严
+		has_modifier = hunter_killer_drones#猎杀子个体
+		has_modifier = compliance_protocols#强制服从协议
+		has_modifier = planet_food_boost#人口增长已鼓励
+		has_modifier = planet_luxuries_boost#奢侈品已发派
+		has_modifier = consecrated_quality_1#蒿驿許谁℅し地(亵渎之地)
+		has_modifier = consecrated_quality_2#圣地(圣洁之地)
+		has_modifier = consecrated_quality_3#圣地(崇敬之地)
+		has_modifier = consecrated_quality_4#圣地(神圣之地)
+		has_modifier = market_nominee_level_1#基础市场竞争力评分:弱
+		has_modifier = market_nominee_level_2#基础市场竞争力评分:中
+		has_modifier = market_nominee_level_3#基础市场竞争力评分:强
+		has_modifier = market_nominee_level_4#增强的市场竞争力评分:极强
+		has_modifier = market_nominee_level_5#增强的市场竞争力评分:完美
+		has_modifier = pm_study_the_sea#活体海洋研究
+		has_modifier = planet_population_control#宣布执行人口控制
+		has_modifier = planet_population_control_gestalt#控制子个体生产
+		has_modifier = planet_robot_assembly_control#机器人组装已停止
+		has_modifier = planet_growth_discouraged#人口增长已减缓
+		has_modifier = planet_population_expelled#人口被放逐
+		has_modifier = mastery_of_nature#掌控自然
+		has_modifier = resort_colony#度假星球
+		has_modifier = gestation_colony#繁育星球
+		has_modifier = penal_colony#流放地
+		has_modifier = slave_colony#奴隶星球
+		has_modifier = penal_colony_other_planets#流放地
+		has_modifier = species_crossbreeding#物种杂交
+		has_modifier = divine_algorithm#神圣算法
+		has_modifier = criminal_gambling#赌博成瘾
+		has_modifier = festival_aftermath#庆典余波
+		has_modifier = slot_machine_bounty#老虎机狂热
+		has_modifier = heavy_metal#重金属
+		has_modifier = alloy_relic#超级合金制造机
+		has_modifier = minerals_relic#非常无趣的遗物
+		has_modifier = energy_relic#能源催化器
+		has_modifier = artist_monument_erected#展出的艺术纪念碑
+		has_modifier = tissue_growth_stimulants#组织生长刺激物
+		has_modifier = explosive_fungifoam_housing#爆发增殖式真菌型住宅单元
+		has_modifier = pm_planetary_mechanocalibrator#C.A.R.E交互界面
+		has_modifier = planet_museum_exhibits#文物展览
+		has_modifier = planet_manager_awards#绩效竞争
+		has_modifier = planet_sanctuary_exhibits#文物展览
+		has_modifier = planet_artifact_relays_hivemind#文物中继
+		has_modifier = planet_artifact_relays_machine#文物中继
+		has_modifier = lithoids_arc_site_minerals#考古遗址
+		has_modifier = oracle_software_integration#神谕中枢
+		has_modifier = pm_yuht_cleansing#尤特净化
+		has_modifier = the_memorex#眠梦仪
+		has_modifier = feral_overload_00#嚎叫的少数人
+		has_modifier = feral_overload_01#吼闹的多数者
+		has_modifier = feral_overload_02#较小的危机
+		has_modifier = the_evermore_modifier#廉价的兴奋感
+		has_modifier = the_evermore_evil_modifier#廉价的兴奋感
+		has_modifier = study_the_sentinels_modifier#永恒
+		has_modifier = sentinels_planet_modifier#哨跎蓈兵
+		has_modifier = evermore_joy#永恒欢乐
+		has_modifier = evermore_science#永恒科学
+		has_modifier = ancient_glassed_planet#玻璃行星
+		has_modifier = celestial_tear_modifier#天空之泪
+		has_modifier = pm_extradimensional_experimentation#异次元体实验方法
+		has_modifier = no_lifetree#无生命之树
+		has_modifier = lithoid_crater#石质生物陨石坑
+		has_modifier = doomsday_1#末日将临
+		has_modifier = doomsday_2#末日将临
+		has_modifier = doomsday_3#末日将临
+		has_modifier = doomsday_4#末日将临
+		has_modifier = doomsday_5#末日将临
+		has_modifier = colonial_remains#殖民地遗迹
+		has_modifier = prosp_uni_mod#繁荣一统
+		has_modifier = prosp_uni_mod_gestalt#繁荣一统
+		has_modifier = colonial_spirit_mod#殖民地精神
+		has_modifier = colonial_spirit_gestalt_mod#崭新意识
+		has_modifier = dancing_fad#舞蹈瘟疫
+		has_modifier = dancing_to_death_modifier#舞蹈至死
+		has_modifier = pm_wenkwort_gardens#温科沃特花园
+		has_modifier = pm_wenkwort_zen#禅意星球
+		has_modifier = pm_wenkwort_custodian#温科沃特监护者
+		has_modifier = planet_manifesti_joy#宣泄主义的欢乐
+		has_modifier = planet_manifesti_uslurp_mod#轻浮的行星
+		has_modifier = manifesti_uslurp_mod#抽象话术
+		has_modifier = manifesti_reflections_mod#反射内心
+		has_modifier = manifesti_sweet_dreams_mod#梦境显昭
+		has_modifier = the_lonely_bot_welcome#援助之手
+		has_modifier = crystalline_architecture_mod#水晶建筑
+		has_modifier = global_power_outrage#全球能源停供
+		has_modifier = phantom_load#幽灵负载
+		has_modifier = modifier_clone_pops_decline#远古克隆仓不足
+		has_modifier = ice_mined_planet#竭冰星球
+		has_modifier = ocean_paradise#海洋天堂
+		has_modifier = ocean_paradise_hive#海洋天堂
+		has_modifier = specialist_overlord_frustrated_population#入乡不随俗
+		has_modifier = missing_offspring_modifier#缺少子嗣
+		has_modifier = holding_splinter_hive_modifier#分离蜂巢共生连结
+		has_modifier = holding_noble_vacation_home_modifier#惬意的贵族
+		has_modifier = specialist_bulwark_neighbor#成邦守卫
+		has_modifier = specialist_scholarium_neighbor#学邦指导
+		has_modifier = specialist_prospectorium_neighbor#勘探邦供给
+		has_modifier = too_lucid_00#过度清醒
+		has_modifier = too_lucid_01#镇压
+		has_modifier = too_lucid_02#叫醒服务
+		has_modifier = too_lucid_03#噩梦
+		has_modifier = shattered_frontier_storm_mod#轨道中的风暴
+		has_modifier = shattered_frontier_storm_gestalt_mod#轨道中的风暴
+		has_modifier = shattered_frontier_looting#趁火打劫
+		has_modifier = shattered_frontier_deviancy#异常反常
+		has_modifier = shattered_frontier_benefits#灵能缓解经费
+		has_modifier = shattered_frontier_lockdown#灵能缓解宵禁
+		has_modifier = shattered_frontier_lockdown_hive#灵能缓解宵禁
+		has_modifier = shattered_frontier_lockdown_machine#灵能缓解宵禁
+		has_modifier = shattered_frontier_uncertain_future#不确定前线
+		has_modifier = shattered_frontier_uncertain_future_gestalt#不安前线
+		has_modifier = rogue_shaman_00#流浪的萨满
+		has_modifier = rogue_shaman_01#受尊敬的宾客
+		has_modifier = rogue_shaman_02#宗教镇压
+		has_modifier = rogue_shaman_03#国民幸福总值
+		has_modifier = rogue_shaman_04#灵能交流
+		has_modifier = great_schism_01#黄金时代
+		has_modifier = great_schism_02#黑暗时代
+		has_modifier = great_schism_03#虚境恶臭
+		has_modifier = hero_redivivus#安享余年的英灵
+		has_modifier = wayward_pilgrim_00#幸福的朝圣者
+		has_modifier = wayward_pilgrim_01#伧昄烔鄑示幸福的朝圣者
+		has_modifier = wayward_pilgrim_02#满意的朝圣者
+		has_modifier = wayward_pilgrim_03#不满意的朝圣者
+		has_modifier = wayward_pilgrim_04#被拒的朝圣者
+		has_modifier = wayward_pilgrim_05#被拒的朝圣者
+		has_modifier = wayward_pilgrim_06#祝圣之国的荣光
+		has_modifier = wayward_pilgrim_07#刚愎风暴
+		has_modifier = larionessi_planet_modifier#本土蜂巢
+		has_modifier = the_beholder_presapients_protected#异常共生
+		has_modifier = paragon_origin_humble_monument#朴素的纪念碑
+		has_modifier = paragon_origin_rich_monument#癰倀疑靖丽的纪念碑
+		has_modifier = paragon_origin_residential_monument#可居住纪念碑
+		has_modifier = paragon_origin_reformists#民主倾向
+		has_modifier = sustaining_apparatus#维持装置
+		has_modifier = terraformation_nucleus_side_effect#过度生长
+		has_modifier = contained_ecosphere_pheromones#生态圈信息素
+		has_modifier = molten_mineral_rivers#熔矿河川
+		has_modifier = hostile_planet#危机四伏
+		has_modifier = ship_junkyard#舰船坟场
+		has_modifier = pulsar_frying_pan#中子狂耀
+		has_modifier = paragon_death_rejuvenation#复生
+		has_modifier = agenda_superior_colonies_planet_boost#殖民地优先支援
+		has_modifier = agenda_favored_society_finish_planet#优待社会议程
+		has_modifier = gia_zumon_arena#竞技场
+		has_modifier = gia_zumon_arena_opened#竞技场开张
+		has_modifier = factorator_industrial_network#工业网络
+		has_modifier = factorator_inhumane_work_experiments#残忍工业实验
+		has_modifier = factorator_inhumane_work_experiments_stopped#避免残忍实验
+		has_modifier = qla_minder_vanity_palace#奢华宫殿
+		has_modifier = culture_shock_broken_shackles#星际文化冲击
+		has_modifier = free_at_last_broken_shackles#终获自由
+		has_modifier = fotd_forced_to_stay#强制驻留
+		has_modifier = ruined_mass_driver#损毁的物质投射炮
+		has_modifier = payback_curfew#根除异见
+		has_modifier = payback_freedom_of_speech#言论自由
+		has_modifier = payback_debris_field#残骸场
+		has_modifier = payback_unified_purpose#众志成城
+		has_modifier = show_some_restraint#表现某种克制
+		has_modifier = food_crisis#食物危机!
+		has_modifier = rock_crisis#岩石危机!
+		has_modifier = food_abundance#食物丰足!
+		has_modifier = rock_abundance#岩石丰足!
+		has_modifier = hands_off_approach#甩手政策
+		has_modifier = irreconcilable_differences#无法调和的分歧
+		has_modifier = support_the_revolution#支持革命!
+		has_modifier = unspoken_grief#无法诉说的哀伤
+		has_modifier = art_is_dead#艺术已死
+		has_modifier = artistic_boom#艺术热潮
+		has_modifier = divine_will#天意
+		has_modifier = fires_of_industry#工业污染
+		has_modifier = pre_ftl_research_outpost#前超光速研究哨站
+		has_modifier = pre_ftl_research_outpost#前超光速研究哨站
+		has_modifier = pre_ftl_distrustful#不信任
+		has_modifier = observation_unforeseen_problems#未曾遇见的问题
+		has_modifier = observation_on_hold#搁置
+		has_modifier = divine_will#天意
+		has_modifier = power_flip#能量蹦跳
+		has_modifier = stand_your_ground#抱残守缺
+		has_modifier = freeport_smuggling#无管制走私
+		has_modifier = fruitful_coop_planet_mod#成果颇丰的合作
+		has_modifier = plague_01_spiritualist#热忱的信徒
+		has_modifier = plague_01_militarist#热忱的信徒
+		has_modifier = plague_05#褴褛之旗
+		has_modifier = paradisiacal_habitat_science#天堂般的居住站
+		has_modifier = paradisiacal_habitat_energy#天堂般的居住站
+		has_modifier = paradisiacal_habitat_mining#天堂般的居住站
+		has_modifier = singularity_situation_01#指数增长
+		has_modifier = singularity_situation_02#指数增长
+		has_modifier = singularity_situation_03#可口的机器
+		has_modifier = singularity_situation_04#可口的机器
+		has_modifier = singularity_situation_05#紧缩计划
+		has_modifier = singularity_situation_06#研究热潮
+		has_modifier = singularity_situation_07#被机器奴役
+		has_modifier = pre_ftl_diplomatic_03#经济稳定性
+		has_modifier = pre_ftl_diplomatic_04#拯救经济
+		has_modifier = pre_ftl_diplomatic_05#偬场知道什么最糟
+		has_modifier = pre_ftl_diplomacy_01#扮装文化
+		has_modifier = pre_ftl_diplomacy_02#艺术百花齐放
+		has_modifier = observation_distraction_insights#独立秘密研究
+		has_modifier = espionage_pre_ftl_indoctrination_authoritarian#社会变迁
+		has_modifier = espionage_pre_ftl_indoctrination_egalitarian#社会变迁
+		has_modifier = espionage_pre_ftl_indoctrination_materialist#社会变迁
+		has_modifier = espionage_pre_ftl_indoctrination_militarist#社会变迁
+		has_modifier = espionage_pre_ftl_indoctrination_pacifist#社会变迁
+		has_modifier = espionage_pre_ftl_indoctrination_spiritualist#社会变迁
+		has_modifier = espionage_pre_ftl_indoctrination_xenophile#社会变迁
+		has_modifier = espionage_pre_ftl_indoctrination_xenophobe#社会变迁
+		has_modifier = culture_shock_diplomacy#星际文化冲击
+		has_modifier = obelisks_curse_modifier#尖塔的诅咒
+		has_modifier = obelisks_curse_machine_modifier#尖塔的诅咒
+		has_modifier = rift_in_space_time_acceleration_modifier#时间扭曲
+		has_modifier = pm_formless_haven#无形庇护所
+		has_modifier = astralnomical_interest_modifier#星界兴趣
+		has_modifier = conflicting_visions#冲突的视景
+		has_modifier = widening_divide_1#分歧扩大
+		has_modifier = widening_divide_2#分歧扩大
+		has_modifier = widening_divide_3#分歧扩大
+		has_modifier = widening_divide_4#分歧扩大
+		has_modifier = widening_divide_5#分歧扩大
+		has_modifier = widening_divide_6#分歧扩大
+		has_modifier = astral_aficionados_modifier#铁杆星粉
+		has_modifier = seeded_planet_0_modifier#休眠种荚
+		has_modifier = seeded_planet_1_modifier#外星入侵植物
+		has_modifier = seeded_planet_2_modifier#散布外星入侵植物
+		has_modifier = seeded_planet_3_modifier#摧枯拉朽的外星入侵植物
+		has_modifier = hyper_ecosystem#超级生态系统
+		has_modifier = docile_fauna#温顺生物群
+		has_modifier = obsidian_lakes#黑曜石湖泊
+		has_modifier = crimson_crawlers#猩红爬虫
+		has_modifier = crimson_crawlers_sashimi_style#猩红爬虫:直接生吃
+		has_modifier = crimson_crawlers_bbq_them#猩红爬虫:煮熟再吃
+		has_modifier = metal_planet#金属行星
+		has_modifier = previously_terraformed_planet#以前环境改造过的行星
+		has_modifier = has_patriotic_institute#爱国庆典学院
+		has_modifier = recent_eruption#近期火山喷发
+		has_modifier = collided_planet#被撞的行星
+		has_modifier = collided_planet_collapsing#行星解体
+		has_modifier = wooden_planet#树栖星球
+		has_modifier = electric_storm_aftermath_modifier_severity_1#余波:带电大气
+		has_modifier = electric_storm_aftermath_modifier_severity_2#余波:严重带电大气
+		has_modifier = electric_storm_aftermath_modifier_severity_3#余波:极端带电大气
+		has_modifier = particle_storm_aftermath_modifier_severity_1#余波:腐蚀之风
+		has_modifier = particle_storm_aftermath_modifier_severity_2#余波:严重腐蚀之风
+		has_modifier = particle_storm_aftermath_modifier_severity_3#余波:严重腐蚀之风
+		has_modifier = gravity_storm_aftermath_modifier_severity_1#余波:重力波动
+		has_modifier = gravity_storm_aftermath_modifier_severity_2#余波:严重重力波动
+		has_modifier = gravity_storm_aftermath_modifier_severity_3#余波:极端重力波动
+		has_modifier = magnetic_storm_aftermath_modifier_severity_1#余波:磁极扰动
+		has_modifier = magnetic_storm_aftermath_modifier_severity_2#余波:严重磁极扰动
+		has_modifier = magnetic_storm_aftermath_modifier_severity_3#余波:极端磁极扰动
+		has_modifier = solar_storm_aftermath_modifier_severity_1#余波:辐射宵禁
+		has_modifier = solar_storm_aftermath_modifier_severity_2#余波:严重辐射宵禁
+		has_modifier = solar_storm_aftermath_modifier_severity_3#余波:极端辐射宵禁
+		has_modifier = celestial_storm_aftermath_modifier_severity_1#余波:浮尘覆盖
+		has_modifier = celestial_storm_aftermath_modifier_severity_2#余波:严重浮尘覆盖
+		has_modifier = celestial_storm_aftermath_modifier_severity_3#余波:极端浮尘覆盖
+		has_modifier = shroud_storm_aftermath_modifier_severity_1#余波:超自然现象
+		has_modifier = shroud_storm_aftermath_modifier_severity_2#余波:严重超自然现象
+		has_modifier = shroud_storm_aftermath_modifier_severity_3#余波:极端超自然现象
+		has_modifier = cs_storm_chasers_homeworld_storm_attraction#极端天气
+		has_modifier = storm_relic_repelling_field_modifier#启动扰动抑制器
+		has_modifier = storm_hunkered_down_modifier#严阵以待
+		has_modifier = cultivated_worldscaping_modifier#星球塑造
+		has_modifier = pm_magnetized_planetary_core#超疒泺磁化行星核心
+		has_modifier = shroud_switched#虚境幕遮
+		has_modifier = pm_satured_filtration#饱和过滤器
+		has_modifier = untamed_wilds#未驯荒原
+		has_modifier = cosmogenesis_superlight_planet_1#廒鮞逐灌詎次难耐
+		has_modifier = cosmogenesis_superlight_planet_2#恒星暴虐
+		has_modifier = leaking_atmosphere#大气泄露
+		has_modifier = cosmogenesis_sped_up#时间加速
+		has_modifier = cosmogenesis_slowed_down#时间减慢
+		has_modifier = cosmogenesis_slightly_bigger#稍微变大
+		has_modifier = cosmogenesis_slightly_smaller#稍微缩小
+		has_modifier = blipped_colony#返老还童星
+		has_modifier = devastated_colony#毁灭的殖民地
+		has_modifier = cybercreed_faithful_unrest#信众不满
+		has_modifier = cybercreed_unified_faith#统合信仰
+		has_modifier = cybercreed_moderates_ignored#无视温和派
+		has_modifier = cybercreed_creeds_absorbed#吸纳教派
+		has_modifier = cybercreed_forced_cyberization#强制强化改造
+		has_modifier = cybercreed_allowed_non_cyborgs#自由选择
+		has_modifier = sold_sky_2#行星广告牌
+		has_modifier = sold_sky_2_mega#行星广告牌
+		has_modifier = synth_mass_demonstrations#大规模抗议
+		has_modifier = synth_character_customize_elite#优先合成躯体修改
+		has_modifier = murdered_martyrs#献祭对象
+		has_modifier = dyson_swarm_1_mod#戴森云:阵列
+		has_modifier = dyson_swarm_2_mod#戴森云:星座
+		has_modifier = dyson_swarm_3_mod#戴森云
+		has_modifier = orbital_arc_furnace_1_mod#电弧熔炉:赤道环带
+		has_modifier = orbital_arc_furnace_2_mod#电弧熔炉:钻井泵机
+		has_modifier = orbital_arc_furnace_3_mod#电弧熔炉:超深钻提取
+		has_modifier = orbital_arc_furnace_4_mod#电弧熔炉
+		has_modifier = obsessional_directive_mod#产品尖塔
+	}
+}
+daoyu_has_enclave_trigger = {
+	or = {
+		has_country_flag = curator_enclave_country#策展人
+		has_country_flag = artist_enclave_country#艺术家联盟
+		has_country_flag = trader_enclave_country_1#雪拉企业
+		has_country_flag = trader_enclave_country_2#里甘商业交易所
+		has_country_flag = trader_enclave_country_3#穆塔根商人公会
+		has_country_flag = salvager_enclave_country#打捞者城邦
+		has_country_flag = shroudwalker_enclave_country#虚境行者城邦
+	}
+}

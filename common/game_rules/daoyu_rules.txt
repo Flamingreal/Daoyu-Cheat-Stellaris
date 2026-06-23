@@ -1,0 +1,19 @@
+can_excavate_outside_borders = {
+	exists = this
+	exists = from
+	or = {
+		has_tradition = tr_archivism_frontier_archaeology
+		and = { has_global_flag = daoyu_can_excavate_outside_borders is_ai = no }
+	}
+	from = {
+		solar_system = { NOT = { exists = owner } }
+	}
+}
+
+can_build_starbase_around = {
+	exists = root
+	or = {
+		and = { not = { has_global_flag = daoyu_ai_can_not_build_starbase } is_ai = yes }
+		is_ai = no
+	}
+}

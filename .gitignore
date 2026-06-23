@@ -1,0 +1,33 @@
+# ==========================================
+# Development Tools & Validators
+# ==========================================
+# JetBrains IDEs project files
+/.idea/
+*.iml
+
+# VS Code workspace settings
+.vscode/
+
+# Stellaris-tiger or validator configuration
+tiger.conf
+*tiger.conf
+
+# ==========================================
+# Paradox Launcher & Game Runtime (Anti-pollution)
+# ==========================================
+# Paradox Launcher cache and sync states
+.launcher-cache/
+launcher-settings.json
+
+# Game generated logs, temporary and backup files
+*.log
+*.tmp
+*.bak
+pdx_settings.txt
+logs/
+
+# ==========================================
+# System Specific Files
+# ==========================================
+.DS_Store
+Thumbs.db

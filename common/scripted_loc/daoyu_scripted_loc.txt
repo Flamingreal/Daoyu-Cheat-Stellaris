@@ -1,0 +1,650 @@
+defined_text = {
+	name = Get_daoyu_species_class
+	text = { trigger = { is_species_class = HUM } localization_key = HUM }
+	text = { trigger = { is_species_class = PRE_MAM } localization_key = PRE_MAM }
+	text = { trigger = { is_species_class = PRE_REP } localization_key = PRE_REP }
+	text = { trigger = { is_species_class = PRE_AVI } localization_key = PRE_AVI }
+	text = { trigger = { is_species_class = PRE_ART } localization_key = PRE_ART }
+	text = { trigger = { is_species_class = PRE_MOL } localization_key = PRE_MOL }
+	text = { trigger = { is_species_class = PRE_FUN } localization_key = PRE_FUN }
+	text = { trigger = { is_species_class = PRE_PLANT } localization_key = PRE_PLANT }
+	text = { trigger = { is_species_class = PRE_LITHOID } localization_key = PRE_LITHOID }
+	text = { trigger = { is_species_class = PRE_AQUATIC } localization_key = PRE_AQUATIC }
+	text = { trigger = { is_species_class = PRE_TOX } localization_key = PRE_TOX }
+	text = { trigger = { is_species_class = AI } localization_key = AI }
+	text = { trigger = { is_species_class = SWARM } localization_key = SWARM }
+	text = { trigger = { is_species_class = EXD } localization_key = EXD }
+	text = { trigger = { is_species_class = ROBOT } localization_key = ROBOT }
+	text = { trigger = { is_species_class = MACHINE } localization_key = MACHINE }
+	text = { trigger = { is_species_class = SALVAGER } localization_key = SALVAGER }
+	text = { trigger = { is_species_class = SHROUDWALKER } localization_key = SHROUDWALKER }
+	text = { trigger = { is_species_class = PARAGON } localization_key = PARAGON }
+	text = { trigger = { is_species_class = MSI_SLAVER } localization_key = MSI_SLAVER }
+	text = { trigger = { is_species_class = SOLARPUNK } localization_key = SOLARPUNK }
+	text = { trigger = { is_species_class = MAM } localization_key = MAM }
+	text = { trigger = { is_species_class = REP } localization_key = REP }
+	text = { trigger = { is_species_class = AVI } localization_key = AVI }
+	text = { trigger = { is_species_class = ART } localization_key = ART }
+	text = { trigger = { is_species_class = MOL } localization_key = MOL }
+	text = { trigger = { is_species_class = FUN } localization_key = FUN }
+	text = { trigger = { is_species_class = PLANT } localization_key = PLANT }
+	text = { trigger = { is_species_class = LITHOID } localization_key = LITHOID }
+	text = { trigger = { is_species_class = NECROID } localization_key = NECROID }
+	text = { trigger = { is_species_class = IMPERIAL } localization_key = IMPERIAL }
+	text = { trigger = { is_species_class = AQUATIC } localization_key = AQUATIC }
+	text = { trigger = { is_species_class = TOX } localization_key = TOX }
+	text = { trigger = { is_species_class = CYBERNETIC } localization_key = CYBERNETIC }
+}
+defined_text = {
+	name = Get_daoyu_authority
+	text = { trigger = { has_authority = auth_democratic } localization_key = auth_democratic }
+	text = { trigger = { has_authority = auth_oligarchic } localization_key = auth_oligarchic }
+	text = { trigger = { has_authority = auth_dictatorial } localization_key = auth_dictatorial }
+	text = { trigger = { has_authority = auth_imperial } localization_key = auth_imperial }
+	text = { trigger = { has_authority = auth_hive_mind } localization_key = auth_hive_mind }
+	text = { trigger = { has_authority = auth_machine_intelligence } localization_key = auth_machine_intelligence }
+	text = { trigger = { has_authority = auth_ancient_machine_intelligence } localization_key = auth_ancient_machine_intelligence }
+	text = { trigger = { has_authority = auth_corporate } localization_key = auth_corporate }
+}
+defined_text = {
+	name = Get_daoyu_origin
+	text = { trigger = { has_origin = origin_hegemon } localization_key = origin_hegemon }
+	text = { trigger = { has_origin = origin_here_be_dragons } localization_key = origin_here_be_dragons }
+	text = { trigger = { has_origin = origin_cybernetic_creed } localization_key = origin_cybernetic_creed }
+	text = { trigger = { has_origin = origin_scion } localization_key = origin_scion }
+	text = { trigger = { has_origin = origin_clone_army } localization_key = origin_clone_army }
+	text = { trigger = { has_origin = origin_common_ground } localization_key = origin_common_ground }
+	text = { trigger = { has_origin = origin_common_ground_npc } localization_key = origin_common_ground_npc }
+	text = { trigger = { has_origin = daoyu_tech_alternatives } localization_key = daoyu_show_more_tech }
+	text = { trigger = { has_origin = origin_separatists } localization_key = origin_separatists }
+	text = { trigger = { has_origin = origin_syncretic_evolution } localization_key = origin_syncretic_evolution }
+	text = { trigger = { has_origin = origin_primal_calling } localization_key = origin_primal_calling }
+	text = { trigger = { has_origin = origin_default_pre_ftl } localization_key = origin_default_pre_ftl }
+	text = { trigger = { has_origin = origin_khan_successor } localization_key = origin_khan_successor }
+	text = { trigger = { has_origin = origin_synthetic_fertility } localization_key = origin_synthetic_fertility }
+	text = { trigger = { has_origin = origin_post_apocalyptic } localization_key = origin_post_apocalyptic }
+	text = { trigger = { has_origin = origin_legendary_leader } localization_key = origin_legendary_leader }
+	text = { trigger = { has_origin = origin_legendary_leader_dictatorial } localization_key = origin_legendary_leader_dictatorial }
+	text = { trigger = { has_origin = origin_legendary_leader_imperial } localization_key = origin_legendary_leader_imperial }
+	text = { trigger = { has_origin = origin_enlightened } localization_key = origin_enlightened }
+	text = { trigger = { has_origin = origin_subterranean } localization_key = origin_subterranean }
+	text = { trigger = { has_origin = origin_subterranean_machines } localization_key = origin_subterranean_machines }
+	text = { trigger = { has_origin = origin_remnants } localization_key = origin_remnants }
+	text = { trigger = { has_origin = origin_lost_colony } localization_key = origin_lost_colony }
+	text = { trigger = { has_origin = origin_progenitor_hive } localization_key = origin_progenitor_hive }
+	text = { trigger = { has_origin = origin_treasure_hunters } localization_key = origin_treasure_hunters }
+	text = { trigger = { has_origin = origin_star_slingshot } localization_key = origin_star_slingshot }
+	text = { trigger = { has_origin = origin_shoulders_of_giants } localization_key = origin_shoulders_of_giants }
+	text = { trigger = { has_origin = origin_imperial_vassal } localization_key = origin_imperial_vassal }
+	text = { trigger = { has_origin = origin_imperial_vassal_overlord } localization_key = origin_imperial_vassal_overlord }
+	text = { trigger = { has_origin = origin_overtuned } localization_key = origin_overtuned }
+	text = { trigger = { has_origin = origin_demonic_incursion } localization_key = origin_demonic_incursion }
+	text = { trigger = { has_origin = origin_doomsday } localization_key = origin_doomsday }
+	text = { trigger = { has_origin = origin_mechanists } localization_key = origin_mechanists }
+	text = { trigger = { has_origin = origin_toxic_knights } localization_key = origin_toxic_knights }
+	text = { trigger = { has_origin = origin_ocean_machines } localization_key = origin_ocean_machines }
+	text = { trigger = { has_origin = origin_ocean_paradise } localization_key = origin_ocean_paradise }
+	text = { trigger = { has_origin = origin_tree_of_life } localization_key = origin_tree_of_life }
+	text = { trigger = { has_origin = origin_life_seeded } localization_key = origin_life_seeded }
+	text = { trigger = { has_origin = origin_life_seeded_ai_only } localization_key = origin_life_seeded_ai_only }
+	text = { trigger = { has_origin = origin_arc_welders } localization_key = origin_arc_welders }
+	text = { trigger = { has_origin = origin_shattered_ring } localization_key = origin_shattered_ring }
+	text = { trigger = { has_origin = origin_fruitful } localization_key = origin_fruitful }
+	text = { trigger = { has_origin = origin_broken_shackles } localization_key = origin_broken_shackles }
+	text = { trigger = { has_origin = origin_galactic_doorstep } localization_key = origin_galactic_doorstep }
+	text = { trigger = { has_origin = origin_default } localization_key = origin_default }
+	text = { trigger = { has_origin = origin_legendary_leader_death } localization_key = origin_legendary_leader_death }
+	text = { trigger = { has_origin = origin_shroudwalker_apprentice } localization_key = origin_shroudwalker_apprentice }
+	text = { trigger = { has_origin = origin_void_dwellers } localization_key = origin_void_dwellers }
+	text = { trigger = { has_origin = origin_void_machines } localization_key = origin_void_machines }
+	text = { trigger = { has_origin = origin_payback } localization_key = origin_payback }
+	text = { trigger = { has_origin = origin_riftworld } localization_key = origin_riftworld }
+	text = { trigger = { has_origin = origin_machine } localization_key = origin_machine }
+	text = { trigger = { has_origin = origin_liberated } localization_key = origin_liberated }
+	text = { trigger = { has_origin = origin_post_apocalyptic_machines } localization_key = origin_post_apocalyptic_machines }
+	text = { trigger = { has_origin = origin_storm_chasers } localization_key = origin_storm_chasers }
+	text = { trigger = { has_origin = origin_slavers } localization_key = origin_slavers }
+	text = { trigger = { has_origin = origin_fallen_empire } localization_key = origin_fallen_empire }
+	text = { trigger = { has_origin = origin_lithoid } localization_key = origin_lithoid }
+	text = { trigger = { has_origin = origin_hegemon_npc } localization_key = origin_hegemon_npc }
+	text = { trigger = { has_origin = origin_necrophage } localization_key = origin_necrophage }
+	text = { trigger = { has_origin = origin_fear_of_the_dark } localization_key = origin_fear_of_the_dark }
+	default = origin_asteroid_category
+}
+defined_text = {
+	name = Get_daoyu_personality
+	text = { trigger = { has_ai_personality = mirrored_empire_spiritualist } localization_key = personality_mirrored_empire_spiritualist }
+	text = { trigger = { has_ai_personality = mirrored_empire_xenophobe } localization_key = personality_mirrored_empire_xenophobe }
+	text = { trigger = { has_ai_personality = mirrored_empire_default } localization_key = personality_mirrored_empire_default }
+	text = { trigger = { has_ai_personality = pre_ftl_splintered } localization_key = personality_pre_ftl_splintered }
+	text = { trigger = { has_ai_personality = fallen_empire_spiritualist } localization_key = personality_fallen_empire_spiritualist }
+	text = { trigger = { has_ai_personality = fallen_empire_materialist } localization_key = personality_fallen_empire_materialist }
+	text = { trigger = { has_ai_personality = fallen_empire_xenophobe } localization_key = personality_fallen_empire_xenophobe }
+	text = { trigger = { has_ai_personality = fallen_empire_xenophile } localization_key = personality_fallen_empire_xenophile }
+	text = { trigger = { has_ai_personality = awakened_fallen_empire_spiritualist } localization_key = personality_awakened_fallen_empire_spiritualist }
+	text = { trigger = { has_ai_personality = awakened_fallen_empire_materialist } localization_key = personality_awakened_fallen_empire_materialist }
+	text = { trigger = { has_ai_personality = awakened_fallen_empire_xenophobe } localization_key = personality_awakened_fallen_empire_xenophobe }
+	text = { trigger = { has_ai_personality = awakened_fallen_empire_xenophile } localization_key = personality_awakened_fallen_empire_xenophile }
+	text = { trigger = { has_ai_personality = fallen_empire_machine } localization_key = personality_fallen_empire_machine }
+	text = { trigger = { has_ai_personality = awakened_fallen_empire_machine } localization_key = personality_awakened_fallen_empire_machine }
+	text = { trigger = { has_ai_personality = berserk_fallen_empire_machine } localization_key = personality_berserk_fallen_empire_machine }
+	text = { trigger = { has_ai_personality = honorbound_warriors } localization_key = personality_honorbound_warriors }
+	text = { trigger = { has_ai_personality = evangelising_zealots } localization_key = personality_evangelising_zealots }
+	text = { trigger = { has_ai_personality = erudite_explorers } localization_key = personality_erudite_explorers }
+	text = { trigger = { has_ai_personality = spiritual_seekers } localization_key = personality_spiritual_seekers }
+	text = { trigger = { has_ai_personality = ruthless_capitalists } localization_key = personality_ruthless_capitalists }
+	text = { trigger = { has_ai_personality = peaceful_traders } localization_key = personality_peaceful_traders }
+	text = { trigger = { has_ai_personality = hegemonic_imperialists } localization_key = personality_hegemonic_imperialists }
+	text = { trigger = { has_ai_personality = slaving_despots } localization_key = personality_slaving_despots }
+	text = { trigger = { has_ai_personality = decadent_hierarchy } localization_key = personality_decadent_hierarchy }
+	text = { trigger = { has_ai_personality = democratic_crusaders } localization_key = personality_democratic_crusaders }
+	text = { trigger = { has_ai_personality = harmonious_hierarchy } localization_key = personality_harmonious_hierarchy }
+	text = { trigger = { has_ai_personality = federation_builders } localization_key = personality_federation_builders }
+	text = { trigger = { has_ai_personality = xenophobic_isolationists } localization_key = personality_xenophobic_isolationists }
+	text = { trigger = { has_ai_personality = fanatic_purifiers } localization_key = personality_fanatic_purifiers }
+	text = { trigger = { has_ai_personality = hive_mind } localization_key = personality_hive_mind }
+	text = { trigger = { has_ai_personality = devouring_swarm } localization_key = personality_devouring_swarm }
+	text = { trigger = { has_ai_personality = migrating_flock } localization_key = personality_migrating_flock }
+	text = { trigger = { has_ai_personality = metalhead } localization_key = personality_metalhead }
+	text = { trigger = { has_ai_personality = machine_intelligence } localization_key = personality_machine_intelligence }
+	text = { trigger = { has_ai_personality = assimilators } localization_key = personality_assimilators }
+	text = { trigger = { has_ai_personality = exterminators } localization_key = personality_exterminators }
+	text = { trigger = { has_ai_personality = servitors } localization_key = personality_servitors }
+	text = { trigger = { has_ai_personality = fanatic_befrienders } localization_key = personality_fanatic_befrienders }
+	text = { trigger = { has_ai_personality = became_the_crisis } localization_key = personality_became_the_crisis }
+	text = { trigger = { has_ai_personality = galactic_defense_force } localization_key = personality_galactic_defense_force }
+	text = { trigger = { has_ai_personality = imperial_origin_overlord_ai } localization_key = personality_imperial_origin_overlord_ai }
+	text = { trigger = { has_ai_personality = decadent_capitalists } localization_key = personality_decadent_capitalists }
+}
+defined_text = {
+	name = Get_daoyu_government
+	text = { trigger = { has_government = gov_storm_chasers } localization_key = gov_storm_chasers }
+	text = { trigger = { has_government = gov_cyber_democracy_individualist } localization_key = gov_cyber_democracy_individualist }
+	text = { trigger = { has_government = gov_cyber_democracy_collectivist } localization_key = gov_cyber_democracy_collectivist }
+	text = { trigger = { has_government = gov_cyber_oligarchy_individualist } localization_key = gov_cyber_oligarchy_individualist }
+	text = { trigger = { has_government = gov_cyber_oligarchy_collectivist } localization_key = gov_cyber_oligarchy_collectivist }
+	text = { trigger = { has_government = gov_cyber_dictatorial_individualist } localization_key = gov_cyber_dictatorial_individualist }
+	text = { trigger = { has_government = gov_cyber_dictatorial_collectivist } localization_key = gov_cyber_dictatorial_collectivist }
+	text = { trigger = { has_government = gov_cyber_imperial_individualist } localization_key = gov_cyber_imperial_individualist }
+	text = { trigger = { has_government = gov_cyber_imperial_collectivist } localization_key = gov_cyber_imperial_collectivist }
+	text = { trigger = { has_government = gov_cyber_corporate_individualist } localization_key = gov_cyber_corporate_individualist }
+	text = { trigger = { has_government = gov_cyber_corporate_collectivist } localization_key = gov_cyber_corporate_collectivist }
+	text = { trigger = { has_government = gov_cyber_hive_volitional } localization_key = gov_cyber_hive_volitional }
+	text = { trigger = { has_government = gov_cyber_hive_integrated } localization_key = gov_cyber_hive_integrated }
+	text = { trigger = { has_government = gov_cyber_creed_monarchy } localization_key = gov_cyber_creed_monarchy }
+	text = { trigger = { has_government = gov_cyber_creed_dictatorship } localization_key = gov_cyber_creed_dictatorship }
+	text = { trigger = { has_government = gov_cyber_creed_oligarchy } localization_key = gov_cyber_creed_oligarchy }
+	text = { trigger = { has_government = gov_cyber_creed_democracy } localization_key = gov_cyber_creed_democracy }
+	text = { trigger = { has_government = gov_cyber_creed_divine_empire } localization_key = gov_cyber_creed_divine_empire }
+	text = { trigger = { has_government = gov_cyber_creed_megachurch } localization_key = gov_cyber_creed_megachurch }
+	text = { trigger = { has_government = gov_cyber_creed_holy_tribunal } localization_key = gov_cyber_creed_holy_tribunal }
+	text = { trigger = { has_government = gov_cyber_creed_subversive_cult } localization_key = gov_cyber_creed_subversive_cult }
+	text = { trigger = { has_government = gov_synth_democracy_physical } localization_key = gov_synth_democracy_physical }
+	text = { trigger = { has_government = gov_synth_democracy_virtual } localization_key = gov_synth_democracy_virtual }
+	text = { trigger = { has_government = gov_synth_oligarchy_physical } localization_key = gov_synth_oligarchy_physical }
+	text = { trigger = { has_government = gov_synth_oligarchy_virtual } localization_key = gov_synth_oligarchy_virtual }
+	text = { trigger = { has_government = gov_synth_dictatorship_physical } localization_key = gov_synth_dictatorship_physical }
+	text = { trigger = { has_government = gov_synth_dictatorship_virtual } localization_key = gov_synth_dictatorship_virtual }
+	text = { trigger = { has_government = gov_synth_imperial_physical } localization_key = gov_synth_imperial_physical }
+	text = { trigger = { has_government = gov_synth_imperial_virtual } localization_key = gov_synth_imperial_virtual }
+	text = { trigger = { has_government = gov_synth_corporate_physical } localization_key = gov_synth_corporate_physical }
+	text = { trigger = { has_government = gov_synth_corporate_virtual } localization_key = gov_synth_corporate_virtual }
+	text = { trigger = { has_government = gov_memory_aggregator } localization_key = gov_memory_aggregator }
+	text = { trigger = { has_government = gov_neural_chorus } localization_key = gov_neural_chorus }
+	text = { trigger = { has_government = gov_divine_empire } localization_key = gov_divine_empire }
+	text = { trigger = { has_government = gov_holy_tribunal } localization_key = gov_holy_tribunal }
+	text = { trigger = { has_government = gov_megachurch } localization_key = gov_megachurch }
+	text = { trigger = { has_government = gov_martial_empire } localization_key = gov_martial_empire }
+	text = { trigger = { has_government = gov_martial_dictatorship } localization_key = gov_martial_dictatorship }
+	text = { trigger = { has_government = gov_war_council } localization_key = gov_war_council }
+	text = { trigger = { has_government = gov_assembly_of_clans } localization_key = gov_assembly_of_clans }
+	text = { trigger = { has_government = gov_citizen_stratocracy } localization_key = gov_citizen_stratocracy }
+	text = { trigger = { has_government = gov_citizen_republic } localization_key = gov_citizen_republic }
+	text = { trigger = { has_government = gov_celestial_empire } localization_key = gov_celestial_empire }
+	text = { trigger = { has_government = gov_rational_consensus } localization_key = gov_rational_consensus }
+	text = { trigger = { has_government = gov_science_directorate } localization_key = gov_science_directorate }
+	text = { trigger = { has_government = gov_technocratic_dictatorship } localization_key = gov_technocratic_dictatorship }
+	text = { trigger = { has_government = gov_illuminated_autocracy } localization_key = gov_illuminated_autocracy }
+	text = { trigger = { has_government = gov_feudal_empire } localization_key = gov_feudal_empire }
+	text = { trigger = { has_government = gov_enlightened_monarchy } localization_key = gov_enlightened_monarchy }
+	text = { trigger = { has_government = gov_elective_monarchy } localization_key = gov_elective_monarchy }
+	text = { trigger = { has_government = gov_machine_research } localization_key = gov_machine_research }
+	text = { trigger = { has_government = gov_machine_industrial } localization_key = gov_machine_industrial }
+	text = { trigger = { has_government = gov_worker_coop } localization_key = gov_worker_coop }
+	text = { trigger = { has_government = gov_communal_parity } localization_key = gov_communal_parity }
+	text = { trigger = { has_government = gov_bandit_kingdom } localization_key = gov_bandit_kingdom }
+	text = { trigger = { has_government = gov_bandit_commune } localization_key = gov_bandit_commune }
+	text = { trigger = { has_government = gov_grim_council } localization_key = gov_grim_council }
+	text = { trigger = { has_government = gov_mortal_empire } localization_key = gov_mortal_empire }
+	text = { trigger = { has_government = gov_band_blood } localization_key = gov_band_blood }
+	text = { trigger = { has_government = gov_sacrificial_megachurch } localization_key = gov_sacrificial_megachurch }
+	text = { trigger = { has_government = gov_defensive_union } localization_key = gov_defensive_union }
+	text = { trigger = { has_government = gov_dimensional_covenant } localization_key = gov_dimensional_covenant }
+	text = { trigger = { has_government = gov_parasitic_overmind } localization_key = gov_parasitic_overmind }
+	text = { trigger = { has_government = gov_trade_league } localization_key = gov_trade_league }
+	text = { trigger = { has_government = gov_machine_servitor } localization_key = gov_machine_servitor }
+	text = { trigger = { has_government = gov_machine_assimilator } localization_key = gov_machine_assimilator }
+	text = { trigger = { has_government = gov_purity_assembly } localization_key = gov_purity_assembly }
+	text = { trigger = { has_government = gov_purification_committee } localization_key = gov_purification_committee }
+	text = { trigger = { has_government = gov_purity_order } localization_key = gov_purity_order }
+	text = { trigger = { has_government = gov_blood_court } localization_key = gov_blood_court }
+	text = { trigger = { has_government = gov_devouring_swarm } localization_key = gov_devouring_swarm }
+	text = { trigger = { has_government = gov_machine_terminator } localization_key = gov_machine_terminator }
+	text = { trigger = { has_government = gov_criminal_syndicate } localization_key = gov_criminal_syndicate }
+	text = { trigger = { has_government = gov_pirate_haven } localization_key = gov_pirate_haven }
+	text = { trigger = { has_government = gov_subversive_cult } localization_key = gov_subversive_cult }
+	text = { trigger = { has_government = gov_imperial_domain } localization_key = gov_imperial_domain }
+	text = { trigger = { has_government = gov_imperial_domain_hives } localization_key = gov_imperial_domain_hives }
+	text = { trigger = { has_government = gov_imperial_domain_machines } localization_key = gov_imperial_domain_machines }
+	text = { trigger = { has_government = gov_imperial_domain_megacorp } localization_key = gov_imperial_domain_megacorp }
+	text = { trigger = { has_government = gov_theocratic_republic } localization_key = gov_theocratic_republic }
+	text = { trigger = { has_government = gov_theocratic_oligarchy } localization_key = gov_theocratic_oligarchy }
+	text = { trigger = { has_government = gov_theocratic_dictatorship } localization_key = gov_theocratic_dictatorship }
+	text = { trigger = { has_government = gov_theocratic_monarchy } localization_key = gov_theocratic_monarchy }
+	text = { trigger = { has_government = gov_direct_democracy } localization_key = gov_direct_democracy }
+	text = { trigger = { has_government = gov_executive_committee } localization_key = gov_executive_committee }
+	text = { trigger = { has_government = gov_totalitarian_regime } localization_key = gov_totalitarian_regime }
+	text = { trigger = { has_government = gov_despotic_hegemony } localization_key = gov_despotic_hegemony }
+	text = { trigger = { has_government = gov_star_empire } localization_key = gov_star_empire }
+	text = { trigger = { has_government = gov_military_dictatorship } localization_key = gov_military_dictatorship }
+	text = { trigger = { has_government = gov_military_junta } localization_key = gov_military_junta }
+	text = { trigger = { has_government = gov_military_commissariat } localization_key = gov_military_commissariat }
+	text = { trigger = { has_government = gov_moral_democracy } localization_key = gov_moral_democracy }
+	text = { trigger = { has_government = gov_irenic_bureaucracy } localization_key = gov_irenic_bureaucracy }
+	text = { trigger = { has_government = gov_irenic_dictatorship } localization_key = gov_irenic_dictatorship }
+	text = { trigger = { has_government = gov_irenic_monarchy } localization_key = gov_irenic_monarchy }
+	text = { trigger = { has_government = gov_representative_democracy } localization_key = gov_representative_democracy }
+	text = { trigger = { has_government = gov_plutocratic_oligarchy } localization_key = gov_plutocratic_oligarchy }
+	text = { trigger = { has_government = gov_constitutional_dictatorship } localization_key = gov_constitutional_dictatorship }
+	text = { trigger = { has_government = gov_despotic_empire } localization_key = gov_despotic_empire }
+	text = { trigger = { has_government = gov_hive_mind } localization_key = gov_hive_mind }
+	text = { trigger = { has_government = gov_machine_empire } localization_key = gov_machine_empire }
+	text = { trigger = { has_government = gov_megacorporation } localization_key = gov_megacorporation }
+	text = { trigger = { has_government = gov_fallback } localization_key = gov_fallback }
+	text = { trigger = { has_government = gov_stagnant_ascendancy } localization_key = gov_stagnant_ascendancy }
+	text = { trigger = { has_government = gov_awakened_ascendancy } localization_key = gov_awakened_ascendancy }
+	text = { trigger = { has_government = gov_custodian_matrix } localization_key = gov_custodian_matrix }
+	text = { trigger = { has_government = gov_berserker_machine } localization_key = gov_berserker_machine }
+	text = { trigger = { has_government = gov_galactic_defense_unit } localization_key = gov_galactic_defense_unit }
+	text = { trigger = { has_government = gov_tribal_society } localization_key = gov_tribal_society }
+	text = { trigger = { has_government = gov_feudal_realms } localization_key = gov_feudal_realms }
+	text = { trigger = { has_government = gov_fragmented_nation_states } localization_key = gov_fragmented_nation_states }
+	text = { trigger = { has_government = gov_curator_enclave } localization_key = gov_curator_enclave }
+	text = { trigger = { has_government = gov_trader_enclave } localization_key = gov_trader_enclave }
+	text = { trigger = { has_government = gov_artist_enclave } localization_key = gov_artist_enclave }
+	text = { trigger = { has_government = gov_marauder_clans } localization_key = gov_marauder_clans }
+	text = { trigger = { has_government = gov_marauder_khanate } localization_key = gov_marauder_khanate }
+	text = { trigger = { has_government = gov_diadochi } localization_key = gov_diadochi }
+	text = { trigger = { has_government = gov_successor_khanate } localization_key = gov_successor_khanate }
+	text = { trigger = { has_government = gov_military_order } localization_key = gov_military_order }
+	text = { trigger = { has_government = gov_ancient_machine_intelligence } localization_key = gov_ancient_machine_intelligence }
+	text = { trigger = { has_government = gov_mercenary_enclave } localization_key = gov_mercenary_enclave }
+	text = { trigger = { has_government = gov_salvager_enclave } localization_key = gov_salvager_enclave }
+	text = { trigger = { has_government = gov_shroudwalker_enclave } localization_key = gov_shroudwalker_enclave }
+}
+defined_text = {
+	name = Get_daoyu_species_number
+	text = { trigger = { has_citizenship_type = { type = daoyu_citizenship_01 country = root } } localization_key = daoyu_citizenship_01 }
+	text = { trigger = { has_citizenship_type = { type = daoyu_citizenship_02 country = root } } localization_key = daoyu_citizenship_02 }
+	text = { trigger = { has_citizenship_type = { type = daoyu_citizenship_03 country = root } } localization_key = daoyu_citizenship_03 }
+	text = { trigger = { has_citizenship_type = { type = daoyu_citizenship_04 country = root } } localization_key = daoyu_citizenship_04 }
+	text = { trigger = { has_citizenship_type = { type = daoyu_citizenship_05 country = root } } localization_key = daoyu_citizenship_05 }
+	text = { trigger = { has_citizenship_type = { type = daoyu_citizenship_06 country = root } } localization_key = daoyu_citizenship_06 }
+	text = { trigger = { has_citizenship_type = { type = daoyu_citizenship_07 country = root } } localization_key = daoyu_citizenship_07 }
+	text = { trigger = { has_citizenship_type = { type = daoyu_citizenship_08 country = root } } localization_key = daoyu_citizenship_08 }
+	text = { trigger = { has_citizenship_type = { type = daoyu_citizenship_09 country = root } } localization_key = daoyu_citizenship_09 }
+	text = { trigger = { has_citizenship_type = { type = daoyu_citizenship_10 country = root } } localization_key = daoyu_citizenship_10 }
+	text = { trigger = { has_citizenship_type = { type = daoyu_citizenship_11 country = root } } localization_key = daoyu_citizenship_11 }
+	text = { trigger = { has_citizenship_type = { type = daoyu_citizenship_12 country = root } } localization_key = daoyu_citizenship_12 }
+	text = { trigger = { has_citizenship_type = { type = daoyu_citizenship_13 country = root } } localization_key = daoyu_citizenship_13 }
+	text = { trigger = { has_citizenship_type = { type = daoyu_citizenship_14 country = root } } localization_key = daoyu_citizenship_14 }
+	text = { trigger = { has_citizenship_type = { type = daoyu_citizenship_15 country = root } } localization_key = daoyu_citizenship_15 }
+	text = { trigger = { has_citizenship_type = { type = daoyu_citizenship_16 country = root } } localization_key = daoyu_citizenship_16 }
+	text = { trigger = { has_citizenship_type = { type = daoyu_citizenship_17 country = root } } localization_key = daoyu_citizenship_17 }
+	text = { trigger = { has_citizenship_type = { type = daoyu_citizenship_18 country = root } } localization_key = daoyu_citizenship_18 }
+	text = { trigger = { has_citizenship_type = { type = daoyu_citizenship_19 country = root } } localization_key = daoyu_citizenship_19 }
+	text = { trigger = { has_citizenship_type = { type = daoyu_citizenship_20 country = root } } localization_key = daoyu_citizenship_20 }
+}
+defined_text = {
+	name = Get_daoyu_arc_site
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = site_ruins_of_shallash } } localization_key = site_ruins_of_shallash }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = site_space_shanty_dig } } localization_key = site_space_shanty_dig }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = site_fumongus_dig } } localization_key = site_fumongus_dig }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = site_ancient_robot_world } } localization_key = site_ancient_robot_world }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = site_transformation_dig } } localization_key = site_transformation_dig }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = site_tiyanki_graveyard } } localization_key = site_tiyanki_graveyard }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = site_ice_trauma } } localization_key = site_ice_trauma }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = site_engineered_species } } localization_key = site_engineered_species }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = site_debris_belt } } localization_key = site_debris_belt }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = site_krazura_dig } } localization_key = site_krazura_dig }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = zroni_digsite_1 } } localization_key = zroni_digsite_1 }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = zroni_digsite_2 } } localization_key = zroni_digsite_2 }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = zroni_digsite_3 } } localization_key = zroni_digsite_3 }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = zroni_digsite_4 } } localization_key = zroni_digsite_4 }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = zroni_digsite_5 } } localization_key = zroni_digsite_5 }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = zroni_digsite_6 } } localization_key = zroni_digsite_6 }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = grunur_digsite_1 } } localization_key = grunur_digsite_1 }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = baol_digsite_1 } } localization_key = baol_digsite_1 }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = baol_digsite_2 } } localization_key = baol_digsite_2 }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = baol_digsite_3 } } localization_key = baol_digsite_3 }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = omnirelic_site } } localization_key = omnirelic_site }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = site_command_center } } localization_key = site_command_center }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = site_hunting_ground } } localization_key = site_hunting_ground }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = site_zarqlan } } localization_key = site_zarqlan }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = site_minigalaxy_1 } } localization_key = site_minigalaxy_1 }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = site_minigalaxy_2 } } localization_key = site_minigalaxy_2 }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = site_star_petal } } localization_key = site_star_petal }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = site_robot_debris } } localization_key = site_robot_debris }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = site_freighter_crash } } localization_key = site_freighter_crash }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = site_moon_bump } } localization_key = site_moon_bump }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = site_echoes_inside } } localization_key = site_echoes_inside }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = site_target_from_orbit } } localization_key = site_target_from_orbit }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = site_shot_into_the_ground } } localization_key = site_shot_into_the_ground }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = site_cut_to_fit } } localization_key = site_cut_to_fit }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = site_deja_vu_dig } } localization_key = site_deja_vu_dig }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = site_trench_world } } localization_key = site_trench_world }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = site_ebb_and_flow } } localization_key = site_ebb_and_flow }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = site_sky_glow_hymn } } localization_key = site_sky_glow_hymn }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = site_warmer_climates } } localization_key = site_warmer_climates }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = site_phoenix_collective } } localization_key = site_phoenix_collective }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = site_grand_herald } } localization_key = site_grand_herald }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = site_hive_coral } } localization_key = site_hive_coral }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = site_orbital_rain } } localization_key = site_orbital_rain }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = site_fossilized_jellyfish } } localization_key = site_fossilized_jellyfish }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = site_popular_rock } } localization_key = site_popular_rock }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = site_strange_flows } } localization_key = site_strange_flows }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = site_lost_moments } } localization_key = site_lost_moments }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = site_lesser_messenger } } localization_key = site_lesser_messenger }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = asteroid_vault_1 } } localization_key = asteroid_vault_1 }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = planetary_mechanocalibrator } } localization_key = planetary_mechanocalibrator }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = it_was_aliens_site } } localization_key = it_was_aliens_site }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = ancient_battle_site } } localization_key = ancient_battle_site }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = mutation_vats } } localization_key = mutation_vats }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = city_of_bones } } localization_key = city_of_bones }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = the_host } } localization_key = the_host }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = site_hidden_lab_a } } localization_key = site_hidden_lab_a }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = endless_expanse_digsite } } localization_key = endless_expanse_digsite }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = endless_expanse_digsite_2 } } localization_key = endless_expanse_digsite_2 }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = site_percussive_maintenance } } localization_key = site_percussive_maintenance }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = lithoids_digsite } } localization_key = lithoids_digsite }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = rubricator_digsite } } localization_key = rubricator_digsite }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = oracle_digsite } } localization_key = oracle_digsite }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = sentinels_digsite } } localization_key = sentinels_digsite }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = site_the_library } } localization_key = site_the_library }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = relicrails_digsite } } localization_key = relicrails_digsite }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = site_polaris_seed_vault } } localization_key = site_polaris_seed_vault }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = site_tombworld_weapon_cache } } localization_key = site_tombworld_weapon_cache }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = site_rage_sage_dig } } localization_key = site_rage_sage_dig }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = site_from_gateway_sent } } localization_key = site_from_gateway_sent }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = site_ex_gravitas } } localization_key = site_ex_gravitas }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = site_something_waiting } } localization_key = site_something_waiting }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = site_buried_deep } } localization_key = site_buried_deep }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = site_in_memoriam } } localization_key = site_in_memoriam }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = site_the_last_stand } } localization_key = site_the_last_stand }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = site_dark_secret } } localization_key = site_dark_secret }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = site_benign_cover_up } } localization_key = site_benign_cover_up }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = site_bury_the_hatchet } } localization_key = site_bury_the_hatchet }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = leylines_digsite } } localization_key = leylines_digsite }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = broken_world_digsite } } localization_key = broken_world_digsite }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = clone_army_digsite } } localization_key = clone_army_digsite }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = slingshot_digsite } } localization_key = slingshot_digsite }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = larion_digsite } } localization_key = larion_digsite }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = zevox_digsite } } localization_key = zevox_digsite }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = payback_digsite } } localization_key = payback_digsite }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = broken_shackles_digsite } } localization_key = broken_shackles_digsite }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = site_the_chosen_backstory } } localization_key = site_the_chosen_backstory }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = paragon_legendary_leader_homeworld } } localization_key = paragon_legendary_leader_homeworld }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = riftworld_digsite } } localization_key = riftworld_digsite }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = site_green_skies } } localization_key = site_green_skies }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = site_weathermanipulators_the_ancient_storm_shelters } } localization_key = site_weathermanipulators_the_ancient_storm_shelters }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = site_weathermanipulators_CoordinatesA_Residential_Planet } } localization_key = site_weathermanipulators_CoordinatesA_Residential_Planet }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = site_weathermanipulators_CoordinatesB_Industrial_Planet } } localization_key = site_weathermanipulators_CoordinatesB_Industrial_Planet }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = site_weathermanipulators_CoordinatesC_Barren_Planet } } localization_key = site_weathermanipulators_CoordinatesC_Barren_Planet }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = site_weathermanipulators_storm_formation } } localization_key = site_weathermanipulators_storm_formation }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = site_weathermanipulators_last_shelter } } localization_key = site_weathermanipulators_last_shelter }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = site_adakkaria_the_propaganda_station } } localization_key = site_adakkaria_the_propaganda_station }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = site_adakarria_windswept_fates } } localization_key = site_adakarria_windswept_fates }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = site_adakkaria_fleets_of_the_thrice_damned } } localization_key = site_adakkaria_fleets_of_the_thrice_damned }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = site_adakkaria_the_patriotic_institute } } localization_key = site_adakkaria_the_patriotic_institute }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = site_adakkaria_celebration } } localization_key = site_adakkaria_celebration }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = site_hold_the_line } } localization_key = site_hold_the_line }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = site_repowered_complex } } localization_key = site_repowered_complex }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = synth_queen_history_site_1 } } localization_key = synth_queen_history_site_1 }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = synth_queen_history_site_2 } } localization_key = synth_queen_history_site_2 }
+	text = { trigger = { exists = archaeological_site archaeological_site = { is_site_type = smeegibb_digsite } } localization_key = smeegibb_digsite }
+}
+#行星类型
+defined_text = {
+	name = Get_daoyu_planet_class
+	text = { trigger = { is_planet_class = pc_desert } localization_key = pc_desert }
+	text = { trigger = { is_planet_class = pc_arid } localization_key = pc_arid }
+	text = { trigger = { is_planet_class = pc_savannah } localization_key = pc_savannah }
+	text = { trigger = { is_planet_class = pc_tropical } localization_key = pc_tropical }
+	text = { trigger = { is_planet_class = pc_continental } localization_key = pc_continental }
+	text = { trigger = { is_planet_class = pc_ocean } localization_key = pc_ocean }
+	text = { trigger = { is_planet_class = pc_tundra } localization_key = pc_tundra }
+	text = { trigger = { is_planet_class = pc_arctic } localization_key = pc_arctic }
+	text = { trigger = { is_planet_class = pc_alpine } localization_key = pc_alpine }
+	text = { trigger = { is_planet_class = pc_gas_giant } localization_key = pc_gas_giant }
+	text = { trigger = { is_planet_class = pc_asteroid } localization_key = pc_asteroid }
+	text = { trigger = { is_planet_class = pc_ice_asteroid } localization_key = pc_ice_asteroid }
+	text = { trigger = { is_planet_class = pc_rare_crystal_asteroid } localization_key = pc_rare_crystal_asteroid }
+	text = { trigger = { is_planet_class = pc_molten } localization_key = pc_molten }
+	text = { trigger = { is_planet_class = pc_barren } localization_key = pc_barren }
+	text = { trigger = { is_planet_class = pc_barren_cold } localization_key = pc_barren_cold }
+	text = { trigger = { is_planet_class = pc_toxic } localization_key = pc_toxic }
+	text = { trigger = { is_planet_class = pc_frozen } localization_key = pc_frozen }
+	text = { trigger = { is_planet_class = pc_nuked } localization_key = pc_nuked }
+	text = { trigger = { is_planet_class = pc_hive } localization_key = pc_hive }
+	text = { trigger = { is_planet_class = pc_machine } localization_key = pc_machine }
+	text = { trigger = { is_planet_class = pc_machine_broken } localization_key = pc_machine_broken }
+	text = { trigger = { is_planet_class = pc_shielded } localization_key = pc_shielded }
+	text = { trigger = { is_planet_class = pc_ai } localization_key = pc_ai }
+	text = { trigger = { is_planet_class = pc_infested } localization_key = pc_infested }
+	text = { trigger = { is_planet_class = pc_gaia } localization_key = pc_gaia }
+	text = { trigger = { is_planet_class = pc_cybrex } localization_key = pc_cybrex }
+	text = { trigger = { is_planet_class = pc_nanotech } localization_key = pc_nanotech }
+	text = { trigger = { is_planet_class = pc_b_star } localization_key = pc_b_star }
+	text = { trigger = { is_planet_class = pc_a_star } localization_key = pc_a_star }
+	text = { trigger = { is_planet_class = pc_f_star } localization_key = pc_f_star }
+	text = { trigger = { is_planet_class = pc_g_star } localization_key = pc_g_star }
+	text = { trigger = { is_planet_class = pc_k_star } localization_key = pc_k_star }
+	text = { trigger = { is_planet_class = pc_m_star } localization_key = pc_m_star }
+	text = { trigger = { is_planet_class = pc_m_giant_star } localization_key = pc_m_giant_star }
+	text = { trigger = { is_planet_class = pc_t_star } localization_key = pc_t_star }
+	text = { trigger = { is_planet_class = pc_black_hole } localization_key = pc_black_hole }
+	text = { trigger = { is_planet_class = pc_neutron_star } localization_key = pc_neutron_star }
+	text = { trigger = { is_planet_class = pc_pulsar } localization_key = pc_pulsar }
+	text = { trigger = { is_planet_class = pc_ringworld_habitable } localization_key = pc_ringworld_habitable }
+	text = { trigger = { is_planet_class = pc_ringworld_habitable_damaged } localization_key = pc_ringworld_habitable_damaged }
+	text = { trigger = { is_planet_class = pc_ringworld_tech } localization_key = pc_ringworld_tech }
+	text = { trigger = { is_planet_class = pc_ringworld_tech_damaged } localization_key = pc_ringworld_tech_damaged }
+	text = { trigger = { is_planet_class = pc_ringworld_seam } localization_key = pc_ringworld_seam }
+	text = { trigger = { is_planet_class = pc_ringworld_seam_damaged } localization_key = pc_ringworld_seam_damaged }
+	text = { trigger = { is_planet_class = pc_shattered_ring_habitable } localization_key = pc_shattered_ring_habitable }
+	text = { trigger = { is_planet_class = pc_habitat } localization_key = pc_habitat }
+	text = { trigger = { is_planet_class = pc_cosmogenesis_world } localization_key = pc_cosmogenesis_world }
+	text = { trigger = { is_planet_class = pc_shrouded } localization_key = pc_shrouded }
+	text = { trigger = { is_planet_class = pc_broken } localization_key = pc_broken }
+	text = { trigger = { is_planet_class = pc_shattered } localization_key = pc_shattered }
+	text = { trigger = { is_planet_class = pc_toxoid_star } localization_key = pc_toxoid_star }
+	text = { trigger = { is_planet_class = pc_rift_star } localization_key = pc_rift_star }
+	text = { trigger = { is_planet_class = pc_astral_scar } localization_key = pc_astral_scar }
+	text = { trigger = { is_planet_class = pc_gray_goo } localization_key = pc_gray_goo }
+	text = { trigger = { is_planet_class = pc_egg_cracked } localization_key = pc_egg_cracked }
+	text = { trigger = { is_planet_class = pc_crystal_habitat } localization_key = pc_crystal_habitat }
+	text = { trigger = { is_planet_class = pc_warden_guardian } localization_key = pc_warden_guardian }
+	text = { trigger = { is_planet_class = pc_crystal_asteroid } localization_key = pc_crystal_asteroid }
+	text = { trigger = { is_planet_class = pc_ringworld_shielded } localization_key = pc_ringworld_shielded }
+	text = { trigger = { is_planet_class = pc_habitat_shielded } localization_key = pc_habitat_shielded }
+	text = { trigger = { is_planet_class = pc_city } localization_key = pc_city }
+	text = { trigger = { is_planet_class = pc_relic } localization_key = pc_relic }
+	text = { trigger = { is_planet_class = pc_shattered_2 } localization_key = pc_shattered_2 }
+	text = { trigger = { is_planet_class = pc_cutholoid } localization_key = pc_cutholoid }
+	default = UNKNOWN
+}
+#老练特质
+defined_text = {
+	name = Get_daoyu_veteran_trait
+	text = { trigger = { has_trait = subclass_commander_admiral } localization_key = subclass_commander_admiral }
+	text = { trigger = { has_trait = subclass_commander_general } localization_key = subclass_commander_general }
+	text = { trigger = { has_trait = subclass_commander_governor } localization_key = subclass_commander_governor }
+	text = { trigger = { has_trait = subclass_commander_councilor } localization_key = subclass_commander_councilor }
+	text = { trigger = { has_trait = subclass_official_delegate } localization_key = subclass_official_delegate }
+	text = { trigger = { has_trait = subclass_official_diplomacy_councilor } localization_key = subclass_official_diplomacy_councilor }
+	text = { trigger = { has_trait = subclass_official_governor } localization_key = subclass_official_governor }
+	text = { trigger = { has_trait = subclass_official_economy_councilor } localization_key = subclass_official_economy_councilor }
+	text = { trigger = { has_trait = subclass_scientist_explorer } localization_key = subclass_scientist_explorer }
+	text = { trigger = { has_trait = subclass_scientist_scholar } localization_key = subclass_scientist_scholar }
+	text = { trigger = { has_trait = subclass_scientist_governor } localization_key = subclass_scientist_governor }
+	text = { trigger = { has_trait = subclass_scientist_councilor } localization_key = subclass_scientist_councilor }
+}
+#内阁席位
+defined_text = {
+	name = Get_daoyu_councilor_type
+	text = { trigger = { is_ruler = yes } localization_key = ruler }
+	text = { trigger = { is_councilor_type = councilor_research } localization_key = councilor_research }
+	text = { trigger = { is_councilor_type = councilor_defense } localization_key = councilor_defense }
+	text = { trigger = { is_councilor_type = councilor_state } localization_key = councilor_state }
+	text = { trigger = { is_councilor_type = councilor_agrarian_idyll } localization_key = councilor_agrarian_idyll }
+	text = { trigger = { is_councilor_type = councilor_anglers } localization_key = councilor_anglers }
+	text = { trigger = { is_councilor_type = councilor_machine_anglers } localization_key = councilor_machine_anglers }
+	text = { trigger = { is_councilor_type = councilor_aristocratic_elite } localization_key = councilor_aristocratic_elite }
+	text = { trigger = { is_councilor_type = councilor_ascensionists } localization_key = councilor_ascensionists }
+	text = { trigger = { is_councilor_type = councilor_barbaric_despoilers } localization_key = councilor_barbaric_despoilers }
+	text = { trigger = { is_councilor_type = councilor_beacon_of_liberty } localization_key = councilor_beacon_of_liberty }
+	text = { trigger = { is_councilor_type = councilor_byzantine_bureaucracy } localization_key = councilor_byzantine_bureaucracy }
+	text = { trigger = { is_councilor_type = councilor_catalytic_processing } localization_key = councilor_catalytic_processing }
+	text = { trigger = { is_councilor_type = councilor_citizen_service } localization_key = councilor_citizen_service }
+	text = { trigger = { is_councilor_type = councilor_corporate_dominion } localization_key = councilor_corporate_dominion }
+	text = { trigger = { is_councilor_type = councilor_corvee_system } localization_key = councilor_corvee_system }
+	text = { trigger = { is_councilor_type = councilor_crafters } localization_key = councilor_crafters }
+	text = { trigger = { is_councilor_type = councilor_crusader_spirit } localization_key = councilor_crusader_spirit }
+	text = { trigger = { is_councilor_type = councilor_cutthroat_politics } localization_key = councilor_cutthroat_politics }
+	text = { trigger = { is_councilor_type = councilor_death_cult } localization_key = councilor_death_cult }
+	text = { trigger = { is_councilor_type = councilor_diplomatic_corps } localization_key = councilor_diplomatic_corps }
+	text = { trigger = { is_councilor_type = councilor_distinguished_admiralty } localization_key = councilor_distinguished_admiralty }
+	text = { trigger = { is_councilor_type = councilor_eager_explorers } localization_key = councilor_eager_explorers }
+	text = { trigger = { is_councilor_type = councilor_efficient_bureaucracy } localization_key = councilor_efficient_bureaucracy }
+	text = { trigger = { is_councilor_type = councilor_environmentalist } localization_key = councilor_environmentalist }
+	text = { trigger = { is_councilor_type = councilor_exalted_priesthood } localization_key = councilor_exalted_priesthood }
+	text = { trigger = { is_councilor_type = councilor_fanatic_purifiers } localization_key = councilor_fanatic_purifiers }
+	text = { trigger = { is_councilor_type = councilor_feudal_realm } localization_key = councilor_feudal_realm }
+	text = { trigger = { is_councilor_type = councilor_free_haven } localization_key = councilor_free_haven }
+	text = { trigger = { is_councilor_type = councilor_functional_architecture } localization_key = councilor_functional_architecture }
+	text = { trigger = { is_councilor_type = councilor_idealistic_foundation } localization_key = councilor_idealistic_foundation }
+	text = { trigger = { is_councilor_type = councilor_idyllic_bloom } localization_key = councilor_idyllic_bloom }
+	text = { trigger = { is_councilor_type = councilor_imperial_cult } localization_key = councilor_imperial_cult }
+	text = { trigger = { is_councilor_type = councilor_inwards_perfection } localization_key = councilor_inwards_perfection }
+	text = { trigger = { is_councilor_type = councilor_memorialist } localization_key = councilor_memorialist }
+	text = { trigger = { is_councilor_type = councilor_memory_vaults } localization_key = councilor_memory_vaults }
+	text = { trigger = { is_councilor_type = councilor_merchant_guilds } localization_key = councilor_merchant_guilds }
+	text = { trigger = { is_councilor_type = councilor_meritocracy } localization_key = councilor_meritocracy }
+	text = { trigger = { is_councilor_type = councilor_mining_guilds } localization_key = councilor_mining_guilds }
+	text = { trigger = { is_councilor_type = councilor_nationalistic_zeal } localization_key = councilor_nationalistic_zeal }
+	text = { trigger = { is_councilor_type = councilor_parliamentary_system } localization_key = councilor_parliamentary_system }
+	text = { trigger = { is_councilor_type = councilor_philosopher_king } localization_key = councilor_philosopher_king }
+	text = { trigger = { is_councilor_type = councilor_pleasure_seekers } localization_key = councilor_pleasure_seekers }
+	text = { trigger = { is_councilor_type = councilor_police_state } localization_key = councilor_police_state }
+	text = { trigger = { is_councilor_type = councilor_pompous_purists } localization_key = councilor_pompous_purists }
+	text = { trigger = { is_councilor_type = councilor_reanimated_armies } localization_key = councilor_reanimated_armies }
+	text = { trigger = { is_councilor_type = councilor_relentless_industrialists } localization_key = councilor_relentless_industrialists }
+	text = { trigger = { is_councilor_type = councilor_scavengers } localization_key = councilor_scavengers }
+	text = { trigger = { is_councilor_type = councilor_shadow_council } localization_key = councilor_shadow_council }
+	text = { trigger = { is_councilor_type = councilor_shared_burden } localization_key = councilor_shared_burden }
+	text = { trigger = { is_councilor_type = councilor_slaver_guilds } localization_key = councilor_slaver_guilds }
+	text = { trigger = { is_councilor_type = councilor_technocracy } localization_key = councilor_technocracy }
+	text = { trigger = { is_councilor_type = councilor_toxic_baths } localization_key = councilor_toxic_baths }
+	text = { trigger = { is_councilor_type = councilor_toxic_baths_individual_machine } localization_key = councilor_toxic_baths_individual_machine }
+	text = { trigger = { is_councilor_type = councilor_corporate_toxic_baths_individual_machine } localization_key = councilor_corporate_toxic_baths_individual_machine }
+	text = { trigger = { is_councilor_type = councilor_warrior_culture } localization_key = councilor_warrior_culture }
+	text = { trigger = { is_councilor_type = councilor_heroic_tales } localization_key = councilor_heroic_tales }
+	text = { trigger = { is_councilor_type = councilor_dystopian_society } localization_key = councilor_dystopian_society }
+	text = { trigger = { is_councilor_type = councilor_selective_kinship } localization_key = councilor_selective_kinship }
+	text = { trigger = { is_councilor_type = councilor_civic_guided_sapience } localization_key = councilor_civic_guided_sapience }
+	text = { trigger = { is_councilor_type = councilor_memory_vault_corporate } localization_key = councilor_memory_vault_corporate }
+	text = { trigger = { is_councilor_type = councilor_crusader_spirit_corporate } localization_key = councilor_crusader_spirit_corporate }
+	text = { trigger = { is_councilor_type = councilor_task_delegation_corporate } localization_key = councilor_task_delegation_corporate }
+	text = { trigger = { is_councilor_type = councilor_private_healthcare_corporate } localization_key = councilor_private_healthcare_corporate }
+	text = { trigger = { is_councilor_type = councilor_brand_loyalty } localization_key = councilor_brand_loyalty }
+	text = { trigger = { is_councilor_type = councilor_corporate_anglers } localization_key = councilor_corporate_anglers }
+	text = { trigger = { is_councilor_type = councilor_corporate_machine_anglers } localization_key = councilor_corporate_machine_anglers }
+	text = { trigger = { is_councilor_type = councilor_corporate_ascensionists } localization_key = councilor_corporate_ascensionists }
+	text = { trigger = { is_councilor_type = councilor_corporate_catalytic_processing } localization_key = councilor_corporate_catalytic_processing }
+	text = { trigger = { is_councilor_type = councilor_corporate_crafters } localization_key = councilor_corporate_crafters }
+	text = { trigger = { is_councilor_type = councilor_corporate_hedonism } localization_key = councilor_corporate_hedonism }
+	text = { trigger = { is_councilor_type = councilor_corporate_scavengers } localization_key = councilor_corporate_scavengers }
+	text = { trigger = { is_councilor_type = councilor_corporate_relentless_industrialists } localization_key = councilor_corporate_relentless_industrialists }
+	text = { trigger = { is_councilor_type = councilor_corporate_toxic_baths } localization_key = councilor_corporate_toxic_baths }
+	text = { trigger = { is_councilor_type = councilor_criminal_heritage } localization_key = councilor_criminal_heritage }
+	text = { trigger = { is_councilor_type = councilor_franchising } localization_key = councilor_franchising }
+	text = { trigger = { is_councilor_type = councilor_death_cult_corporate } localization_key = councilor_death_cult_corporate }
+	text = { trigger = { is_councilor_type = councilor_free_traders } localization_key = councilor_free_traders }
+	text = { trigger = { is_councilor_type = councilor_gospel_of_the_masses } localization_key = councilor_gospel_of_the_masses }
+	text = { trigger = { is_councilor_type = councilor_indentured_assets } localization_key = councilor_indentured_assets }
+	text = { trigger = { is_councilor_type = councilor_media_conglomerate } localization_key = councilor_media_conglomerate }
+	text = { trigger = { is_councilor_type = councilor_naval_contractors } localization_key = councilor_naval_contractors }
+	text = { trigger = { is_councilor_type = councilor_permanent_employment } localization_key = councilor_permanent_employment }
+	text = { trigger = { is_councilor_type = councilor_private_military_companies } localization_key = councilor_private_military_companies }
+	text = { trigger = { is_councilor_type = councilor_private_prospectors } localization_key = councilor_private_prospectors }
+	text = { trigger = { is_councilor_type = councilor_privatized_exploration } localization_key = councilor_privatized_exploration }
+	text = { trigger = { is_councilor_type = councilor_public_relations_specialists } localization_key = councilor_public_relations_specialists }
+	text = { trigger = { is_councilor_type = councilor_ruthless_competition } localization_key = councilor_ruthless_competition }
+	text = { trigger = { is_councilor_type = councilor_trading_posts } localization_key = councilor_trading_posts }
+	text = { trigger = { is_councilor_type = councilor_worker_coop } localization_key = councilor_worker_coop }
+	text = { trigger = { is_councilor_type = councilor_civic_guided_sapience_corperate } localization_key = councilor_civic_guided_sapience_corperate }
+	text = { trigger = { is_councilor_type = councilor_gestalt_growth } localization_key = councilor_gestalt_growth }
+	text = { trigger = { is_councilor_type = councilor_gestalt_cognitive } localization_key = councilor_gestalt_cognitive }
+	text = { trigger = { is_councilor_type = councilor_gestalt_legion } localization_key = councilor_gestalt_legion }
+	text = { trigger = { is_councilor_type = councilor_gestalt_regulatory } localization_key = councilor_gestalt_regulatory }
+	text = { trigger = { is_councilor_type = councilor_psionic_sovereign } localization_key = councilor_psionic_sovereign }
+	text = { trigger = { is_councilor_type = councilor_galactic_sovereign } localization_key = councilor_galactic_sovereign }
+	text = { trigger = { is_councilor_type = councilor_galactic_sovereign_megacorp } localization_key = councilor_galactic_sovereign_megacorp }
+	text = { trigger = { is_councilor_type = councilor_diadochi } localization_key = councilor_diadochi }
+	text = { trigger = { is_councilor_type = councilor_great_khans_legacy } localization_key = councilor_great_khans_legacy }
+	text = { trigger = { is_councilor_type = councilor_revanchist_fervor } localization_key = councilor_revanchist_fervor }
+	text = { trigger = { is_councilor_type = councilor_ancient_caches_of_technology } localization_key = councilor_ancient_caches_of_technology }
+	text = { trigger = { is_councilor = yes daoyu_councilor_post_trigger = no } localization_key = LEADER_ISWAS_COUNCILOR_SHORT }
+	text = { trigger = { is_councilor = no } localization_key = dayu_non_councilor }
+}
+defined_text = {
+	name = Get_daoyu_lgate_result
+	text = { trigger = { has_global_flag = gray_goo_crisis_set } localization_key = NAME_Gray_Goo }
+	text = { trigger = { has_global_flag = dragon_season } localization_key = nanite_space_dragon_baby }
+	text = { trigger = { has_global_flag = gray_goo_empire_set } localization_key = NAME_Dessanu_Consonance }
+	default = NAME_Gray
+}
+defined_text = {
+	name = Get_daoyu_gray_forms
+	text = { trigger = { has_country_flag = gray_official_active } localization_key = daoyu_gray_official }
+	text = { trigger = { has_country_flag = gray_warship_active } localization_key = daoyu_gray_warship }
+	text = { trigger = { has_country_flag = gray_army_active } localization_key = daoyu_gray_army }
+}
+defined_text = {
+	name = Get_daoyu_special_project_desc
+	text = { trigger = { has_global_flag = daoyu_edit_planet_special_project } localization_key = daoyu_edit_planet }
+	text = { trigger = { has_global_flag = daoyu_gain_fleet_special_project } localization_key = daoyu_gain_fleet_desc }
+	text = { trigger = { has_global_flag = daoyu_hyperlane_special_project } localization_key = daoyu_select_point_A }
+	text = { trigger = { has_global_flag = daoyu_select_point_B_on_map } localization_key = daoyu_select_point_B }
+	text = { trigger = { has_global_flag = daoyu_fleets_disband_special_project } localization_key = FLEETS_DISBAND_TITLE }
+}
+defined_text = {
+	name = Get_daoyu_auto_seek_unity_of_ethic
+	text = { trigger = { has_country_flag = daoyu_auto_seek_unity_of_authoritarian } localization_key = ethic_authoritarian }
+	text = { trigger = { has_country_flag = daoyu_auto_seek_unity_of_fanatic_authoritarian } localization_key = ethic_fanatic_authoritarian }
+	text = { trigger = { has_country_flag = daoyu_auto_seek_unity_of_egalitarian } localization_key = ethic_egalitarian }
+	text = { trigger = { has_country_flag = daoyu_auto_seek_unity_of_fanatic_egalitarian } localization_key = ethic_fanatic_egalitarian }
+	text = { trigger = { has_country_flag = daoyu_auto_seek_unity_of_xenophobe } localization_key = ethic_xenophobe }
+	text = { trigger = { has_country_flag = daoyu_auto_seek_unity_of_fanatic_xenophobe } localization_key = ethic_fanatic_xenophobe }
+	text = { trigger = { has_country_flag = daoyu_auto_seek_unity_of_xenophile } localization_key = ethic_xenophile }
+	text = { trigger = { has_country_flag = daoyu_auto_seek_unity_of_fanatic_xenophile } localization_key = ethic_fanatic_xenophile }
+	text = { trigger = { has_country_flag = daoyu_auto_seek_unity_of_militarist } localization_key = ethic_militarist }
+	text = { trigger = { has_country_flag = daoyu_auto_seek_unity_of_fanatic_militarist } localization_key = ethic_fanatic_militarist }
+	text = { trigger = { has_country_flag = daoyu_auto_seek_unity_of_pacifist } localization_key = ethic_pacifist }
+	text = { trigger = { has_country_flag = daoyu_auto_seek_unity_of_fanatic_pacifist } localization_key = ethic_fanatic_pacifist }
+	text = { trigger = { has_country_flag = daoyu_auto_seek_unity_of_spiritualist } localization_key = ethic_spiritualist }
+	text = { trigger = { has_country_flag = daoyu_auto_seek_unity_of_fanatic_spiritualist } localization_key = ethic_fanatic_spiritualist }
+	text = { trigger = { has_country_flag = daoyu_auto_seek_unity_of_materialist } localization_key = ethic_materialist }
+	text = { trigger = { has_country_flag = daoyu_auto_seek_unity_of_fanatic_materialist } localization_key = ethic_fanatic_materialist }
+	default = TRADITION_SLOT_LOCKED
+}
