@@ -93,26 +93,45 @@ daoyu_ring_world_restored = {
 		hidden_effect = {
 			solar_system = {
 				set_star_flag = daoyu_ring_world_restored
+				
+				# 针对母星系和 Cybrex 的生成，由于需要指定 planet 目标为恒星，
+				# 这里直接利用群星里对中心星体的定位：
+				
 				if = {
 					limit = { has_star_flag = empire_home_system has_star_flag = ring_world_built }
 					every_system_planet = { limit = { or = { is_planet_class = pc_shattered_2 is_planet_class = pc_ringworld_tech is_planet_class = pc_ringworld_seam } } remove_planet = yes }
 					every_system_planet = { limit = { or = { is_planet_class = pc_ringworld_tech_damaged is_planet_class = pc_ringworld_seam_damaged } } remove_planet = yes }
 					every_system_ambient_object = { limit = { is_ambient_object_type = medium_debris_01_object } destroy_ambient_object = this }
 					every_system_megastructure = { limit = { is_megastructure_type = ring_world_ruined } remove_megastructure = this }
-					every_system_megastructure = { limit = { is_megastructure_type = ring_world_ruined } remove_megastructure = this }
-					spawn_megastructure = { type = "ring_world_3_intermediate" orbit_angle = 333.5 orbit_distance = 45 location = planet }
+					
+					# 在星系作用域下通过 random_system_planet 动态抓取恒星保存为变量（event_target），然后作为 planet 的参数填入！
+					random_system_planet = {
+						limit = { is_star = yes }
+						save_global_event_target_as = daoyu_target_star
+					}
+					
+					spawn_megastructure = { type = "ring_world_3_intermediate" orbit_angle = 333.5 orbit_distance = 45 planet = event_target:daoyu_target_star }
+					
 					every_system_planet = { limit = { is_planet_class = pc_ringworld_habitable } remove_planet = yes }
-					spawn_megastructure = { type = "ring_world_3_intermediate" orbit_angle = 243.5 orbit_distance = 45 location = planet }
-					spawn_megastructure = { type = "ring_world_3_intermediate" orbit_angle = 153.5 orbit_distance = 45 location = planet }
-					spawn_megastructure = { type = "ring_world_3_intermediate" orbit_angle = 63.5 orbit_distance = 45 location = planet }
+					
+					# 使用完全合规的 planet 参数
+					spawn_megastructure = { type = "ring_world_3_intermediate" orbit_angle = 243.5 orbit_distance = 45 planet = event_target:daoyu_target_star }
+					spawn_megastructure = { type = "ring_world_3_intermediate" orbit_angle = 153.5 orbit_distance = 45 planet = event_target:daoyu_target_star }
+					spawn_megastructure = { type = "ring_world_3_intermediate" orbit_angle = 63.5 orbit_distance = 45 planet = event_target:daoyu_target_star }
+					
 					every_system_planet = { limit = { is_planet_class = pc_shattered_ring_habitable } set_name = "NAME_Habitable_Section_A" }
 					every_system_planet = { limit = { is_planet_class = pc_ringworld_habitable } set_planet_size = 25 }
 					if = {
 						limit = { owner = { has_origin = origin_shattered_ring } }
 						every_system_planet = {
 							limit = { is_planet_class = pc_ringworld_habitable }
-							add_deposit = d_segment_rubble_1 add_deposit = d_segment_rubble_2 add_deposit = d_segment_rubble_3 add_deposit = d_segment_rubble_4
-							add_deposit = d_decrepit_tunnels_1 add_deposit = d_decrepit_tunnels_1 add_deposit = d_decrepit_tunnels_1
+							add_deposit = d_segment_rubble_1 
+							add_deposit = d_segment_rubble_2 
+							add_deposit = d_segment_rubble_3 
+							add_deposit = d_segment_rubble_4
+							add_deposit = d_decrepit_tunnels_1 
+							add_deposit = d_decrepit_tunnels_1 
+							add_deposit = d_decrepit_tunnels_1
 						}
 					}
 					if = { limit = { owner = { has_civic = civic_machine_servitor } } every_system_planet = { limit = { is_planet_class = pc_ringworld_habitable } add_deposit = d_unsupervised_settlement } }
@@ -131,14 +150,25 @@ daoyu_ring_world_restored = {
 				}
 				if = {
 					limit = { has_star_flag = cybrex has_star_flag = precursor_system }
-					every_megastructure = { limit = { is_megastructure_type = ring_world_ruined } remove_megastructure = this }
+					every_system_megastructure = { limit = { is_megastructure_type = ring_world_ruined } remove_megastructure = this }
 					every_system_planet = { limit = { is_star = no } remove_planet = yes }
 					every_system_ambient_object = { destroy_ambient_object = this }
-					spawn_megastructure = { type = "ring_world_3_intermediate" orbit_angle = 0 orbit_distance = 45 }
-					spawn_megastructure = { type = "ring_world_3_intermediate" orbit_angle = 90 orbit_distance = 45 }
-					spawn_megastructure = { type = "ring_world_3_intermediate" orbit_angle = 180 orbit_distance = 45 }
-					spawn_megastructure = { type = "ring_world_3_intermediate" orbit_angle = 270 orbit_distance = 45 }
+					
+					# Cybrex 同样先抓取恒星
+					random_system_planet = {
+						limit = { is_star = yes }
+						save_global_event_target_as = daoyu_target_star_cybrex
+					}
+					
+					# 使用合规的 planet 参数
+					spawn_megastructure = { type = "ring_world_3_intermediate" orbit_angle = 0 orbit_distance = 45 planet = event_target:daoyu_target_star_cybrex }
+					spawn_megastructure = { type = "ring_world_3_intermediate" orbit_angle = 90 orbit_distance = 45 planet = event_target:daoyu_target_star_cybrex }
+					spawn_megastructure = { type = "ring_world_3_intermediate" orbit_angle = 180 orbit_distance = 45 planet = event_target:daoyu_target_star_cybrex }
+					spawn_megastructure = { type = "ring_world_3_intermediate" orbit_angle = 270 orbit_distance = 45 planet = event_target:daoyu_target_star_cybrex }
 				}
+				
+				# 清理全局缓存变量
+				clear_global_event_targets = yes
 			}
 		}
 	}

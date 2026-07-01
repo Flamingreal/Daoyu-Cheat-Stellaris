@@ -349,7 +349,7 @@ country_event = {
 		trigger = { has_distar = yes event_target:daoyu_target_planet = { nor = { has_modifier = daoyu_enigmatic_cache_in_orbit has_deposit = d_valley_of_zanaam has_deposit = d_former_relic_world has_deposit = d_central_spire } } }
 		allow = { event_target:daoyu_target_planet = { has_anomaly = no } }
 		event_target:daoyu_target_planet = {
-			add_modifier = { modifier = daoyu_enigmatic_cache_in_orbit day = -1 }
+			add_modifier = { modifier = daoyu_enigmatic_cache_in_orbit days = -1 }
 			clear_deposits = yes
 			if = { limit = { not = { is_planet_class = pc_relic } } change_pc = pc_relic }
 			if = { limit = { has_modifier = holy_planet } remove_modifier = holy_planet solar_system = { random_system_ambient_object = { limit = { is_ambient_object_type = consecrated_planet_stage_3_object } destroy_ambient_object = this } } }
@@ -369,10 +369,10 @@ country_event = {
 				prevent_anomaly = yes
 			}
 		}
-		if = { limit = { is_gestalt = no event_target:daoyu_target_planet = { not = { has_modifier = colonial_spirit_mod } } } event_target:daoyu_target_planet = { remove_modifier = colonial_spirit_gestalt_mod add_modifier = { modifier = colonial_spirit_mod day = -1 } } }
-		if = { limit = { is_gestalt = no event_target:daoyu_target_planet = { not = { has_modifier = prosp_uni_mod } } } event_target:daoyu_target_planet = { remove_modifier = prosp_uni_mod_gestalt add_modifier = { modifier = prosp_uni_mod day = -1 } } }
-		if = { limit = { is_gestalt = yes event_target:daoyu_target_planet = { not = { has_modifier = colonial_spirit_gestalt_mod } } } event_target:daoyu_target_planet = { remove_modifier = colonial_spirit_mod add_modifier = { modifier = colonial_spirit_gestalt_mod day = -1 } } }
-		if = { limit = { is_gestalt = yes event_target:daoyu_target_planet = { not = { has_modifier = prosp_uni_mod_gestalt } } } event_target:daoyu_target_planet = { remove_modifier = prosp_uni_mod add_modifier = { modifier = prosp_uni_mod_gestalt day = -1 } } }
+		if = { limit = { is_gestalt = no event_target:daoyu_target_planet = { not = { has_modifier = colonial_spirit_mod } } } event_target:daoyu_target_planet = { remove_modifier = colonial_spirit_gestalt_mod add_modifier = { modifier = colonial_spirit_mod days = -1 } } }
+		if = { limit = { is_gestalt = no event_target:daoyu_target_planet = { not = { has_modifier = prosp_uni_mod } } } event_target:daoyu_target_planet = { remove_modifier = prosp_uni_mod_gestalt add_modifier = { modifier = prosp_uni_mod days = -1 } } }
+		if = { limit = { is_gestalt = yes event_target:daoyu_target_planet = { not = { has_modifier = colonial_spirit_gestalt_mod } } } event_target:daoyu_target_planet = { remove_modifier = colonial_spirit_mod add_modifier = { modifier = colonial_spirit_gestalt_mod days = -1 } } }
+		if = { limit = { is_gestalt = yes event_target:daoyu_target_planet = { not = { has_modifier = prosp_uni_mod_gestalt } } } event_target:daoyu_target_planet = { remove_modifier = prosp_uni_mod add_modifier = { modifier = prosp_uni_mod_gestalt days = -1 } } }
 	}
 	option = {
 		name = SETTINGS_RESET#重置
@@ -897,22 +897,22 @@ country_event = {
 	option = {
 		name = colonial_spirit_mod#殖民地精神
 		trigger = { is_gestalt = no event_target:daoyu_target_planet = { not = { has_modifier = colonial_spirit_mod } } }
-		event_target:daoyu_target_planet = { remove_modifier = colonial_spirit_gestalt_mod add_modifier = { modifier = colonial_spirit_mod day = -1 } }
+		event_target:daoyu_target_planet = { remove_modifier = colonial_spirit_gestalt_mod add_modifier = { modifier = colonial_spirit_mod days = -1 } }
 	}
 	option = {
 		name = prosp_uni_mod#繁荣一统
 		trigger = { is_gestalt = no event_target:daoyu_target_planet = { not = { has_modifier = prosp_uni_mod } } }
-		event_target:daoyu_target_planet = { remove_modifier = prosp_uni_mod_gestalt add_modifier = { modifier = prosp_uni_mod day = -1 } }
+		event_target:daoyu_target_planet = { remove_modifier = prosp_uni_mod_gestalt add_modifier = { modifier = prosp_uni_mod days = -1 } }
 	}
 	option = {
 		name = colonial_spirit_gestalt_mod#崭新意识
 		trigger = { is_gestalt = yes event_target:daoyu_target_planet = { not = { has_modifier = colonial_spirit_gestalt_mod } } }
-		event_target:daoyu_target_planet = { remove_modifier = colonial_spirit_mod add_modifier = { modifier = colonial_spirit_gestalt_mod day = -1 } }
+		event_target:daoyu_target_planet = { remove_modifier = colonial_spirit_mod add_modifier = { modifier = colonial_spirit_gestalt_mod days = -1 } }
 	}
 	option = {
 		name = prosp_uni_mod_gestalt#繁荣一统
 		trigger = { is_gestalt = yes event_target:daoyu_target_planet = { not = { has_modifier = prosp_uni_mod_gestalt } } }
-		event_target:daoyu_target_planet = { remove_modifier = prosp_uni_mod add_modifier = { modifier = prosp_uni_mod_gestalt day = -1 } }
+		event_target:daoyu_target_planet = { remove_modifier = prosp_uni_mod add_modifier = { modifier = prosp_uni_mod_gestalt days = -1 } }
 	}
 	option = {
 		name = daoyu_add_deposit#行星特征
